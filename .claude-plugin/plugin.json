@@ -1,0 +1,21 @@
+{
+  "name": "bjoern",
+  "description": "Personal writing conventions: style enforcement for comments, docs, and commit bodies.",
+  "author": {
+    "name": "Björn",
+    "url": "https://github.com/bjoern621"
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"WRITING STYLE (repo files): load writing-style skill before writing any comment or doc. Comments clipped fragments stating only non-obvious constraints. Break lines at punctuation or conjunctions. Markdown one sentence per line.\"}}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
