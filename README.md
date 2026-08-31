@@ -5,9 +5,15 @@ Claude Code plugin marketplace carrying personal skills.
 ## Plugins
 
 `bjoern`: writing conventions.
-Ships the `writing-style` skill (style for comments, docs, and commit bodies) and a per-turn reminder hook.
-The skill enforces clipped comments, line breaks at punctuation, one sentence per markdown line, and time-agnostic docs.
+Ships two skills and a per-turn reminder hook.
+
+`writing-style`: style for comments, docs, and commit bodies.
+Clipped comments, line breaks at punctuation, one sentence per markdown line, time-agnostic docs.
 Full rules: [skills/writing-style/reference.md](skills/writing-style/reference.md).
+
+`ui-copy`: style for user-facing interface text.
+Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
+Full rules: [skills/ui-copy/reference.md](skills/ui-copy/reference.md).
 
 ## Use in a repository
 
