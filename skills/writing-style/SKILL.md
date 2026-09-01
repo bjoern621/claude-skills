@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Writing style for everything committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, commit and PR bodies. Load before writing or editing any of these, however small the edit, in any repository. Use when writing or editing comments, documenting, editing manifests or configs that carry comments, writing a README or docs page, drafting a commit message, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs.
+description: Writing style for everything committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, commit and PR bodies. Load before writing or editing any of these, however small the edit, in any repository. Use when writing or editing comments, documenting, editing manifests or configs that carry comments, writing a README or docs page, drafting a commit message, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), and a catalogue of AI writing tells with a bad and a good example each.
 ---
 
 # Writing style
@@ -29,6 +29,30 @@ Break lines at sentence ends, after `,` `:` `;`, or at a conjunction ("and", "or
 One sentence per markdown source line.
 A continuation line continues its sentence.
 
+## Paired negation
+
+Cut the clause naming what the subject is not: "X, not Y", "X, never Y", "X and never Y", "not Y but X".
+- Bad: `// The table decides the codec, not the caller.`
+- Good: `// Codec comes from the table.`
+
+Keep the negated half only where a reader was about to assume it, which is rare.
+Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
+A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
+A plain negative statement about one subject is unaffected: `// nil when the transport carries no video.`
+
+## AI tells
+
+Catalogue with a bad and a good example each: [ai-tells.md](ai-tells.md).
+Read it when drafting a doc page or a commit body, and when a passage reads fluent while saying little.
+
+The ones worth holding without opening the file:
+- Inflated word where a plain one carries the fact: `delve`, `pivotal`, `underscore`, `leverage`, `utilize`, `serves as`.
+- A participle claiming a result the clause never established: "Fix the null pointer, improving stability."
+- Stacked hedges on a fact that can be asserted: "could potentially leave the socket open."
+- A list landing on three items for rhythm.
+- Chat residue in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
+- A heading whose first sentence restates the heading.
+
 ## Docs
 
 State the invariant, in present tense, third person.
@@ -47,4 +71,6 @@ Project style rules add to these; on conflict this skill wins.
 
 - Every written or touched comment passes the checklist.
 - `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
-  ASCII-art hits on the em-dash check are the one accepted exception; judge those by eye.
+  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, WHETHER-LIST, and INTENSIFIER.
+- Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
+  Cutting a tell manufactures its own register, so the output gets the same scan as the input.

@@ -26,7 +26,7 @@ Code comments take one further cut on top; see "Comments" below, which wins on a
 
 **No rhetorical scaffolding.** Drop "It is worth noting that", "Importantly,", "Notably,", "Note that", "In essence,", "Of course,". State the fact directly.
 
-**No sales-pitch framings.** Avoid "Not just X, but Y", "This is more than X", "X enables Y to thrive".
+**No sales-pitch framings.** Avoid "This is more than X", "X enables Y to thrive". "Not just X, but Y" is one shape of the pattern in "Paired negation" below.
 
 **Reference, not tour.** Documentation describes the finished state. Avoid "First, we...", "Now we will...", "Next, let's...".
 
@@ -92,7 +92,8 @@ A comment that shrinks and still answers the "why" got better; one that shrinks 
 - Good: `// ms, 1..60000.`
 
 **The language's own comment convention comes first.**
-Clipping happens inside that shape and never replaces it.
+Clipping happens inside that shape.
+Where the convention demands a word these rules would cut, the convention wins.
 - Go: a doc comment starts with the identifier. `// StartReceive opens decode for stream. Already open is success.`
 - C#: XML doc comments, one clipped line per tag.
 - TypeScript/JavaScript: JSDoc, `@param` and `@returns` carry the facts.
@@ -101,7 +102,7 @@ Clipping happens inside that shape and never replaces it.
 
 **Wrap at a sentence end, never mid-sentence.**
 A source line holds one sentence, however short that leaves the line.
-A sentence too long for the file's width breaks after a comma or before a conjunction ("and", "or", "but", "so"), never mid-clause, and a continuation line never starts a new sentence.
+A sentence too long for the file's width breaks after a comma or before a conjunction ("and", "or", "but", "so"), and a continuation line never starts a new sentence.
 
 **A touched comment is rewritten in the same change.**
 Editing the code under a comment means re-reading that comment and bringing it to this style, whether or not the edit made it false.
@@ -128,7 +129,45 @@ Ask, in order:
 
 Cutting words is free. Cutting facts is not.
 
-## Language states what is, never what changed
+## Paired negation
+
+A statement followed by the excluded alternative for the same subject is machine cadence, and it is cut.
+The shapes: "X, not Y", "X, never Y", "X and never Y", "not Y but X", "not just X but Y", "Y is not the point; X is".
+The negated half is normally the assertion restated with a minus sign in front, so it carries no fact and exists to make the sentence swing.
+- Bad: "A connection is checked by arithmetic and never by a round trip."
+- Good: "A connection is checked by arithmetic."
+- Bad: `// The table decides the codec, not the caller.`
+- Good: `// Codec comes from the table.`
+- Bad: "It reports a reading, not a regression."
+- Good: "It reports a reading."
+
+**The negated half earns its place only where a reader was about to assume it.**
+The test is to say the alternative out loud and ask whether anything pointed that way.
+"Asserted in release builds too, not only in debug" answers a real expectation.
+"Checked by arithmetic, never by a round trip" answers an expectation nobody had.
+One such clause on a page is already a lot.
+
+**Cutting the negated half means rewriting the passage around it.**
+Where the contrast carried the sentence's only content, striking it leaves a sentence saying nothing.
+A dead sentence is a worse defect than the cadence it replaced.
+Read the neighbours and move the fact: usually the opener goes entirely because the sentence after it already carries the point, or the excluded alternative comes back as a positive statement of what does happen.
+- Bad cut: "A finding is a claim, not a verdict." to "A finding is a claim."
+- Good cut: drop the opener, and let "Every finding is held against the product before it is believed." carry it.
+- Bad cut: "Windows are reconciled, not opened by an event." to "Windows are reconciled."
+- Good cut: "A render pass opens the windows the model asks for."
+
+**An aphoristic copula is the same tell.**
+"A finding is a claim.", "The binding layer is a transport.", "Trust is a property."
+A copula standing alone as a paragraph opener, re-labelling a noun the reader already holds, usually there to set up a contrast.
+Say what the thing does instead.
+A copula handing the reader a term they lack is a definition and stays, which is what a glossary row and a domain-model entry are built from.
+
+**A plain negative sentence is untouched by this.**
+"Restart drops no roster entry" and `// nil when the transport carries no video` each state one fact about one subject.
+Two subjects put side by side are two statements, so "Cutting words is free. Cutting facts is not." stays.
+What is cut is one subject asserted and mirrored in the same breath.
+
+## Language states the present
 
 Every word describes the thing as it stands.
 What it replaced, what is planned, and what building it was like are changelog voice, at home only in commits, PR descriptions, release notes, and migration guides.
