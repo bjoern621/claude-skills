@@ -14,7 +14,7 @@ A sentence the reader stops to admire, or to decode, is rewritten.
 - Bad: "That is a trade you are entitled to make: it opens anywhere, and it costs you."
 - Good: "It opens in any editor, at the cost of a larger file."
 
-**Plain conversational, not formal and not clipped.**
+**Plain conversational.**
 Full short sentences, everyday words, the tone of a competent colleague.
 Formal register reads colder without reading more trustworthy; fragments read curt in help text.
 Fragments stay legitimate where the surface is a fragment: chip captions, list notes, table cells.
@@ -27,7 +27,7 @@ Humor reads once; settings text is read hundreds of times.
 ## Person
 
 **Neutral by default.**
-The person reading is addressed directly or not at all, never described.
+The person reading is addressed directly or left unnamed.
 "The user", "the customer", "the reader", "somebody" as a name for the person reading are banned.
 
 **"you/your" only where ownership is otherwise ambiguous.**
@@ -89,7 +89,7 @@ Help text may teach; it may not lecture.
 
 ## Words
 
-**American English**, one variant throughout, never mixed.
+**American English**, one variant throughout.
 
 **One term per concept.**
 A concept renamed per surface costs the reader a lookup each time.
@@ -116,7 +116,7 @@ Plain words carry the sentence; the identifier appears where a log or command li
 - Good: "Compressed with the slower method (zstd-19)."
 
 **Positive framing.**
-Say what is so and what to do, not what is absent.
+Say what is so and what to do.
 An absence is named only where the reader would try to restore it.
 - Bad: "Nothing carries formatting through the export, so the file has no styles."
 - Good: "The export carries text alone. Open the original to keep the styling."

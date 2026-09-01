@@ -18,7 +18,7 @@ Apply to every comment written or touched:
    Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
 2. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
-3. Show formats and ranges by example: `// Key: "rtsp/H264".`, `// ms, 1..60000.`
+3. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
 4. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
 5. Second pass: re-read each comment and cut again.
    Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
@@ -62,7 +62,7 @@ The ones worth holding without opening the file:
 ## Docs
 
 State the invariant, in present tense, third person.
-Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation, not documentation.
+Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation that rots.
 Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
 Point at the source-of-truth file instead of copying its contents.
 Cut every section, table, and diagram the reader can do without.

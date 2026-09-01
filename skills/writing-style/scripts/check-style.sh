@@ -34,7 +34,7 @@ mask() {
         fence { print ""; next }
         /^[[:space:]]*\|/ { print ""; next }
         /^[[:space:]]*[-*]?[[:space:]]*\**(Bad|Good)[^:]{0,20}:/ { print ""; next }
-        { gsub(/`[^`]*`/, " "); print }
+        { gsub(/`[^`]*`/, " "); gsub(/"[^"]*"/, " "); print }
     ' "$1"
 }
 
@@ -75,7 +75,8 @@ for f in "${files[@]}"; do
     hits=$(rg -n --no-heading -i '\b(speaks? for (itself|themselves)|tells? a story|paints? a picture)\b|\bto ensure (clarity|correctness|completeness)\b|\ba more (complete|thorough) solution\b' "$tmp" || true)
     report "SELF-NARRATION $f" "$hits"
 
-    hits=$(rg -n --no-heading -i '\bwhether (it.s|the|a|an|this)\b[^.]{0,60}\bor\b' "$tmp" || true)
+    # Fronted concessive only, so a subordinate "ask whether ..." passes.
+    hits=$(rg -n --no-heading '(^|\. )[Ww]hether (it.s|the|a|an|this)\b[^.]{0,60}\bor\b' "$tmp" || true)
     report "WHETHER-LIST $f" "$hits"
 
     hits=$(rg -n --no-heading -i '\b(very|truly|fundamentally|essentially|absolutely|literally)\b' "$tmp" || true)
@@ -84,7 +85,7 @@ for f in "${files[@]}"; do
     case "$f" in
         *.md)
             # Bullets are line-oriented, so several short sentences on one are the intended shape.
-            hits=$(rg -n --no-heading '[a-z]\. [A-Z]' "$tmp" | rg -v 'e\.g\.|i\.e\.|etc\.|vs\.|^\d+:\s*[-*]' || true)
+            hits=$(rg -n --no-heading '[a-z]\. [A-Z]' "$tmp" | rg -v 'e\.g\.|i\.e\.|etc\.|vs\.|^\d+:\s*[-*]\s' || true)
             report "MULTI-SENTENCE-LINE $f" "$hits"
 
             hits=$(rg -n --no-heading -i '^#+\s+(challenges and|future (outlook|prospects)|overview\s*$)|^#+\s+\w+ (things|reasons|ways|takeaways)\b' "$tmp" || true)

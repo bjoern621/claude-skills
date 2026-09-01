@@ -1,10 +1,8 @@
 # Page shape
 
-What a docs page is shaped like, above the sentence level: what it answers, which names it may use, and what a diagram carries.
-Sentence style, wrapping, changelog voice and time-agnostic phrasing live in [reference.md](reference.md).
-
-Three words do the work here.
+What a docs page is shaped like, above the sentence level.
 A page has one **thesis**, it names **contract** vocabulary, and it ends a section on a **pointer**.
+Sentence style, wrapping, changelog voice and time-agnostic phrasing live in [reference.md](reference.md).
 
 ## Thesis
 
@@ -42,8 +40,7 @@ A page that changes is a page restating code, and the fix is a pointer at the pa
 Mermaid carries an exchange or a path better than prose does, so it goes first and the prose states the consequence.
 `sequenceDiagram` for an exchange between parts, `flowchart` for the route something takes.
 Two lines after the diagram, naming what follows from it.
-
-A page explaining a flow in prose alone is a page whose diagram was never drawn.
+A flow carried by prose alone wants a diagram above it.
 
 ## One screen per section
 
@@ -65,8 +62,15 @@ Calibrate them per repository: measure the page whose shape the project already 
 The numbers locate the page worth re-reading.
 A long page holding one thesis and pointing at its code stays long.
 
-A page whose job is defining terms carries few pointers by design, a glossary sitting near zero and being right to.
+A page whose job is defining terms carries few pointers by design, so a glossary sits near zero and reads correctly there.
 Name the exception when a signal fires for a reason like that one.
+
+## Where the numbers read differently
+
+A rules reference measures unlike an architecture page, and some signals fire on it for a reason.
+Its sections are rule clusters holding one job, so a long section stays.
+Its code spans are specimens of the constructions it governs, so the pointer share sits low.
+It describes no flow, so it draws no diagram.
 
 ## Completion criteria
 

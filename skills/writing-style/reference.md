@@ -17,33 +17,53 @@ One layer of parentheses maximum.
 Applies to README files, architecture docs, doc comments, and the body of commit messages and PR descriptions.
 Code comments take one further cut on top; see "Comments" below, which wins on any conflict about length or sentence form.
 
-**Neutral, third-person description.** State what the system does. Do not address the reader.
+**Neutral, third-person description.**
+State what the system does.
+Do not address the reader.
 - Bad: "You can call `OrThrow()` to extract the value."
 - Good: "`OrThrow()` extracts the success value or throws the error variant."
 - Words to avoid: "you", "your", "we", "we'll", "let's", "our".
 
 **No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready".
 
-**No rhetorical scaffolding.** Drop "It is worth noting that", "Importantly,", "Notably,", "Note that", "In essence,", "Of course,". State the fact directly.
+**No rhetorical scaffolding.**
+Drop "It is worth noting that", "Importantly,", "Notably,", "Note that", "In essence,", "Of course,".
+State the fact directly.
 
-**No sales-pitch framings.** Avoid "This is more than X", "X enables Y to thrive". "Not just X, but Y" is one shape of the pattern in "Paired negation" below.
+**No sales-pitch framings.**
+Avoid "This is more than X", "X enables Y to thrive".
+"Not just X, but Y" is one shape of the pattern in "Paired negation" below.
 
-**Reference, not tour.** Documentation describes the finished state. Avoid "First, we...", "Now we will...", "Next, let's...".
+**Written as a reference.**
+Documentation describes the finished state.
+Avoid "First, we...", "Now we will...", "Next, let's...".
 
-**Code over explanation.** If a behaviour fits in five lines, show it.
+**Code over explanation.**
+If a behaviour fits in five lines, show it.
 
-**No closing recap.** The reader just read the body.
+**No closing recap.**
+The reader just read the body.
 
-**Cut hedging on facts.** "Throws on null input", not "may throw on null input in some cases". Reserve hedging for genuinely conditional behaviour.
+**Cut hedging on facts.**
+Reserve hedging for genuinely conditional behaviour.
+- Bad: "may throw on null input in some cases".
+- Good: "Throws on null input".
 
-**One idea per sentence; one job per paragraph.** Comma-chained sentences with three subordinate clauses are an LLM tic. Break them up.
+**One idea per sentence; one job per paragraph.**
+Comma-chained sentences with three subordinate clauses are an LLM tic.
+Break them up.
 
-**One sentence per line.** Break the source line at every sentence end. A sentence owns its line, however short. Diffs then show the sentence that changed instead of a reflowed block.
+**One sentence per line.**
+Break the source line at every sentence end.
+A sentence owns its line, however short.
+Diffs then show the sentence that changed instead of a reflowed block.
 - Applies to the source of Markdown, code comments, and commit bodies. Rendered Markdown joins the lines back, so readers see no difference.
 - A sentence longer than the file's comfortable width wraps at a clause boundary; a continuation line never starts a new sentence.
 - Line-oriented text already one item per line (bullets, tables, code) is unaffected.
 
-**Documentation is time-agnostic.** The test for any sentence: would it become false because of work that has nothing to do with this document? Then it is an observation, not documentation, and it rots into a confident lie.
+**Documentation is time-agnostic.**
+The test for any sentence: would it become false because of work that has nothing to do with this document?
+Then it is an observation, and it rots into a confident lie.
 Do not write:
 - Counts and tallies: "46 dependencies across 28 files".
 - Point-in-time versions of things the repo does not itself pin: "the latest release is v1.12.0".
@@ -55,13 +75,20 @@ State the invariant that produces the fact:
 - Bad: "The chart's ten component images resolve from `appVersion`."
 - Good: "The chart's component images carry no explicit tag, so each resolves from `appVersion`."
 
-Version facts that are contracts rather than measurements are fine: "requires Postgres 14 or newer". A pin in a config file is that file's business; the doc explains why the pin exists.
+Version facts that are contracts rather than measurements are fine: "requires Postgres 14 or newer".
+A pin in a config file is that file's business; the doc explains why the pin exists.
 
-**Point at the source of truth instead of copying it.** State what the file is for and why it is shaped that way, then name it. The file answers "what is set".
+**Point at the source of truth instead of copying it.**
+State what the file is for and why it is shaped that way, then name it.
+The file answers "what is set".
 
-**Anchors must survive edits.** Name a file, symbol, heading, or config key; a line number rots on the next edit. Name sections instead of writing "the section above".
+**Anchors must survive edits.**
+Name a file, symbol, heading, or config key; a line number rots on the next edit.
+Name sections instead of writing "the section above".
 
-**Cut everything that does not pull its weight.** Before adding a section, diagram, table, or example, ask whether the reader needs it to use or modify the system. Remove on sight: diagrams for one-line operations, tables restating nearby prose, "Overview" sections that preview instead of state, historical archeology, "Concepts" sections that exist to look thorough, the same fact repeated in different wording.
+**Cut everything that does not pull its weight.**
+Before adding a section, diagram, table, or example, ask whether the reader needs it to use or modify the system.
+Remove on sight: diagrams for one-line operations, tables restating nearby prose, "Overview" sections that preview instead of state, historical archeology, "Concepts" sections that exist to look thorough, the same fact repeated in different wording.
 
 ## Comments
 
@@ -76,7 +103,7 @@ Written down is only what the name cannot carry: a unit, a range, an invariant, 
 - Good: no comment.
 - Good: `// Zero until the first sync completes.`
 
-**A comment is written clipped, not in prose.**
+**A comment is written clipped.**
 Articles, copulas and self-reference go: "a", "an", "the", "is the", "which is", "this function".
 A noun phrase is a whole comment, and a fragment needs no trailing period.
 - Bad: `// This function returns the resolved timeout for the given profile, or nil if the profile does not set one.`
@@ -85,7 +112,7 @@ A noun phrase is a whole comment, and a fragment needs no trailing period.
 **Shortest form that keeps every fact wins.**
 A comment that shrinks and still answers the "why" got better; one that shrinks by dropping a constraint got worse.
 
-**A format, a value or a range is shown by example, not described by a rule.**
+**A format, a value or a range is shown by example.**
 - Bad: `// The key is the region name in lowercase, a slash, then the bucket name in uppercase.`
 - Good: `// Key: "eu-west/ARCHIVE".`
 - Bad: `// Accepts a duration in milliseconds between one and sixty thousand.`
@@ -100,7 +127,7 @@ Where the convention demands a word these rules would cut, the convention wins.
 - Python: a docstring in the style the file already uses.
 - Rust: `///` on the item, `//!` on the module.
 
-**Wrap at a sentence end, never mid-sentence.**
+**Wrap at a sentence end.**
 A source line holds one sentence, however short that leaves the line.
 A sentence too long for the file's width breaks after a comma or before a conjunction ("and", "or", "but", "so"), and a continuation line never starts a new sentence.
 
@@ -127,7 +154,8 @@ Ask, in order:
 - Which words carry no fact? Cut them.
 - Can it be shorter without losing a fact? Then it is not finished.
 
-Cutting words is free. Cutting facts is not.
+Cutting words is free.
+Cutting facts is not.
 
 ## Paired negation
 
@@ -178,7 +206,9 @@ Three faces:
 - Future: "not yet", "coming soon", "planned", "for now", "eventually".
 - Workshop: "by design", "we decided", "after some experimentation", "it turned out that".
 
-**A clause that argues with somebody is the clearest tell.** "and never was" rebuts a complaint nobody made. Writing reports a state and names a consequence.
+**A clause that argues with somebody is the clearest tell.**
+"and never was" rebuts a complaint nobody made.
+Writing reports a state and names a consequence.
 
 **Naming an absence teaches a capability and then takes it away.**
 - Bad: "There is no way to apply this without a restart."
@@ -186,12 +216,15 @@ Three faces:
 
 Per surface:
 - Interface copy is the strictest: the reader holds no earlier version. Bad: "This field is no longer editable while syncing." Good: "Locked while syncing. Stop the sync to change it." Bad: "Dark mode is not supported yet." Good: "This theme ships light only."
-- Comments are written from the file, never from the diff. Bad: `// Now returns nil instead of an error.` Good: `// nil when the profile sets no timeout.` Bad: `// Moved here from Session.cs.` Good: no comment.
-- Docs describe the system, not the road to it. An upgrade guide is the page whose subject genuinely is the change.
+- Comments are written from the file. Bad: `// Now returns nil instead of an error.` Good: `// nil when the profile sets no timeout.` Bad: `// Moved here from Session.cs.` Good: no comment.
+- Docs describe the system. An upgrade guide is the page whose subject genuinely is the change.
 - Identifiers name what the thing does. `newParser`, `parserV2`, `legacyPath`, `improvedRetry` are true for one release and confusing after the next.
-- Logs, asserts and test failures report the reading, not the regression. Bad: `t.Fatal("this broke when the retry table landed")`. Good: `t.Fatalf("%s declares no retry budget", profile)`.
+- Logs, asserts and test failures report the reading. Bad: `t.Fatal("this broke when the retry table landed")`. Good: `t.Fatalf("%s declares no retry budget", profile)`.
 
-**A state whose name contains a past is not history.** "Disconnected", "Retrying in 5 s", "stale", "expired" are readings of a running system, and they stay. Banned is the thing's history, not the run's. A migration naming an old and a new key describes its own present job.
+**A state whose name contains a past is not history.**
+"Disconnected", "Retrying in 5 s", "stale", "expired" are readings of a running system, and they stay.
+The ban covers the product's history, and a run's own states stay.
+A migration naming an old and a new key describes its own present job.
 
 The test, clause by clause:
 - Would a reader who met this thing a minute ago act differently because of this clause? No: cut it.

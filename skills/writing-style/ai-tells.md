@@ -1,6 +1,6 @@
 # AI tells
 
-Constructions marking text as machine-drafted, in the register this repository writes: code comments, Markdown pages, commit and PR bodies.
+Constructions marking text as machine-drafted, in the register this skill governs: code comments, Markdown pages, commit and PR bodies.
 Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
 The mechanical ones are detected by `scripts/check-style.sh`; the rest need a reader.
 
@@ -83,12 +83,13 @@ Cutting slop produces a second register that scans just as machine-made: bare fr
 `A finding is a claim.` and `Windows are reconciled.` are what a paired negation leaves behind when the negated half was carrying the sentence.
 
 So the pass runs against its own output.
-Every sentence this style touched is re-read and asked whether it still states a fact a reader can use, and a sentence that lost its content is rewritten rather than kept short.
+Every sentence this style touched is re-read and asked whether it still states a fact a reader can use.
+A sentence that lost its content is rewritten rather than kept short.
 A dead sentence is a worse defect than the tell it replaced.
 
 ## False positives
 
-Four rules keep the detectors honest.
+Rules keeping the detectors honest.
 
 **A quoted example is masked.** Text inside a code fence, an inline code span, or a `Bad:`/`Good:` line documents a construction, so it is exempt from the check for that construction.
 

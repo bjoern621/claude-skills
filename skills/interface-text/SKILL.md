@@ -35,7 +35,7 @@ Apply to every string written or touched:
 - Error or refusal: problem, cause, fix. Fix named only where one exists.
 - Disabled control: why it is unavailable, and what enables it. Never a dead end.
 - Option description: what it does, when to pick it.
-- Tooltip: 25 words at most, never a restatement of the label.
+- Tooltip: 25 words at most, adding what the label leaves out.
 - Empty state: what is so, then the next step.
 
 ## Words
@@ -47,7 +47,7 @@ Apply to every string written or touched:
   Instead: "could not", "unable", "incorrect", "not supported", "stop".
 - "please" only when asking the user to wait or redo work; "sorry" only for serious loss.
 - Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
-- Positive framing: what is so and what to do, not what is missing.
+- Positive framing: what is so and what to do.
 
 ## Completion criteria
 
