@@ -17,7 +17,7 @@ Apply to every comment written or touched:
 1. Keep only comments stating a constraint the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
    Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
 2. Write clipped fragments: noun phrases, articles and copulas dropped.
-   `// Negotiated codec. nil if transport carries no video.`
+   `// Resolved timeout. nil if profile sets none.`
 3. Show formats and ranges by example: `// Key: "rtsp/H264".`, `// ms, 1..60000.`
 4. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
 5. Second pass: re-read each comment and cut again.
@@ -32,13 +32,13 @@ A continuation line continues its sentence.
 ## Paired negation
 
 State the assertion and stop, leaving the excluded alternative unsaid: "X, not Y", "X, never Y", "X and never Y", "not Y but X".
-- Good: `// Codec comes from the table.`
-- Bad: `// The table decides the codec, not the caller.`
+- Good: `// Retry budget comes from the table.`
+- Bad: `// The table decides the retry budget, not the caller.`
 
 Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
 A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
-A plain negative statement about one subject is unaffected: `// nil when the transport carries no video.`
+A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
 
 ## Page shape
 

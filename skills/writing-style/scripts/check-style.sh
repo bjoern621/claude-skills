@@ -27,6 +27,9 @@ report() {
 # Blanks quoted material. One output line per input line, so numbers still point at the source.
 mask() {
     awk '
+        NR == 1 && /^---[[:space:]]*$/ { front = 1; print ""; next }
+        front && /^---[[:space:]]*$/ { front = 0; print ""; next }
+        front { print ""; next }
         /^[[:space:]]*```/ { fence = !fence; print ""; next }
         fence { print ""; next }
         /^[[:space:]]*\|/ { print ""; next }
@@ -80,7 +83,8 @@ for f in "${files[@]}"; do
 
     case "$f" in
         *.md)
-            hits=$(rg -n --no-heading '[a-z]\. [A-Z]' "$tmp" | rg -v 'e\.g\.|i\.e\.|etc\.|vs\.' || true)
+            # Bullets are line-oriented, so several short sentences on one are the intended shape.
+            hits=$(rg -n --no-heading '[a-z]\. [A-Z]' "$tmp" | rg -v 'e\.g\.|i\.e\.|etc\.|vs\.|^\d+:\s*[-*]' || true)
             report "MULTI-SENTENCE-LINE $f" "$hits"
 
             hits=$(rg -n --no-heading -i '^#+\s+(challenges and|future (outlook|prospects)|overview\s*$)|^#+\s+\w+ (things|reasons|ways|takeaways)\b' "$tmp" || true)

@@ -1,9 +1,9 @@
 ---
-name: ui-copy
-description: Style for user-facing interface text - control labels, help paragraphs, option descriptions, tooltips, error and refusal messages, empty states, any string literal a user reads in an app. Load before writing or editing any user-facing string, however small the edit, in any repository. Use when writing UI copy, error messages, tooltips, settings help, refusal or disabled-control explanations, or the user says "reword this text", "user-facing text", "microcopy". Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
+name: interface-text
+description: Style for user-facing interface text - control labels, help paragraphs, option descriptions, tooltips, error and refusal messages, empty states, any string literal a user reads in an app. Load before writing or editing any user-facing string, however small the edit, in any repository. Use when writing interface text, error messages, tooltips, settings help, refusal or disabled-control explanations, or the user says "reword this text", "user-facing text", "UI copy", "microcopy". Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
 ---
 
-# UI copy
+# Interface text
 
 Governs every string a user reads on screen: labels, help text, option descriptions, tooltips, errors, refusals, empty states.
 A user-facing string takes this skill even though it lives in code; comments, docs and commits take [writing-style](../writing-style/SKILL.md) instead.
@@ -17,7 +17,7 @@ Apply to every string written or touched:
 1. Plain conversational register: full short sentences, everyday words, no narrator.
    Copy passes unnoticed; a sentence with an author's voice in it is rewritten.
 2. Neutral by default; "you/your" only where ownership is otherwise ambiguous.
-   Never "the user", "the publisher" or any third-person name for the person reading.
+   Never "the user", "the customer" or any third-person name for the person reading.
 3. No opinions, no judgment of a choice, no asides, no humor.
    State the trade; the reader decides.
 4. Positive contractions allowed ("it's"); negatives spelled out ("cannot", "does not").
@@ -41,12 +41,12 @@ Apply to every string written or touched:
 ## Words
 
 - American English, one variant throughout.
-- One term per concept across the product. The user's computer is "this computer".
-- Standard technical verbs only (targets, holds, serves, retransmits); no dramatic agency.
+- One term per concept, fixed in one place the project owns. Read the project's design or style document before coining a name.
+- Standard technical verbs only (holds, targets, refuses, retries, serves); no dramatic agency.
 - Not aimed at the user or their input: "error", "failed", "invalid", "illegal", "bad", "abort".
   Instead: "could not", "unable", "incorrect", "not supported", "stop".
 - "please" only when asking the user to wait or redo work; "sorry" only for serious loss.
-- Identifiers ride in parentheses: "decoded on the CPU (avdec_h264)".
+- Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
 - Positive framing: what is so and what to do, not what is missing.
 
 ## Completion criteria

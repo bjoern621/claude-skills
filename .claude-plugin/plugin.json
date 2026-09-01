@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"WRITING STYLE (repo files): load writing-style skill before writing any comment or doc. Comments clipped fragments stating only non-obvious constraints. Break lines at punctuation or conjunctions. Markdown one sentence per line. UI COPY (user-facing strings): load ui-copy skill before writing or editing any string a user sees.\"}}'",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"WRITING STYLE (repo files): load writing-style skill before writing any comment or doc. Comments clipped fragments stating only non-obvious constraints. Break lines at punctuation or conjunctions. Markdown one sentence per line. INTERFACE TEXT (user-facing strings): load interface-text skill before writing or editing any string a user sees.\"}}'",
             "timeout": 5
           }
         ]

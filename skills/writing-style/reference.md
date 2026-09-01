@@ -74,27 +74,27 @@ A name that already says it takes no comment: `getPlayerGuid`, `isEmpty`, `maxRe
 Written down is only what the name cannot carry: a unit, a range, an invariant, a reason for an odd choice, an obligation on the caller.
 - Bad: `// GetPlayerGuid returns the player GUID.`
 - Good: no comment.
-- Good: `// Zero until the roster push lands.`
+- Good: `// Zero until the first sync completes.`
 
 **A comment is written clipped, not in prose.**
 Articles, copulas and self-reference go: "a", "an", "the", "is the", "which is", "this function".
 A noun phrase is a whole comment, and a fragment needs no trailing period.
-- Bad: `// This function returns the negotiated codec for the given transport, or nil if the transport does not carry video.`
-- Good: `// Negotiated codec. nil if transport carries no video.`
+- Bad: `// This function returns the resolved timeout for the given profile, or nil if the profile does not set one.`
+- Good: `// Resolved timeout. nil if profile sets none.`
 
 **Shortest form that keeps every fact wins.**
 A comment that shrinks and still answers the "why" got better; one that shrinks by dropping a constraint got worse.
 
 **A format, a value or a range is shown by example, not described by a rule.**
-- Bad: `// The key is the transport name in lowercase, a slash, then the codec name in uppercase.`
-- Good: `// Key: "rtsp/H264".`
+- Bad: `// The key is the region name in lowercase, a slash, then the bucket name in uppercase.`
+- Good: `// Key: "eu-west/ARCHIVE".`
 - Bad: `// Accepts a duration in milliseconds between one and sixty thousand.`
 - Good: `// ms, 1..60000.`
 
 **The language's own comment convention comes first.**
 Clipping happens inside that shape.
 Where the convention demands a word these rules would cut, the convention wins.
-- Go: a doc comment starts with the identifier. `// StartReceive opens decode for stream. Already open is success.`
+- Go: a doc comment starts with the identifier. `// StartWatch opens a watcher for the path. Already open is success.`
 - C#: XML doc comments, one clipped line per tag.
 - TypeScript/JavaScript: JSDoc, `@param` and `@returns` carry the facts.
 - Python: a docstring in the style the file already uses.
@@ -136,8 +136,8 @@ The shapes: "X, not Y", "X, never Y", "X and never Y", "not Y but X", "not just 
 The negated half is normally the assertion restated with a minus sign in front, so it carries no fact and exists to make the sentence swing.
 - Bad: "A connection is checked by arithmetic and never by a round trip."
 - Good: "A connection is checked by arithmetic."
-- Bad: `// The table decides the codec, not the caller.`
-- Good: `// Codec comes from the table.`
+- Bad: `// The table decides the retry budget, not the caller.`
+- Good: `// Retry budget comes from the table.`
 - Bad: "It reports a reading, not a regression."
 - Good: "It reports a reading."
 
@@ -157,13 +157,13 @@ Read the neighbours and move the fact: usually the opener goes entirely because 
 - Good cut: "A render pass opens the windows the model asks for."
 
 **An aphoristic copula is the same tell.**
-"A finding is a claim.", "The binding layer is a transport.", "Trust is a property."
+"A finding is a claim.", "The binding layer is a bridge.", "Trust is a property."
 A copula standing alone as a paragraph opener, re-labelling a noun the reader already holds, usually there to set up a contrast.
 Say what the thing does instead.
 A copula handing the reader a term they lack is a definition and stays, which is what a glossary row and a domain-model entry are built from.
 
 **A plain negative sentence is untouched by this.**
-"Restart drops no roster entry" and `// nil when the transport carries no video` each state one fact about one subject.
+"Restart drops no queued job" and `// nil when the profile sets no timeout` each state one fact about one subject.
 Two subjects put side by side are two statements, so "Cutting words is free. Cutting facts is not." stays.
 What is cut is one subject asserted and mirrored in the same breath.
 
@@ -182,14 +182,14 @@ Three faces:
 
 **Naming an absence teaches a capability and then takes it away.**
 - Bad: "There is no way to apply this without a restart."
-- Good: "Applying restarts the stream."
+- Good: "Applying restarts the service."
 
 Per surface:
-- Interface copy is the strictest: the reader holds no earlier version. Bad: "This field is no longer editable while sharing." Good: "Locked while sharing. Stop the stream to change it." Bad: "HDR is not supported yet." Good: "This encoder codes SDR only."
-- Comments are written from the file, never from the diff. Bad: `// Now returns nil instead of an error.` Good: `// nil when the transport carries no video.` Bad: `// Moved here from Session.cs.` Good: no comment.
+- Interface copy is the strictest: the reader holds no earlier version. Bad: "This field is no longer editable while syncing." Good: "Locked while syncing. Stop the sync to change it." Bad: "Dark mode is not supported yet." Good: "This theme ships light only."
+- Comments are written from the file, never from the diff. Bad: `// Now returns nil instead of an error.` Good: `// nil when the profile sets no timeout.` Bad: `// Moved here from Session.cs.` Good: no comment.
 - Docs describe the system, not the road to it. An upgrade guide is the page whose subject genuinely is the change.
 - Identifiers name what the thing does. `newParser`, `parserV2`, `legacyPath`, `improvedRetry` are true for one release and confusing after the next.
-- Logs, asserts and test failures report the reading, not the regression. Bad: `t.Fatal("this broke when the ladder table landed")`. Good: `t.Fatalf("%s declares no ladder step", codec)`.
+- Logs, asserts and test failures report the reading, not the regression. Bad: `t.Fatal("this broke when the retry table landed")`. Good: `t.Fatalf("%s declares no retry budget", profile)`.
 
 **A state whose name contains a past is not history.** "Disconnected", "Retrying in 5 s", "stale", "expired" are readings of a running system, and they stay. Banned is the thing's history, not the run's. A migration naming an old and a new key describes its own present job.
 

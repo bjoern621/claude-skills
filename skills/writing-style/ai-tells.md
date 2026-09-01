@@ -10,52 +10,52 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 
 | Tell | Bad | Good |
 |---|---|---|
-| Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm` | `The retry queue underscores the pivotal role of backpressure.` | `The retry queue caps backpressure at three retries.` |
-| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents` | `Publisher serves as the boundary between capture and encode.` | `Publisher is the boundary between capture and encode.` |
-| Jargon verb for a plain one: `leverage`, `utilize`, `facilitate`, `streamline`, `harness` | `// Utilizes a mutex to leverage exclusive access.` | `// Locks settingsMu before touching the file.` |
-| Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, jitter exceeds one frame.` |
-| Vague relational preposition | `// Runs in connection with the cursor-mode check.` | `// Runs after PickCursorMode confirms Embedded support.` |
-| Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the codec table. Adds no state.` |
-| Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the transport layer.` | `This refactor moves codec negotiation into the transport table.` |
+| Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm` | `The CI runner underscores the pivotal role of job retries.` | `The CI runner caps job retries at three attempts.` |
+| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents` | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer is the boundary between login and session storage.` |
+| Jargon verb for a plain one: `leverage`, `utilize`, `facilitate`, `streamline`, `harness` | `// Utilizes a mutex to leverage exclusive access.` | `// Locks indexMu before touching the manifest.` |
+| Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, the health check misses two heartbeats.` |
+| Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
+| Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the driver's connection pool. Adds no state.` |
+| Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the editor's undo system.` | `This refactor moves undo-stack merging into the history table.` |
 
 ## Syntactic
 
 | Tell | Bad | Good |
 |---|---|---|
 | Stacked hedges | `// Could potentially leave the socket open in some cases.` | `// Socket stays open when Close runs before the write completes.` |
-| Participial tack-on claiming a result the clause never established | `Fix null pointer in cursor handler, improving stability and reliability.` | `Fix null pointer in cursor handler when the portal reports no default cursor.` |
-| Rhetorical question answering itself | `Why does the encoder restart on a settings change? Because nothing reconfigures it live.` | `The encoder restarts on a settings change. Nothing reconfigures it live.` |
-| Whether-list claiming coverage | `Whether the destination is one viewer or a hundred, fanout is the same.` | `Fanout is the same for one viewer and for a hundred.` |
-| Rule of three, a list landing on three items for rhythm | `Refactor the pipeline builder for clarity, maintainability, and performance.` | `Split the 400-line pipeline builder into one function per codec.` |
-| Agentless passive hiding which component acts | `The setting is read by the render pass and the value is derived from the model.` | `The render pass reads the setting from the model.` |
-| Stacked range manufacturing breadth | `Supports resolutions from 480p to 4K, from 30 to 120 fps, everything from H.264 to AV1.` | `Supports 480p to 4K at 30 to 120 fps, in H.264, HEVC or AV1.` |
+| Participial tack-on claiming a result the clause never established | `Fix null pointer in conflict resolver, improving stability and reliability.` | `Fix null pointer in conflict resolver when the remote reports no base revision.` |
+| Rhetorical question answering itself | `Why does the worker pool restart on a config change? Because nothing reconfigures it live.` | `The worker pool restarts on a config change. Nothing reconfigures it live.` |
+| Whether-list claiming coverage | `Whether the destination is one webhook or a hundred, fanout is the same.` | `Fanout is the same for one webhook and for a hundred.` |
+| Rule of three, a list landing on three items for rhythm | `Refactor the query builder for clarity, maintainability, and performance.` | `Split the 400-line query builder into one function per clause type.` |
+| Agentless passive hiding which component acts | `The version is read by the resolver and the value is derived from the lockfile.` | `The resolver reads the version from the lockfile.` |
+| Stacked range manufacturing breadth | `Supports rows from a thousand to a billion, from one column to a thousand, everything from Postgres to MySQL.` | `Supports a thousand to a billion rows, one to a thousand columns, on Postgres, MySQL or SQLite.` |
 | Parenthetical smuggling a scope qualifier | `// Retries the request (and in most cases this resolves it).` | `// Retries once. Resolves the timeout in most cases.` |
 
 ## Structural
 
 | Tell | Bad | Good |
 |---|---|---|
-| Prompt echo: first sentence restates its heading | `## What StopReceive does` over `StopReceive is a function that stops receiving.` | `## StopReceive` over `Closes decode. Already closed is success.` |
-| Boilerplate section skeleton | `## Challenges and future outlook` | `## Known issues`, holding `SRT floors every hop at 120 ms, and MediaMTX exposes no key for it.` |
-| Parent heading holding only more headings | `## Architecture` straight into `### Overview` | `## Architecture` over `Three components: capture, encode, relay.` |
-| Bolded label plus colon turning a fact into a glossary entry | `- **Fast**: encodes in under 5 ms.` | `Encodes in under 5 ms, retries three times, reads one config file.` |
-| Prose split into bullets, each one short clause | `- Hardware init runs first.` `- Software fallback runs on failure.` | `Encoder tries hardware first and falls back to software on init failure.` |
-| Count in a heading, chosen for the format | `## Five things to know about the transport table` | `## Transport table` |
+| Prompt echo: first sentence restates its heading | `## What StopSync does` over `StopSync is a function that stops syncing.` | `## StopSync` over `Closes the watch. Already closed is success.` |
+| Boilerplate section skeleton | `## Challenges and future outlook` | `## Known issues`, holding `The CI runner floors every retry at 30 s, and the config file exposes no key for it.` |
+| Parent heading holding only more headings | `## Architecture` straight into `### Overview` | `## Architecture` over `Three components: resolver, fetcher, linker.` |
+| Bolded label plus colon turning a fact into a glossary entry | `- **Fast**: schedules in under 5 ms.` | `Schedules in under 5 ms, retries three times, reads one config file.` |
+| Prose split into bullets, each one short clause | `- Hardware key check runs first.` `- Software OTP fallback runs on failure.` | `Auth tries the hardware key first and falls back to software OTP on failure.` |
+| Count in a heading, chosen for the format | `## Five things to know about the connection pool` | `## Connection pool` |
 | Title Case heading | `## Setting Up The Development Environment` | `## Setting up the development environment` |
-| Transition openers on consecutive paragraphs: `Additionally`, `Furthermore`, `Moreover` | `Additionally, the relay buffers three segments. Furthermore, it drops the oldest.` | `The relay buffers three segments and drops the oldest on overflow.` |
+| Transition openers on consecutive paragraphs: `Additionally`, `Furthermore`, `Moreover` | `Additionally, the job scheduler buffers three tasks. Furthermore, it drops the oldest.` | `The job scheduler buffers three tasks and drops the oldest on overflow.` |
 
 ## Rhetorical
 
 | Tell | Bad | Good |
 |---|---|---|
-| Chat preamble or sign-off pasted in | `Certainly! Here is the commit message: Add portal capability check.` | `Add portal capability check before enabling embedded cursor mode.` |
-| Citation artifact from a chat surface | `Fix decode crash on empty stream oaicite:3 turn0search2.` | `Fix decode crash on empty stream.` |
-| Model disclaiming its own reach | `Without running the suite this cannot be confirmed.` | `Verified against MediaMTX 1.9 on the dev relay.` |
-| Text praising its own quality | `Refactored the builder to ensure clarity and provide a more complete solution.` | `Split the builder into one function per codec.` |
+| Chat preamble or sign-off pasted in | `Certainly! Here is the commit message: Add lockfile hash check.` | `Add lockfile hash check before allowing an offline install.` |
+| Citation artifact from a chat surface | `Fix parser crash on empty file oaicite:3 turn0search2.` | `Fix parser crash on empty file.` |
+| Model disclaiming its own reach | `Without running the suite this cannot be confirmed.` | `Verified against Postgres 16 on the staging database.` |
+| Text praising its own quality | `Refactored the builder to ensure clarity and provide a more complete solution.` | `Split the resolver into one function per version constraint.` |
 | Data narrating itself | `The benchmark numbers speak for themselves.` | `Benchmark: 12 ms median, 40 ms p99, at 500 requests per second.` |
 | Tool given a will or acting on itself | `The reconciler fixes itself when the settings file goes stale.` | `The reconciler rereads the settings file on every pass.` |
-| Novelty inflation | `Introduces a novel retry strategy.` | `Retries with jittered backoff, so a relay reconnect avoids a thundering herd.` |
-| Templated concession naming no size | `While the fallback path is simple, it remains a limitation worth watching.` | `The fallback path adds 200 ms and drops audio, so it runs only when the relay is unreachable.` |
+| Novelty inflation | `Introduces a novel retry strategy.` | `Retries with jittered backoff, so a connection-pool reconnect avoids a thundering herd.` |
+| Templated concession naming no size | `While the fallback path is simple, it remains a limitation worth watching.` | `The fallback path adds 200 ms and skips the cache, so it runs only when the primary region is unreachable.` |
 
 ## What only a reader catches
 

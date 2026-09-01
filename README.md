@@ -11,9 +11,9 @@ Ships two skills and a per-turn reminder hook.
 Clipped comments, line breaks at punctuation, one sentence per markdown line, time-agnostic docs.
 Full rules: [skills/writing-style/reference.md](skills/writing-style/reference.md).
 
-`ui-copy`: style for user-facing interface text.
+`interface-text`: style for user-facing interface text.
 Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
-Full rules: [skills/ui-copy/reference.md](skills/ui-copy/reference.md).
+Full rules: [skills/interface-text/reference.md](skills/interface-text/reference.md).
 
 ## Use in a repository
 
