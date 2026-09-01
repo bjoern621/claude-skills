@@ -3,7 +3,7 @@
 # Usage: check-style.sh [file ...]; default: files changed vs HEAD.
 # Exit 1 on findings.
 # Prose checks read a masked copy: code fences, inline code spans, table rows and Bad:/Good: example lines are blanked, line numbers kept.
-# Candidates rather than verdicts, judged by eye: PAIRED-NEGATION, WHETHER-LIST, INTENSIFIER, and em-dash hits inside ASCII art.
+# Candidates rather than verdicts, judged by eye: PAIRED-NEGATION, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, and em-dash hits inside ASCII art.
 set -uo pipefail
 
 files=("$@")
@@ -47,6 +47,10 @@ for f in "${files[@]}"; do
 
     hits=$(rg -n --no-heading '^\s*(#|//|///|--)\s.*\s(the|a|an|of|to|in|on|for|with|its|is|are|was|by|from|that|which|as|at|into|over)$' "$f" || true)
     report "MID-CLAUSE-WRAP $f" "$hits"
+
+    # Comment opening on a literal value, so the prose after it restates the line below.
+    hits=$(rg -n --no-heading -i '^\s*(#|//|///|--|;)\s*"?(-?[0-9]+(\.[0-9]+)?|true|false|on|off|yes|no|none|null|nil|empty)"?\s*[:=]\s*\S' "$tmp" || true)
+    report "VALUE-GLOSS $f" "$hits"
 
     hits=$(rg -n --no-heading -i '\b(no longer|used to be|not yet|moved here from|coming soon|previously)\b' "$tmp" || true)
     report "CHANGELOG-VOICE $f" "$hits"

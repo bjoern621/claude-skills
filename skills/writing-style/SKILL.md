@@ -16,11 +16,15 @@ Apply to every comment written or touched:
 
 1. Keep only comments stating a constraint the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
    Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
-2. Write clipped fragments: noun phrases, articles and copulas dropped.
+2. Name the reason before adding a comment to a line that carried none: the constraint a reader cannot get from the code.
+   An answer that paraphrases the line means the line stays bare.
+3. Delete a value gloss on sight.
+   `# 0: no blink.` over `cursor_blink_interval = 0` and `# 0: no inertial glide after the fingers lift.` over `momentum_scroll = 0.0` say what the name and the value already say.
+4. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
-3. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
-4. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
-5. Second pass: re-read each comment and cut again.
+5. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
+6. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
+7. Second pass: re-read each comment and cut again.
    Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
 
 ## Line wrapping
@@ -77,6 +81,6 @@ Project style rules add to these; on conflict this skill wins.
 
 - Every written or touched comment passes the checklist.
 - `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
-  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, WHETHER-LIST, and INTENSIFIER.
+  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, and INTENSIFIER.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
   Cutting a tell manufactures its own register, so the output gets the same scan as the input.

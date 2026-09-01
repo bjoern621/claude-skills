@@ -142,6 +142,19 @@ The test: could this comment be pasted, unchanged, above the same construct some
 - Bad: `# As root, which is the only account here, so it needs no sudo rule.` Nothing suggested a sudo rule.
 - Good: no comment.
 
+**A value gloss repeats the line under it.**
+Translating a setting's value into words says what the name and the value already say.
+- Bad: `# 0: no blink.` over `cursor_blink_interval = 0`.
+- Bad: `# 0: no inertial glide after the fingers lift. Takes effect on kitty restart.` over `momentum_scroll = 0.0`.
+- Good: no comment.
+A disabling value earns a line where the reason for disabling sits outside the file: which hardware misbehaves, which other setting it compensates for.
+Every setting in that config needs the same restart, so the restart clause in the second example is routine and goes with the rest.
+
+**A comment on a line that carried none is justified before it is written.**
+Adding one is its own change, and its reason is the constraint a reader cannot get from the code.
+The question is asked before typing: what does this tell a reader that the name, the value, and the rest of the repository do not?
+An answer that paraphrases the line means the line stays bare.
+
 **An absence is explained only where a reader would restore it.**
 "Why this is not here" is worth a line when the missing thing looks required, was there before, or is what the neighbouring code does.
 It is noise when nothing pointed that way.
@@ -151,6 +164,7 @@ Re-read each comment before moving on and rewrite it, every time.
 Ask, in order:
 - Routine anywhere else in the repository? Delete it.
 - Restates the code? Delete it.
+- Glosses the value on the line below? Delete it.
 - Which words carry no fact? Cut them.
 - Can it be shorter without losing a fact? Then it is not finished.
 
