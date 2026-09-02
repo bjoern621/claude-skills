@@ -78,13 +78,21 @@ State the invariant that produces the fact:
 Version facts that are contracts rather than measurements are fine: "requires Postgres 14 or newer".
 A pin in a config file is that file's business; the doc explains why the pin exists.
 
-**Point at the source of truth instead of copying it.**
-State what the file is for and why it is shaped that way, then name it.
-The file answers "what is set".
+**Architecture and programming are separate subjects.**
+Architecture is what the parts are and what crosses between them; programming is which file holds it and what the function is called.
+A page describing the system names no source file, no function, no type and no package path, the code answering those completely and without going stale.
+A reader reaches the code through the contract vocabulary, which the code spells the same way.
+[page-shape.md](page-shape.md) states the split in full, with the config keys and wire paths that do belong.
+- Bad: "`publish.SamePipeline` renders both settings objects and compares the strings."
+- Good: "A relaunch is decided by rendering both configurations and comparing them."
 
 **Anchors must survive edits.**
-Name a file, symbol, heading, or config key; a line number rots on the next edit.
+Name a contract term, a config key, a route or a heading; a line number rots on the next edit, and a symbol name rots on the next rename.
 Name sections instead of writing "the section above".
+
+**A decision is one line.**
+The mechanism behind it, the alternative that lost, and every consequence after the first are the author's working, and the page is not where that goes.
+A rewrite landing near a tenth of the length is the ordinary result, and the facts all survive it.
 
 **Cut everything that does not pull its weight.**
 Before adding a section, diagram, table, or example, ask whether the reader needs it to use or modify the system.

@@ -46,7 +46,7 @@ A plain negative statement about one subject is unaffected: `// nil when the pro
 
 ## Page shape
 
-[page-shape.md](page-shape.md): what a page answers, which names it may carry, what a diagram replaces.
+[page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects, and how much of a draft is the author's working.
 Read it when starting a docs page, restructuring one, splitting one, or reviewing one that reads long.
 `scripts/page-shape.sh <page>` reports the measurements.
 
@@ -68,7 +68,8 @@ The ones worth holding without opening the file:
 State the invariant, in present tense, third person.
 Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation that rots.
 Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
-Point at the source-of-truth file instead of copying its contents.
+Architecture and programming are separate subjects, so a page describing the system names no source file, function, type or package path.
+A decision is one line, and the reasoning that reached it is the author's working.
 Cut every section, table, and diagram the reader can do without.
 
 ## Scope of application
