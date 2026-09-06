@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Writing style for everything committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, commit and PR bodies. Load before writing or editing any of these, however small the edit, in any repository. Use when writing or editing comments, documenting, editing manifests or configs that carry comments, writing a README or docs page, restructuring or splitting a docs page, drafting a commit message, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), page shape (one thesis per page, contract names over internal ones), and a catalogue of AI writing tells with a bad and a good example each.
+description: Writing style for everything committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, commit and PR bodies. Load before writing or editing any of these, however small the edit, in any repository. Use when writing or editing comments, documenting, editing manifests or configs that carry comments, writing a README or docs page, restructuring or splitting a docs page, drafting a commit message, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), lists of members only where the set is a contract, page shape (one thesis per page, contract names over internal ones), and a catalogue of AI writing tells with a bad and a good example each.
 ---
 
 # Writing style
@@ -43,6 +43,15 @@ Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
 A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
+
+## Naming the parts
+
+A list of members is a contract or it is cut.
+The set that stays is closed and binding: the values a field accepts, the parts a key is built from.
+A sample of what something holds decides nothing, and it goes false the first time a member is added.
+Test by adding one, then describe the container by what it decides.
+- Bad: "Settings for the app: reports, updates, logs and the linked account."
+- Good: "Settings for the app itself. They hold for every project."
 
 ## Page shape
 

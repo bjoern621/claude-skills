@@ -87,6 +87,15 @@ Never a restatement of the visible label.
 The first sentence carries the decision; mechanism follows only where the decision needs it.
 Help text may teach; it may not lecture.
 
+**A list of contents describes nothing.**
+Naming what a screen holds repeats what the screen says once it is open, and it goes false the first time something is added.
+Name what the surface decides.
+- Bad: "Settings for the app: reports, updates, logs and the linked account."
+- Good: "Settings for the app itself. They hold for every project."
+
+The list stays where the reader has to hit it: the formats a field accepts, the values a control takes.
+Stated in full in [writing-style](../writing-style/reference.md).
+
 ## Words
 
 **American English**, one variant throughout.

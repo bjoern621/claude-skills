@@ -179,6 +179,20 @@ Ask, in order:
 Cutting words is free.
 Cutting facts is not.
 
+## Naming the parts
+
+**A list of members is a contract or it is cut.**
+Naming what something holds earns its place where the set is closed and the reader has to hit it: the values a field accepts, the flags a caller may combine, the parts a key is built from.
+A sample of the contents decides nothing, and it goes false the first time a member is added.
+The test is to add one: where the sentence stops being true it was a sample, and what the container decides is written in its place.
+- Bad: "The scheduler package holds the queue, the retry table, the worker pool and the metrics hook."
+- Good: "The scheduler decides when a job runs and how often it retries."
+
+**A closed set the code already shows is a restatement.**
+Written down is the set the code cannot carry: text parsed into a value, the three spellings a string field accepts, a range narrower than the type's.
+- Bad: `// Fields: name, region, bucket, created.` over the struct declaring them.
+- Good: `// Region: "eu-west", "us-east", "ap-south". Anything else is refused.`
+
 ## Paired negation
 
 A statement followed by the excluded alternative for the same subject is machine cadence, and it is cut.
