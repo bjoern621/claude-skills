@@ -265,3 +265,8 @@ A migration naming an old and a new key describes its own present job.
 The test, clause by clause:
 - Would a reader who met this thing a minute ago act differently because of this clause? No: cut it.
 - Does the clause only parse for somebody who knows a previous version or how the work went? Cut it.
+
+## Sources
+
+- [Google developer documentation style guide, timeless documentation](https://developers.google.com/style/timeless-documentation): the rule behind "Documentation is time-agnostic".
+- [Grafana Writers' Toolkit, style conventions](https://grafana.com/docs/writers-toolkit/write/style-guide/style-conventions/): positive sentences, behind "Naming an absence teaches a capability and then takes it away".

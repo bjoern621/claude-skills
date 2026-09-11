@@ -105,4 +105,5 @@ Rules keeping the detectors honest.
 - [Why Does ChatGPT "Delve" So Much?](https://arxiv.org/abs/2412.11385), COLING 2025, measuring the lexical spike
 - [GPTZero on the rule of three](https://gptzero.me/news/the-rule-of-three/)
 - [Pangram: spotting AI writing patterns](https://www.pangram.com/blog/comprehensive-guide-to-spotting-ai-writing-patterns)
+- [Google developer documentation style guide, headings](https://developers.google.com/style/headings): sentence case, behind the Title Case row
 - The `unslop` skill's reference corpus, for the technical-register translation and the detection machinery

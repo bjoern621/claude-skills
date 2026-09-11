@@ -10,6 +10,7 @@ Ships two skills and a per-turn reminder hook.
 `writing-style`: style for comments, docs, and commit bodies.
 Clipped comments, line breaks at punctuation, one sentence per markdown line, time-agnostic docs.
 Full rules: [skills/writing-style/reference.md](skills/writing-style/reference.md).
+Page shape and README shape: [skills/writing-style/page-shape.md](skills/writing-style/page-shape.md), [skills/writing-style/readme.md](skills/writing-style/readme.md).
 
 `interface-text`: style for user-facing interface text.
 Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.

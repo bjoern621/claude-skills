@@ -2,7 +2,7 @@
 
 Full ruleset for user-facing interface text.
 [SKILL.md](SKILL.md) carries the working checklist; this file settles the details and edge cases.
-Grounded in the shared guidance of the Microsoft Writing Style Guide, Material Design writing, GOV.UK content design, Nielsen Norman Group research, and Podmajersky's "Strategic Writing for UX".
+Grounded in the guides listed under Sources at the end.
 
 Examples come from several kinds of product on purpose, so the rule shows through rather than one product's vocabulary.
 
@@ -144,3 +144,14 @@ Ask, in order:
 - Which words carry no fact? Cut them.
 - Does any sentence pass 25 words? Split it.
 - Shorter without losing a fact? Not finished.
+
+## Sources
+
+- [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/): warm and relaxed register, sentence case, blame-free problem words.
+- [Material Design, content design](https://m3.material.io/foundations/content-design/overview): short, plain, present-tense copy.
+- [GOV.UK, writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk): plain words, the fact first.
+- [Nielsen Norman Group, error message guidelines](https://www.nngroup.com/articles/error-message-guidelines/): behind "problem, cause, fix".
+- [Nielsen Norman Group, plain language for experts](https://www.nngroup.com/articles/plain-language-experts/): plain language holds for expert readers too.
+- [Google developer documentation style guide, voice and tone](https://developers.google.com/style/tone): conversational, no hype, no exclamation marks.
+- [Grafana Writers' Toolkit, style conventions](https://grafana.com/docs/writers-toolkit/write/style-guide/style-conventions/): positive sentences, behind "Positive framing".
+- Torrey Podmajersky, "Strategic Writing for UX" (O'Reilly, 2019): the per-surface patterns.

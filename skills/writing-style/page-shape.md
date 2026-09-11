@@ -8,6 +8,8 @@ Sentence style, wrapping, changelog voice and time-agnostic phrasing live in [re
 
 A page answers one question, and the first three lines state it.
 Every section serves that question.
+[Diátaxis](https://diataxis.fr/) names four needs a page can serve: learning, doing a task, looking a fact up, understanding.
+A page serves one of them.
 
 Name the thesis in one sentence before writing.
 A section that serves a different question belongs to a different page, so a page carrying four theses is four pages sharing a filename.
@@ -91,6 +93,12 @@ Mermaid carries an exchange or a path better than prose does, so it goes first a
 Two lines after the diagram, naming what follows from it.
 A flow carried by prose alone wants a diagram above it.
 
+## A table holds comparable data
+
+A table earns its place with three or more related data points per row, and a header naming what the column holds.
+A row that is a clause is prose, and a table of situations and results is a state machine, which is reference material.
+[readme.md](readme.md) states what a README does with one.
+
 ## One screen per section
 
 A section runs to about one screen.
@@ -130,3 +138,8 @@ It describes no flow, so it draws no diagram.
 - Every flow has its diagram, and the prose under it states the consequence.
 - Every section fits one screen.
 - `bash <skill-dir>/scripts/page-shape.sh <page>` reports numbers, and each one outside the reference shape has a reason.
+
+## Sources
+
+- [Diátaxis](https://diataxis.fr/): the four needs a page serves, behind one thesis per page.
+- [Google developer documentation style guide, tables](https://developers.google.com/style/tables): when a table beats a list.

@@ -59,6 +59,11 @@ Test by adding one, then describe the container by what it decides.
 Read it when starting a docs page, restructuring one, splitting one, or reviewing one that reads long.
 `scripts/page-shape.sh <page>` reports the measurements.
 
+## README
+
+[readme.md](readme.md): who a README is read by, what it carries and in which order, and what moves to a page of its own.
+Read it when writing, restructuring or reviewing a README.
+
 ## AI tells
 
 Catalogue with a bad and a good example each: [ai-tells.md](ai-tells.md).
@@ -92,5 +97,6 @@ Project style rules add to these; on conflict this skill wins.
 - Every written or touched comment passes the checklist.
 - `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
   Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, and INTENSIFIER.
+- A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in its order, with what works stated and the mechanism on its own page.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
   Cutting a tell manufactures its own register, so the output gets the same scan as the input.
