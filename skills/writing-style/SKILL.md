@@ -61,7 +61,8 @@ Read it when starting a docs page, restructuring one, splitting one, or reviewin
 
 ## README
 
-[readme.md](readme.md): who a README is read by, what it carries and in which order, and what moves to a page of its own.
+[readme.md](readme.md): who a README is read by, the two shapes it comes in, and which one a project's reader picks.
+A reader who already grants the value gets the informing shape, and a reader arriving with a default this software contradicts gets the arguing shape.
 Read it when writing, restructuring or reviewing a README.
 
 ## AI tells
@@ -97,6 +98,6 @@ Project style rules add to these; on conflict this skill wins.
 - Every written or touched comment passes the checklist.
 - `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
   Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, and INTENSIFIER.
-- A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in its order, with what works stated and the mechanism on its own page.
+- A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in whichever of the two shapes that reader needs, with every capability line checked against the code.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
   Cutting a tell manufactures its own register, so the output gets the same scan as the input.

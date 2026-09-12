@@ -2,6 +2,7 @@
 # Style check for comments and docs.
 # Usage: check-style.sh [file ...]; default: files changed vs HEAD.
 # Exit 1 on findings.
+# ASCII art is exempted by the box-drawing characters around it, rounded corners included.
 # Prose checks read a masked copy: code fences, inline code spans, table rows and Bad:/Good: example lines are blanked, line numbers kept.
 # Candidates rather than verdicts, judged by eye: PAIRED-NEGATION, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, and em-dash hits inside ASCII art.
 set -uo pipefail
@@ -42,7 +43,7 @@ for f in "${files[@]}"; do
     [ -f "$f" ] || continue
     mask "$f" > "$tmp"
 
-    hits=$(rg -n --no-heading '—|─' "$f" | rg -v '[┌┐└┘├┤┬┴┼╔╗╚╝║═╪]' || true)
+    hits=$(rg -n --no-heading '—|─' "$f" | rg -v '[┌┐└┘├┤┬┴┼╔╗╚╝║═╪╭╮╰╯]' || true)
     report "EM-DASH/BOX-CHAR $f" "$hits"
 
     hits=$(rg -n --no-heading '^\s*(#|//|///|--)\s.*\s(the|a|an|of|to|in|on|for|with|its|is|are|was|by|from|that|which|as|at|into|over)$' "$f" || true)

@@ -14,7 +14,8 @@ One layer of parentheses maximum.
 
 ## Docs and prose
 
-Applies to README files, architecture docs, doc comments, and the body of commit messages and PR descriptions.
+Applies to architecture docs, doc comments, and the body of commit messages and PR descriptions.
+A README takes these rules with one exception, stated under "Register" in [readme.md](readme.md).
 Code comments take one further cut on top; see "Comments" below, which wins on any conflict about length or sentence form.
 
 **Neutral, third-person description.**
@@ -23,6 +24,7 @@ Do not address the reader.
 - Bad: "You can call `OrThrow()` to extract the value."
 - Good: "`OrThrow()` extracts the success value or throws the error variant."
 - Words to avoid: "you", "your", "we", "we'll", "let's", "our".
+- A README is the exception, addressing somebody deciding whether to use the software. [readme.md](readme.md) states the scope.
 
 **No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready".
 
