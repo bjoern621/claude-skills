@@ -58,6 +58,17 @@ A page that changes either time is a page restating code.
 - Bad: the same sentence with the package name closing the section.
 - Bad: a table mapping each package to what it owns.
 
+## A heading names the rule at the level it applies
+
+The case that prompted the rule belongs to the example under it.
+A heading naming that case sends a reader carrying a different one straight past the rule that covers them.
+
+- Bad: "A path not taken takes the conditional", over a rule about grammatical mood.
+- Good: "Mood", over the same rule, with the rejected-path example under it.
+
+The test: somebody meeting the rule in another project reads the heading and recognizes it.
+The example stays as concrete as it was.
+
 ## Scope and addressee
 
 A page carries what the project owns.
@@ -74,10 +85,10 @@ Explaining the addressee's own tools back to them reads as padding, and it is th
 Name the addressee in one line before writing, beside the thesis.
 The two together decide what a section is allowed to hold.
 
-## A snippet names its file
+## A snippet names where it goes
 
-A configuration snippet opens with its path, written as a comment in the snippet's own language: `// eslint.config.js`, `# .github/workflows/ci.yml`, `# ~/.config/app/config.toml`.
-A reader pasting a snippet that names no file guesses where it goes.
+A snippet opens with its destination, written as a comment in the snippet's own language: `// eslint.config.js`, `# .github/workflows/ci.yml`, `# run from the repository root`.
+A reader pasting a snippet that names no destination guesses it.
 
 ## A page states the decision and stops
 

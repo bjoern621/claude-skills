@@ -268,18 +268,18 @@ The test, clause by clause:
 - Would a reader who met this thing a minute ago act differently because of this clause? No: cut it.
 - Does the clause only parse for somebody who knows a previous version or how the work went? Cut it.
 
-## A path not taken takes the conditional
+## Mood
 
-The indicative asserts that something happens.
-A consequence belonging to a configuration the page rejects does not happen, so it takes "would".
+The indicative asserts that something happens, so a clause carries it only where it does.
+A consequence belonging to a path the page argues against takes "would".
 
 - Bad, under a snippet that switches the other rule off: "Both rules report the same missing dependencies, so leaving React's on reports each one twice."
 - Good: "Both rules report the same missing dependencies, so leaving React's on would report each one twice."
 
 Run the check on any clause opening with "if", "leaving", "without", "unless" or "instead of".
-Read the clause on its own: a reader who takes it as written believes the page describes what the project does, and the project does the opposite.
+Read the clause on its own: a reader taking it as written believes the project does the thing the page argues against.
 
-A branch the page genuinely offers stays indicative, because somebody takes it.
+A path the page genuinely offers keeps the indicative, because somebody takes it.
 "Registering the plugin yourself sets the severity" describes one of two supported paths and needs no "would".
 
 ## Sources
