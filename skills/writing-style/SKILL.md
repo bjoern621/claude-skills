@@ -102,6 +102,7 @@ Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs al
 Architecture and programming are separate subjects, so a page describing the system names no source file, function, type or package path.
 A decision is one line, and the reasoning that reached it is the author's working.
 A snippet opens with its destination, as a comment in the snippet's own language.
+A changelog entry names what somebody taking the release notices, so work leaving the published artifact as it was stays out.
 Cut every section, table, and diagram the reader can do without.
 
 ## Scope of application

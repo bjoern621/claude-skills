@@ -282,7 +282,20 @@ Read the clause on its own: a reader taking it as written believes the project d
 A path the page genuinely offers keeps the indicative, because somebody takes it.
 "Registering the plugin yourself sets the severity" describes one of two supported paths and needs no "would".
 
+## Changelog
+
+An entry names what somebody taking the release notices: behaviour, a message, a supported version, a file the package ships.
+Work that leaves the published artifact as it was stays out, whatever share of the diff it was.
+A test script, a CI step, a refactor and a page the package does not ship are all invisible to the reader deciding whether to upgrade.
+
+- Bad: "`npm test` compiles the sources and runs the case suite."
+- Good: no entry. The published package behaves as it did.
+
+The line between them is the artifact, rather than the size of the change.
+A one-word fix to a shipped README is an entry, and a rewritten build pipeline is not.
+
 ## Sources
 
+- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/): the entry types and the rule that a changelog is written for humans.
 - [Google developer documentation style guide, timeless documentation](https://developers.google.com/style/timeless-documentation): the rule behind "Documentation is time-agnostic".
 - [Grafana Writers' Toolkit, style conventions](https://grafana.com/docs/writers-toolkit/write/style-guide/style-conventions/): positive sentences, behind "Naming an absence teaches a capability and then takes it away".
