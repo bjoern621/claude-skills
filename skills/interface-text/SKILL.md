@@ -1,6 +1,6 @@
 ---
 name: interface-text
-description: Style for user-facing interface text - control labels, help paragraphs, option descriptions, tooltips, error and refusal messages, empty states, any string literal a user reads in an app. Load before writing or editing any user-facing string, however small the edit, in any repository. Use when writing interface text, error messages, tooltips, settings help, refusal or disabled-control explanations, or the user says "reword this text", "user-facing text", "UI copy", "microcopy". Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
+description: Style for user-facing interface text - control labels, help paragraphs, option descriptions, tooltips, error and refusal messages, empty states, CLI output, any string literal a user reads. Load at the start of any task that writes or edits such a string, in any repository and any language, however small the edit, and whenever wording a message comes up. Use when writing interface text, error or validation messages, tooltips, settings help, refusal or disabled-control explanations, CLI help text, or the user says "reword this text", "user-facing text", "UI copy", "microcopy". Plain conversational register, problem-cause-fix errors, positive framing, one term per concept, no opinions or humor.
 ---
 
 # Interface text

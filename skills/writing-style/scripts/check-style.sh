@@ -68,6 +68,13 @@ for f in "${files[@]}"; do
     hits=$(rg -n --no-heading -i '\b(could potentially|may possibly|might potentially|probably|perhaps)\b|\bin some cases,? (may|might|could)\b' "$tmp" || true)
     report "HEDGE $f" "$hits"
 
+    # Possession sense only, so "each edge case gets a sentence" passes.
+    hits=$(rg -n --no-heading -i '\bgets? you\b|\bgetting you\b|\byou get\b' "$tmp" || true)
+    report "GET-POSSESSION $f" "$hits"
+
+    hits=$(rg -n --no-heading -i '\bcosts? (nothing|you|the reader|little)\b|\bat no cost\b|\ba small price\b' "$tmp" || true)
+    report "COST-METAPHOR $f" "$hits"
+
     hits=$(rg -n --no-heading -i ',\s+(improving|enhancing|ensuring|reflecting|underscoring|highlighting|showcasing|demonstrating|signaling)\b' "$tmp" || true)
     report "PARTICIPIAL-TACK-ON $f" "$hits"
 

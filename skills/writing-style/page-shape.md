@@ -58,6 +58,27 @@ A page that changes either time is a page restating code.
 - Bad: the same sentence with the package name closing the section.
 - Bad: a table mapping each package to what it owns.
 
+## Scope and addressee
+
+A page carries what the project owns.
+Behaviour belonging to a tool the project plugs into is that tool's documentation, and restating it here goes stale the first time that tool changes.
+Name the tool, and let its own docs answer for it.
+
+- Bad, in a lint plugin's README: "ESLint reads `.js`, `.mjs` and `.cjs` on its own, so the `files` entry is what brings `.jsx` and TypeScript in."
+- Good: the configuration example carries a `files` entry, and the page explains ESLint nowhere.
+
+The addressee sets how much is said.
+Somebody configuring a plugin already runs the tool it plugs into, so the page addresses a reader who knows that tool and came for this one.
+Explaining the addressee's own tools back to them reads as padding, and it is the first thing to cut from a page that runs long.
+
+Name the addressee in one line before writing, beside the thesis.
+The two together decide what a section is allowed to hold.
+
+## A snippet names its file
+
+A configuration snippet opens with its path, written as a comment in the snippet's own language: `// eslint.config.js`, `# .github/workflows/ci.yml`, `# ~/.config/app/config.toml`.
+A reader pasting a snippet that names no file guesses where it goes.
+
 ## A page states the decision and stops
 
 Length is the defect a reader meets first, and it is usually the argument rather than the facts.

@@ -101,7 +101,7 @@ Stated in full in [writing-style](../writing-style/reference.md).
 **American English**, one variant throughout.
 
 **One term per concept.**
-A concept renamed per surface costs the reader a lookup each time.
+A concept renamed per surface sends the reader looking it up again on every surface.
 The term list belongs to the product, so a project fixes its own names in one place and every surface reads them from there.
 Check the project's design or style document for an existing term before coining one.
 

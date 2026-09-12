@@ -17,6 +17,8 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 | Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
 | Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the driver's connection pool. Adds no state.` |
 | Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the editor's undo system.` | `This refactor moves undo-stack merging into the history table.` |
+| `get` in the possession sense, standing in for the verb that happened: `gets you`, `you get`, `getting you` | `Registering the plugin yourself gets you the severity.` | `Registering the plugin yourself allows you to set the severity.` |
+| Cost metaphor naming no number: `costs nothing`, `at no cost`, `costs the reader`, `a small price` | `Switching the upstream rule off costs nothing.` | `A rule set to off needs no plugin behind it.` |
 
 ## Syntactic
 
@@ -61,7 +63,7 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 
 No regex reaches these, so they are asked at the second pass.
 
-**Elegant variation.** One entity renamed across a page to avoid repeating a word, which costs the reader the grep that would have found every mention.
+**Elegant variation.** One entity renamed across a page to avoid repeating a word, so no single grep finds every mention.
 Bad: "The client opens the socket. The peer sends a handshake. The consumer reads the reply."
 Good: "The client opens the socket, sends a handshake, and reads the reply."
 
