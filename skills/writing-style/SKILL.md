@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), scope and addressee, configuration snippets naming their file, page shape, and a catalogue of AI writing tells.
+description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), the conditional for a path the page rejects, scope and addressee, configuration snippets naming their file, page shape, and a catalogue of AI writing tells.
 ---
 
 # Writing style
@@ -43,6 +43,15 @@ Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
 A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
+
+## A path not taken takes the conditional
+
+A consequence of a configuration the page rejects does not happen, so it takes "would".
+- Bad, under a snippet switching the other rule off: "Leaving React's rule on reports each dependency twice."
+- Good: "Leaving React's rule on would report each dependency twice."
+
+A branch the page genuinely offers stays indicative, because somebody takes it.
+Clauses opening with "if", "leaving", "without", "unless" or "instead of" are where this goes wrong.
 
 ## Naming the parts
 
