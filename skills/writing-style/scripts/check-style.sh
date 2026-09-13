@@ -4,7 +4,7 @@
 # Exit 1 on findings.
 # ASCII art is exempted by the box-drawing characters around it, rounded corners included.
 # Prose checks read a masked copy: code fences, inline code spans, table rows and Bad:/Good: example lines are blanked, line numbers kept.
-# Candidates rather than verdicts, judged by eye: PAIRED-NEGATION, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, and em-dash hits inside ASCII art.
+# Candidates rather than verdicts, judged by eye: PAIRED-NEGATION, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, FIDELITY-EMPHASIS, and em-dash hits inside ASCII art.
 set -uo pipefail
 
 files=("$@")
@@ -93,6 +93,9 @@ for f in "${files[@]}"; do
 
     hits=$(rg -n --no-heading -i '\b(very|truly|fundamentally|essentially|absolutely|literally)\b' "$tmp" || true)
     report "INTENSIFIER $f" "$hits"
+
+    hits=$(rg -n --no-heading -i '\bverbatim\b|\bword[- ]for[- ]word\b|\bcharacter[- ]for[- ]character\b|\bas-is\b|\b(exactly|precisely) as (written|shown|stated|given|is)\b' "$tmp" || true)
+    report "FIDELITY-EMPHASIS $f" "$hits"
 
     case "$f" in
         *.md)

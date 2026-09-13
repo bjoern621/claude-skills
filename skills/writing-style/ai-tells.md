@@ -16,6 +16,7 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 | Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, the health check misses two heartbeats.` |
 | Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
 | Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the driver's connection pool. Adds no state.` |
+| Fidelity emphasis the verb already carries: `verbatim`, `word-for-word`, `character-for-character`, `exactly as written`, `as-is` | `// Forwards the Authorization header verbatim.` | `// Forwards the Authorization header. Any rewrite breaks the signature.` |
 | Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the editor's undo system.` | `This refactor moves undo-stack merging into the history table.` |
 | `get` in the possession sense, standing in for the verb that happened: `gets you`, `you get`, `getting you` | `Registering the plugin yourself gets you the severity.` | `Registering the plugin yourself allows you to set the severity.` |
 | Cost metaphor naming no number: `costs nothing`, `at no cost`, `costs the reader`, `a small price` | `Switching the upstream rule off costs nothing.` | `A rule set to off needs no plugin behind it.` |
@@ -96,6 +97,8 @@ Rules keeping the detectors honest.
 **A quoted example is masked.** Text inside a code fence, an inline code span, or a `Bad:`/`Good:` line documents a construction, so it is exempt from the check for that construction.
 
 **A literal sense is exempt.** `leverage` in a finance context, `robust` as a measured property of an estimator, `seamless` describing a texture.
+
+**A fidelity word holds where something else would change the value.** `Paste the key verbatim` beside a form that trims whitespace, `as-is` naming the mode a flag selects.
 
 **A correction of fact is exempt.** `Use pnpm, not npm` and `Latency fell 40%, not 4%` carry the correction in the negated half.
 

@@ -116,7 +116,7 @@ Project style rules add to these; on conflict this skill wins.
 - Every written or touched comment passes the checklist.
 - Every heading names its rule at the level the rule applies, with the case it came from left to the example.
 - `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
-  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, and INTENSIFIER.
+  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, and FIDELITY-EMPHASIS.
 - A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in whichever of the two shapes that reader needs, with every capability line checked against the code.
 - Nothing on the page documents a tool the project only plugs into, and every snippet names where it goes.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
