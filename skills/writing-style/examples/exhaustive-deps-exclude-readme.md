@@ -14,8 +14,8 @@ What it does that the shape asks for:
 - Each excluded-dependency case names the reason the exclusion is correct there.
 - The objection a reader raises next, `eslint-disable-next-line`, gets a section, and the answer is two snippets.
 
-`scripts/check-style.sh` reports one paired-negation candidate on the debounce line.
-The eye passes it: the negated half names the alternative trigger, which is the fact the sentence exists to settle.
+The debounce line reads as paired negation and stays anyway: the negated half names the alternative trigger, which is the fact the sentence exists to settle.
+That is the case the rule reserves, and recognising it takes a reader.
 
 ---
 

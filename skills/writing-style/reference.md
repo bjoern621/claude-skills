@@ -160,6 +160,24 @@ Translating a setting's value into words says what the name and the value alread
 A disabling value earns a line where the reason for disabling sits outside the file: which hardware misbehaves, which other setting it compensates for.
 Every setting in that config needs the same restart, so the restart clause in the second example is routine and goes with the rest.
 
+**Upstream documentation is not copied into the repository.**
+A setting belongs to the tool that defines it, and that tool documents what it does.
+Saying it again pins a stale copy of someone else's reference page inside this repository, where nobody updates it when the tool changes.
+The test: could a reader reach this sentence by searching the setting's name? Then it is already written, somewhere that stays current.
+- Bad: `// Merge requests opened per project per hour.` over `prHourlyLimit: 3`.
+- Bad: `# Seconds before the probe gives up.` over `timeoutSeconds: 5`.
+- Bad: `# Whether to follow redirects.` over `follow_redirects = true`.
+- Good: no comment.
+
+The name and the value carry the meaning between them, and a reader who does not recognise the name looks it up once rather than reading a paraphrase every time.
+
+What the upstream page cannot hold is why this project chose this value, and that earns a line only where the reason sits outside the file.
+- Good: `# Worker boots at ~930 MB, so a cap near that recycles it every few minutes.` over `per_worker_max_memory_mb = 1500`.
+- Good: `# vmk3s reserves nearly all its CPU, so a larger request never schedules.` over `cpu_request = "50m"`.
+
+A number chosen by taste needs no defence.
+Writing one invents a constraint the next reader then works around.
+
 **A comment on a line that carried none is justified before it is written.**
 Adding one is its own change, and its reason is the constraint a reader cannot get from the code.
 The question is asked before typing: what does this tell a reader that the name, the value, and the rest of the repository do not?
@@ -175,6 +193,7 @@ Ask, in order:
 - Routine anywhere else in the repository? Delete it.
 - Restates the code? Delete it.
 - Glosses the value on the line below? Delete it.
+- Answered by the documentation of the tool that owns the setting? Delete it.
 - Which words carry no fact? Cut them.
 - Can it be shorter without losing a fact? Then it is not finished.
 

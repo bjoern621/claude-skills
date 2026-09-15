@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), mood matching what happens, scope and addressee, snippets naming where they go, page shape, and a catalogue of AI writing tells.
+description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, no restating what the tool's own documentation carries, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), mood matching what happens, scope and addressee, snippets naming where they go, page shape, and a catalogue of AI writing tells.
 ---
 
 # Writing style
@@ -20,11 +20,14 @@ Apply to every comment written or touched:
    An answer that paraphrases the line means the line stays bare.
 3. Delete a value gloss on sight.
    `# 0: no blink.` over `cursor_blink_interval = 0` and `# 0: no inertial glide after the fingers lift.` over `momentum_scroll = 0.0` say what the name and the value already say.
-4. Write clipped fragments: noun phrases, articles and copulas dropped.
+4. Delete what the tool's own documentation carries.
+   A setting reachable by searching its name is already written down, somewhere that stays current: `// Merge requests opened per project per hour.` over `prHourlyLimit: 3`.
+   What earns a line is why this project chose this value, and only where that reason sits outside the file.
+5. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
-5. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
-6. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
-7. Second pass: re-read each comment and cut again.
+6. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
+7. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
+8. Second pass: re-read each comment and cut again.
    Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
 
 ## Line wrapping
@@ -113,10 +116,14 @@ Project style rules add to these; on conflict this skill wins.
 
 ## Completion criteria
 
-- Every written or touched comment passes the checklist.
+Nothing here is settled by a tool.
+A pattern match catches a handful of shapes and passes every comment that is fluent and empty, and a report saying "clean" is an invitation to stop reading.
+The pass below is done by reading the draft.
+
+- Every written or touched comment passes the checklist, one comment at a time rather than a file at a glance.
+- Each comment is read against the line beneath it, asking what it adds that the name, the value, and the documentation of the tool that owns the setting do not.
 - Every heading names its rule at the level the rule applies, with the case it came from left to the example.
-- `bash <skill-dir>/scripts/check-style.sh <touched files>` reports clean.
-  Some checks report candidates rather than verdicts and are judged by eye: em-dash hits inside ASCII art, PAIRED-NEGATION whose negated half answers an assumption the reader held, VALUE-GLOSS, WHETHER-LIST, INTENSIFIER, and FIDELITY-EMPHASIS.
+- The catalogue in [ai-tells.md](ai-tells.md) is read over the draft, since a tell survives a checklist by sounding finished.
 - A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in whichever of the two shapes that reader needs, with every capability line checked against the code.
 - Nothing on the page documents a tool the project only plugs into, and every snippet names where it goes.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.

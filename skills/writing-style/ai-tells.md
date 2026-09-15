@@ -2,7 +2,7 @@
 
 Constructions marking text as machine-drafted, in the register this skill governs: code comments, Markdown pages, commit and PR bodies.
 Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
-The mechanical ones are detected by `scripts/check-style.sh`; the rest need a reader.
+Every one of them is found by reading, and the fluent ones are the point: a tell survives a checklist by sounding finished.
 
 Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
