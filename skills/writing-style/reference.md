@@ -268,7 +268,7 @@ The test is deletion: read the sentence without the word and ask whether it now 
 
 **A restriction that narrows a real set stays.**
 `// Safe only on the render thread.` loses a caller obligation the moment the word goes, and "runs only when the primary region is unreachable" widens into a claim about every request.
-That is the deletion test read the other way: what the sentence permits changes, so the word carries a fact.
+That is the deletion test read the other way: what the sentence permits changes, and the word carries a fact.
 
 **Fronted `Only` with inversion stages a sequence as suspense.**
 The clause goes back to its plain order, and the inversion goes with it.
@@ -277,7 +277,8 @@ The clause goes back to its plain order, and the inversion goes with it.
 - Bad: "Three attempts run, and only then does the job fail."
 - Good: "The job fails after three attempts."
 
-**`The only X is Y` reaches for weight, so it is checked against the code or replaced by the mechanism.**
+**`The only X is Y` reaches for weight.**
+It is checked against the code or replaced by the mechanism.
 As a claim about importance it states nothing a reader can use, and as a claim about the code it goes false the first time a second path appears.
 - Bad: "The only thing that matters for throughput is the batch size."
 - Good: "Batch size sets throughput."
@@ -291,7 +292,8 @@ An exclusivity a reader has to honour is an invariant, and it is written as one:
 - Good: "The cache survives a reload and shares entries across tabs."
 
 **Repetition across a page is its own signal.**
-Several defensible instances in one passage read as cadence, so each takes the deletion test rather than passing on the strength of the first.
+Several defensible instances in one passage read as cadence.
+Each takes the deletion test rather than passing on the strength of the first.
 
 ## Language states the present
 

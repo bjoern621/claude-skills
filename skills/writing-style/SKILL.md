@@ -56,8 +56,10 @@ Delete it and read again: a sentence that now covers a case the code rules out k
 - Bad: `// Only takes effect after a restart.`
 - Good: `// Safe only on the render thread.`, where deletion drops a caller obligation.
 
-Fronted "Only after X does Y" stages a sequence as suspense, so the clause goes back to its plain order.
-"The only X is Y" reaches for weight, so it names the mechanism instead, and an exclusivity a reader has to honour is written as an invariant.
+Fronted "Only after X does Y" stages a sequence as suspense.
+The clause goes back to its plain order.
+"The only X is Y" reaches for weight, and it names the mechanism instead.
+An exclusivity a reader has to honour is written as an invariant.
 Rewrites: [reference.md](reference.md).
 
 ## Mood
