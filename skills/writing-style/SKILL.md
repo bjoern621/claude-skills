@@ -68,7 +68,8 @@ Test by adding one, then describe the container by what it decides.
 ## Scope and addressee
 
 A page carries what the project owns, and it addresses a reader who already runs the tools the project plugs into.
-Behaviour belonging to one of those tools is that tool's documentation, so the page names the tool and stops.
+Behaviour belonging to one of those tools is that tool's documentation.
+The page names the tool and stops.
 Explaining the addressee's own tools back to them is the first thing to cut from a page that runs long.
 Worked examples: [page-shape.md](page-shape.md).
 
@@ -96,16 +97,19 @@ The ones worth holding without opening the file:
 - A list landing on three items for rhythm.
 - Chat residue in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
 - A heading whose first sentence restates the heading.
+- A consequence welded to a fact with `so`, `thus` or `which means`, where the fact stands alone.
 
 ## Docs
 
 State the invariant, in present tense, third person.
 Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation that rots.
 Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
-Architecture and programming are separate subjects, so a page describing the system names no source file, function, type or package path.
+Architecture and programming are separate subjects.
+A page describing the system names no source file, function, type or package path.
 A decision is one line, and the reasoning that reached it is the author's working.
 A snippet opens with its destination, as a comment in the snippet's own language.
-A changelog entry names what somebody taking the release notices, so work leaving the published artifact as it was stays out.
+A changelog entry names what somebody taking the release notices.
+Work leaving the published artifact as it was stays out.
 Cut every section, table, and diagram the reader can do without.
 
 ## Scope of application
@@ -127,4 +131,4 @@ The pass below is done by reading the draft.
 - A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in whichever of the two shapes that reader needs, with every capability line checked against the code.
 - Nothing on the page documents a tool the project only plugs into, and every snippet names where it goes.
 - Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
-  Cutting a tell manufactures its own register, so the output takes the same scan as the input.
+  Cutting a tell manufactures its own register, and the output takes the same scan as the input.

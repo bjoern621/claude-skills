@@ -59,7 +59,7 @@ Break them up.
 Break the source line at every sentence end.
 A sentence owns its line, however short.
 Diffs then show the sentence that changed instead of a reflowed block.
-- Applies to the source of Markdown, code comments, and commit bodies. Rendered Markdown joins the lines back, so readers see no difference.
+- Applies to the source of Markdown, code comments, and commit bodies. Rendered Markdown joins the lines back, and readers see no difference.
 - A sentence longer than the file's comfortable width wraps at a clause boundary; a continuation line never starts a new sentence.
 - Line-oriented text already one item per line (bullets, tables, code) is unaffected.
 
@@ -158,7 +158,8 @@ Translating a setting's value into words says what the name and the value alread
 - Bad: `# 0: no inertial glide after the fingers lift. Takes effect on kitty restart.` over `momentum_scroll = 0.0`.
 - Good: no comment.
 A disabling value earns a line where the reason for disabling sits outside the file: which hardware misbehaves, which other setting it compensates for.
-Every setting in that config needs the same restart, so the restart clause in the second example is routine and goes with the rest.
+Every setting in that config needs the same restart.
+The restart clause in the second example is routine and goes with the rest.
 
 **Upstream documentation is not copied into the repository.**
 A setting belongs to the tool that defines it, and that tool documents what it does.
@@ -218,7 +219,8 @@ Written down is the set the code cannot carry: text parsed into a value, the thr
 
 A statement followed by the excluded alternative for the same subject is machine cadence, and it is cut.
 The shapes: "X, not Y", "X, never Y", "X and never Y", "not Y but X", "not just X but Y", "Y is not the point; X is".
-The negated half is normally the assertion restated with a minus sign in front, so it carries no fact and exists to make the sentence swing.
+The negated half is normally the assertion restated with a minus sign in front.
+It carries no fact and exists to make the sentence swing.
 - Bad: "A connection is checked by arithmetic and never by a round trip."
 - Good: "A connection is checked by arithmetic."
 - Bad: `// The table decides the retry budget, not the caller.`
@@ -249,7 +251,7 @@ A copula handing the reader a term they lack is a definition and stays, which is
 
 **A plain negative sentence is untouched by this.**
 "Restart drops no queued job" and `// nil when the profile sets no timeout` each state one fact about one subject.
-Two subjects put side by side are two statements, so "Cutting words is free. Cutting facts is not." stays.
+Two subjects put side by side are two statements, and "Cutting words is free. Cutting facts is not." stays.
 What is cut is one subject asserted and mirrored in the same breath.
 
 ## Language states the present
@@ -289,7 +291,8 @@ The test, clause by clause:
 
 ## Mood
 
-The indicative asserts that something happens, so a clause carries it only where it does.
+The indicative asserts that something happens.
+A clause carries it only where it does.
 A consequence belonging to a path the page argues against takes "would".
 
 - Bad, under a snippet that switches the other rule off: "Both rules report the same missing dependencies, so leaving React's on reports each one twice."

@@ -12,7 +12,8 @@ Every section serves that question.
 A page serves one of them.
 
 Name the thesis in one sentence before writing.
-A section that serves a different question belongs to a different page, so a page carrying four theses is four pages sharing a filename.
+A section that serves a different question belongs to a different page.
+A page carrying four theses is four pages sharing a filename.
 
 - Thesis: "who may do what, and what a leak costs".
 - Thesis: "how a request reaches storage".
@@ -22,7 +23,8 @@ A section that serves a different question belongs to a different page, so a pag
 
 Architecture is what the parts are, what crosses between them, and what decides what.
 Programming is which file holds it, what the function is called, and what type it returns.
-The code answers the second completely and without going stale, so a page reaching for it spends its length on the half it is worst at.
+The code answers the second completely and without going stale.
+A page reaching for it spends its length on the half it is worst at.
 
 An architecture page names no source file, no function, no type and no package path.
 
@@ -48,7 +50,8 @@ A page names what survives a rename.
 | Role name, in plain words | Yes | the gateway, the relay, the decode host |
 | Implementation vocabulary | No, the code answers it | `authEngine`, `internal/authsvc`, `publish/live.go`, `App.run`, a struct field, a package-responsibility table |
 
-Protocol verbs, wire paths, config keys and a third-party tool's own element names hold across any refactor, so they carry the architecture.
+Protocol verbs, wire paths, config keys and a third-party tool's own element names hold across any refactor.
+They carry the architecture.
 An internal name holds until someone renames it.
 
 Test by renaming a type, then by moving a file.
@@ -79,7 +82,8 @@ Name the tool, and let its own docs answer for it.
 - Good: the configuration example carries a `files` entry, and the page explains ESLint nowhere.
 
 The addressee sets how much is said.
-Somebody configuring a plugin already runs the tool it plugs into, so the page addresses a reader who knows that tool and came for this one.
+Somebody configuring a plugin already runs the tool it plugs into.
+The page addresses a reader who knows that tool and came for this one.
 Explaining the addressee's own tools back to them reads as padding, and it is the first thing to cut from a page that runs long.
 
 Name the addressee in one line before writing, beside the thesis.
@@ -120,7 +124,8 @@ What a measurement cost to obtain says nothing about how much page it deserves.
 
 ## A diagram replaces a paragraph
 
-Mermaid carries an exchange or a path better than prose does, so it goes first and the prose states the consequence.
+Mermaid carries an exchange or a path better than prose does.
+It goes first and the prose states the consequence.
 `sequenceDiagram` for an exchange between parts, `flowchart` for the route something takes.
 Two lines after the diagram, naming what follows from it.
 A flow carried by prose alone wants a diagram above it.
@@ -151,15 +156,17 @@ Calibrate them per repository: measure the page whose shape the project already 
 
 The numbers locate the page worth re-reading.
 
-A page whose job is defining terms carries almost no contract vocabulary by design, so a glossary reads correctly at zero.
+A page whose job is defining terms carries almost no contract vocabulary by design.
+A glossary reads correctly at zero.
 Name the exception when a signal fires for a reason like that one.
 
 ## Where the numbers read differently
 
 A rules reference measures unlike an architecture page, and some signals fire on it for a reason.
-Its sections are rule clusters holding one job, so a long section stays.
-Its code spans are specimens of the constructions it governs, so implementation spans are the subject rather than a defect.
-It describes no flow, so it draws no diagram.
+Its sections are rule clusters holding one job, and a long section stays.
+Its code spans are specimens of the constructions it governs.
+Implementation spans are the subject rather than a defect.
+It describes no flow and draws no diagram.
 
 ## Completion criteria
 

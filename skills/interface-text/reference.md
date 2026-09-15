@@ -4,7 +4,8 @@ Full ruleset for user-facing interface text.
 [SKILL.md](SKILL.md) carries the working checklist; this file settles the details and edge cases.
 Grounded in the guides listed under Sources at the end.
 
-Examples come from several kinds of product on purpose, so the rule shows through rather than one product's vocabulary.
+Examples come from several kinds of product on purpose.
+The rule shows through rather than one product's vocabulary.
 
 ## Register
 
@@ -102,7 +103,8 @@ Stated in full in [writing-style](../writing-style/reference.md).
 
 **One term per concept.**
 A concept renamed per surface sends the reader looking it up again on every surface.
-The term list belongs to the product, so a project fixes its own names in one place and every surface reads them from there.
+The term list belongs to the product.
+A project fixes its own names in one place, and every surface reads them from there.
 Check the project's design or style document for an existing term before coining one.
 
 **Personification stays standard.**
