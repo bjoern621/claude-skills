@@ -4,7 +4,7 @@ Constructions marking text as machine-drafted, in the register this skill govern
 Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
 Every one of them is found by reading, and the fluent ones are the point: a tell survives a checklist by sounding finished.
 
-Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
+Paired negation, restriction, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
 ## Lexical
 
@@ -20,6 +20,7 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 | Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the editor's undo system.` | `This refactor moves undo-stack merging into the history table.` |
 | `get` in the possession sense, standing in for the verb that happened: `gets you`, `you get`, `getting you` | `Registering the plugin yourself gets you the severity.` | `Registering the plugin yourself allows you to set the severity.` |
 | Cost metaphor naming no number: `costs nothing`, `at no cost`, `costs the reader`, `a small price` | `Switching the upstream rule off costs nothing.` | `A rule set to off needs no plugin behind it.` |
+| Restrictive emphasis on a case the sentence already names: `only`, `just`, `merely`, `simply`, `alone`, `purely`, `all it takes` | `// Only takes effect after a restart.` | `// Takes effect after a restart.` |
 
 ## Syntactic
 
@@ -34,6 +35,9 @@ Paired negation, em-dashes, changelog voice, marketing adjectives, rhetorical sc
 | Stacked range manufacturing breadth | `Supports rows from a thousand to a billion, from one column to a thousand, everything from Postgres to MySQL.` | `Supports a thousand to a billion rows, one to a thousand columns, on Postgres, MySQL or SQLite.` |
 | Parenthetical smuggling a scope qualifier | `// Retries the request (and in most cases this resolves it).` | `// Retries once. Resolves the timeout in most cases.` |
 | Consequence welded to a fact with `so`, `thus`, `hence`, `therefore`, `as such`, `which means`, `in turn` | `// Runs on a copy of the manifest, so the original stays unchanged.` | `// Runs on a copy of the manifest.` |
+| Fronted `Only` with inversion, sequence staged as suspense | `Only after the lockfile is written does the install proceed.` | `The install proceeds after the lockfile is written.` |
+| `The only X is Y`, weight standing in for the mechanism | `The only thing that matters for throughput is the batch size.` | `Batch size sets throughput.` |
+| `not only X but also Y`, two facts staged as a climb | `The cache not only survives a reload but also shares entries across tabs.` | `The cache survives a reload and shares entries across tabs.` |
 
 ## Structural
 
@@ -112,6 +116,8 @@ The check for that construction skips it.
 **A fidelity word holds where something else would change the value.** `Paste the key verbatim` beside a form that trims whitespace, `as-is` naming the mode a flag selects.
 
 **A correction of fact is exempt.** `Use pnpm, not npm` and `Latency fell 40%, not 4%` carry the correction in the negated half.
+
+**A restriction that narrows a real set is exempt.** Deleting `only` from `// Safe only on the render thread.` drops a caller obligation, and "runs only when the primary region is unreachable" widens into a claim about every request.
 
 **Frequency gates the voice tells.** Transition openers, staccato, rule of three and causal cadence fire on a pattern across a document.
 One legitimate instance passes.

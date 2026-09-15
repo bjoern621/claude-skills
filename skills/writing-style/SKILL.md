@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, no restating what the tool's own documentation carries, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), mood matching what happens, scope and addressee, snippets naming where they go, page shape, and a catalogue of AI writing tells.
+description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, no restating what the tool's own documentation carries, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), no empty restriction ("only", "merely"), mood matching what happens, scope and addressee, snippets naming where they go, page shape, and a catalogue of AI writing tells.
 ---
 
 # Writing style
@@ -46,6 +46,19 @@ Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
 A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
+
+## Restriction
+
+`only` and its family (`just`, `merely`, `simply`, `alone`, `nothing but`, `all it takes`) narrow a set.
+Where the sentence already names the narrow case, the word is emphasis and it is cut.
+Delete it and read again: a sentence that now covers a case the code rules out keeps the word.
+- Good: `// Takes effect after a restart.`
+- Bad: `// Only takes effect after a restart.`
+- Good: `// Safe only on the render thread.`, where deletion drops a caller obligation.
+
+Fronted "Only after X does Y" stages a sequence as suspense, so the clause goes back to its plain order.
+"The only X is Y" reaches for weight, so it names the mechanism instead, and an exclusivity a reader has to honour is written as an invariant.
+Rewrites: [reference.md](reference.md).
 
 ## Mood
 
@@ -98,6 +111,7 @@ The ones worth holding without opening the file:
 - Chat residue in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
 - A heading whose first sentence restates the heading.
 - A consequence welded to a fact with `so`, `thus` or `which means`, where the fact stands alone.
+- A restrictor emphasising a case the sentence already names: "Only takes effect after a restart."
 
 ## Docs
 

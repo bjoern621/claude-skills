@@ -254,6 +254,45 @@ A copula handing the reader a term they lack is a definition and stays, which is
 Two subjects put side by side are two statements, and "Cutting words is free. Cutting facts is not." stays.
 What is cut is one subject asserted and mirrored in the same breath.
 
+## Restriction
+
+`only` narrows a set, and the family around it does the same work: `just`, `merely`, `simply`, `alone`, `purely`, `solely`, `nothing but`, `all it takes`.
+Where the sentence already names the narrow case, the word carries emphasis and it is cut.
+The test is deletion: read the sentence without the word and ask whether it now covers a case the code rules out.
+- Bad: `// Only takes effect after a restart.`
+- Good: `// Takes effect after a restart.`
+- Bad: "Wiring the hook up only takes one key in the settings file."
+- Good: "Wiring the hook up takes one key in the settings file."
+- Bad: "The migration is merely a rename of the column."
+- Good: "The migration renames the column."
+
+**A restriction that narrows a real set stays.**
+`// Safe only on the render thread.` loses a caller obligation the moment the word goes, and "runs only when the primary region is unreachable" widens into a claim about every request.
+That is the deletion test read the other way: what the sentence permits changes, so the word carries a fact.
+
+**Fronted `Only` with inversion stages a sequence as suspense.**
+The clause goes back to its plain order, and the inversion goes with it.
+- Bad: "Only after the lockfile is written does the install proceed."
+- Good: "The install proceeds after the lockfile is written."
+- Bad: "Three attempts run, and only then does the job fail."
+- Good: "The job fails after three attempts."
+
+**`The only X is Y` reaches for weight, so it is checked against the code or replaced by the mechanism.**
+As a claim about importance it states nothing a reader can use, and as a claim about the code it goes false the first time a second path appears.
+- Bad: "The only thing that matters for throughput is the batch size."
+- Good: "Batch size sets throughput."
+- Bad: "All you need is a token in the header."
+- Good: "The request carries a token in the header."
+
+An exclusivity a reader has to honour is an invariant, and it is written as one: "WriteManifest is the single writer of manifest.json."
+
+**`not only X but also Y` stages two facts as a climb**, which is why it sits among the paired-negation shapes above.
+- Bad: "The cache not only survives a reload but also shares entries across tabs."
+- Good: "The cache survives a reload and shares entries across tabs."
+
+**Repetition across a page is its own signal.**
+Several defensible instances in one passage read as cadence, so each takes the deletion test rather than passing on the strength of the first.
+
 ## Language states the present
 
 Every word describes the thing as it stands.
