@@ -1,14 +1,15 @@
 ---
 name: writing-style
-description: Writing style for every word committed to a repository - code comments, YAML/TOML/config comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load at the start of any task that writes or edits a file in a repository, in any language, however small the edit, and whenever any wording question comes up. Use when writing or editing code that carries comments, documenting, editing manifests or configs, writing or restructuring a README or docs page, drafting a commit message or PR body, reviewing wording, or the user says "fix comments", "rewrite comments", "too verbose", "clean up docs". Enforces clipped comments, no restating what the tool's own documentation carries, wrapping at punctuation, one sentence per markdown line, time-agnostic docs, no paired negation ("X, not Y"), no empty restriction ("only", "merely"), mood matching what happens, scope and addressee, snippets naming where they go, page shape, and a catalogue of AI writing tells.
+description: Style for every word committed to a repository. Covers code comments, config and manifest comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, and when the user says "fix comments", "too verbose" or "clean up docs".
 ---
 
 # Writing style
 
-Governs everything written into a repository: comments (`#`, `//`, `///`, docstrings), markdown docs, commit and PR bodies.
+Governs everything written into a repository: code comments, config-file comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies.
 Chat replies are out of scope (caveman rules govern those).
 Full ruleset with examples: [reference.md](reference.md).
-Read it before the first comment or doc edit of a session.
+How a draft is revised into that state, in five passes: [revision.md](revision.md).
+Read both before the first comment or doc edit of a session.
 
 ## Comment checklist
 
@@ -44,8 +45,14 @@ State the assertion and stop, leaving the excluded alternative unsaid: "X, not Y
 
 Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
-A residue like "A finding is a claim." or "Windows are reconciled." states nothing, which is a worse defect than the cadence it replaced.
+A residue like "A finding is a claim." or "Windows are reconciled." states nothing.
+A dead sentence is a worse defect than the cadence it replaced.
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
+
+An aphoristic copula is the same tell with the negated half already gone.
+"A finding is a claim.", "The binding layer is a bridge.", "A version is a tag on this project." each open a paragraph by re-labelling a noun the reader already holds.
+Say what the thing does: "Tagging this project publishes a version."
+A copula handing the reader a term they lack is a definition and stays.
 
 ## Restriction
 
@@ -136,15 +143,9 @@ Project style rules add to these; on conflict this skill wins.
 
 ## Completion criteria
 
-Nothing here is settled by a tool.
-A pattern match catches a handful of shapes and passes every comment that is fluent and empty, and a report saying "clean" is an invitation to stop reading.
-The pass below is done by reading the draft.
+A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
 
-- Every written or touched comment passes the checklist, one comment at a time rather than a file at a glance.
-- Each comment is read against the line beneath it, asking what it adds that the name, the value, and the documentation of the tool that owns the setting do not.
-- Every heading names its rule at the level the rule applies, with the case it came from left to the example.
-- The catalogue in [ai-tells.md](ai-tells.md) is read over the draft, since a tell survives a checklist by sounding finished.
-- A README follows [readme.md](readme.md): written for the reader deciding whether to use it, in whichever of the two shapes that reader needs, with every capability line checked against the code.
-- Nothing on the page documents a tool the project only plugs into, and every snippet names where it goes.
-- Every sentence this pass rewrote is re-read once more, and one that lost its content is rewritten rather than left short.
-  Cutting a tell manufactures its own register, and the output takes the same scan as the input.
+Nothing here is settled by a tool.
+A pattern match catches a handful of shapes and passes every comment that is fluent and empty.
+A report saying "clean" stops the reading that would have caught the rest.
+Every pass is done by reading.
