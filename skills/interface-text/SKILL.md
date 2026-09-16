@@ -1,11 +1,11 @@
 ---
 name: interface-text
-description: Style for user-facing interface text - control labels, help paragraphs, option descriptions, tooltips, error and refusal messages, empty states, CLI output, any string literal a user reads. Load at the start of any task that writes or edits such a string, in any repository and any language, however small the edit, and whenever wording a message comes up. Use when writing interface text, error or validation messages, tooltips, settings help, refusal or disabled-control explanations, CLI help text, or the user says "reword this text", "user-facing text", "UI copy", "microcopy". Plain conversational register, problem-cause-fix errors, positive framing, one term per concept, no opinions or humor.
+description: Style for any string a user reads. Covers labels, help text, option descriptions, tooltips, error and refusal messages, disabled-control explanations, empty states, CLI output. Load before writing or editing one, however small the edit, and when the user says "reword this", "user-facing text", "UI copy" or "microcopy".
 ---
 
 # Interface text
 
-Governs every string a user reads on screen: labels, help text, option descriptions, tooltips, errors, refusals, empty states.
+Governs every string a user reads on screen, whichever surface renders it.
 A user-facing string takes this skill even though it lives in code; comments, docs and commits take [writing-style](../writing-style/SKILL.md) instead.
 Full ruleset with examples: [reference.md](reference.md).
 Read it before the first copy edit of a session.
@@ -18,10 +18,11 @@ Apply to every string written or touched:
    Copy passes unnoticed; a sentence with an author's voice in it is rewritten.
 2. Neutral by default; "you/your" only where ownership is otherwise ambiguous.
    Never "the user", "the customer" or any third-person name for the person reading.
-3. No opinions, no judgment of a choice, no asides, no humor.
-   State the trade; the reader decides.
+3. State the trade and let the reader decide.
+   Opinions, judgments of a choice, asides and humor stay out.
 4. Positive contractions allowed ("it's"); negatives spelled out ("cannot", "does not").
-5. No self-reference: no "we", no "I", and the concrete part named instead of "this app".
+5. Name the part that acts: "the sync service", "the installer".
+   "We", "I" and "this app" stay out.
 
 ## Shape
 
@@ -43,8 +44,8 @@ Apply to every string written or touched:
 - American English, one variant throughout.
 - One term per concept, fixed in one place the project owns. Read the project's design or style document before coining a name.
 - Standard technical verbs only (holds, targets, refuses, retries, serves); no dramatic agency.
-- Not aimed at the user or their input: "error", "failed", "invalid", "illegal", "bad", "abort".
-  Instead: "could not", "unable", "incorrect", "not supported", "stop".
+- Name what happened: "could not", "unable", "incorrect", "not supported", "stop".
+  "error", "failed", "invalid", "illegal", "bad" and "abort" aim at the user or their input.
 - "please" only when asking the user to wait or redo work; "sorry" only for serious loss.
 - Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
 - Positive framing: what is so and what to do.
@@ -52,4 +53,4 @@ Apply to every string written or touched:
 ## Completion criteria
 
 - Every written or touched string passes the checklist and its surface pattern.
-- Second pass on every string: read it aloud, cut what carries no fact, keep every fact.
+- Second pass, one string at a time: name the fact each word carries, and cut the words that carry none.
