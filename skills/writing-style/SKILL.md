@@ -1,15 +1,17 @@
 ---
 name: writing-style
-description: Style for every word committed to a repository. Covers code comments, config and manifest comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, and when the user says "fix comments", "too verbose" or "clean up docs".
+description: Style for repository prose a human reads, agent-executed documents aside. Covers code comments, config and manifest comments, docstrings, identifiers, test names, log lines, markdown docs, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, when any wording question comes up, and when the user says "fix comments", "clean up docs" or "reads like AI".
 ---
 
 # Writing style
 
-Governs everything written into a repository: code comments, config-file comments, docstrings, markdown docs, READMEs, changelogs, commit and PR bodies.
+Governs what a human reads out of a repository: code comments, config-file comments, docstrings, identifiers, test names, log lines, markdown docs, READMEs, changelogs, commit and PR bodies.
 Chat replies are out of scope (caveman rules govern those).
+So is a document an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt file.
+That document is written to make an agent's behaviour repeatable, and these rules are written to make a human's reading fast.
 Full ruleset with examples: [reference.md](reference.md).
-How a draft is revised into that state, in five passes: [revision.md](revision.md).
-Read both before the first comment or doc edit of a session.
+Read it before the first comment or doc edit of a session.
+[revision.md](revision.md) revises a draft in five passes, and runs on a docs page, a README or a commit body rather than on a comment touched in passing.
 
 ## Comment checklist
 
@@ -36,6 +38,8 @@ Apply to every comment written or touched:
 Break lines at sentence ends, after `,` `:` `;`, or at a conjunction ("and", "or", "but", "so").
 One sentence per markdown source line.
 A continuation line continues its sentence.
+The rule binds the source; rendered Markdown joins the lines back.
+Text already one item per line, bullets, tables and code, is unaffected.
 
 ## Paired negation
 
@@ -65,7 +69,7 @@ Delete it and read again: a sentence that now covers a case the code rules out k
 
 Fronted "Only after X does Y" stages a sequence as suspense.
 The clause goes back to its plain order.
-"The only X is Y" reaches for weight, and it names the mechanism instead.
+"The only X is Y" reaches for weight, and the mechanism takes its place.
 An exclusivity a reader has to honour is written as an invariant.
 Rewrites: [reference.md](reference.md).
 
@@ -99,7 +103,7 @@ Worked examples: [page-shape.md](page-shape.md).
 
 [page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects, and how much of a draft is the author's working.
 Read it when starting a docs page, restructuring one, splitting one, or reviewing one that reads long.
-`scripts/page-shape.sh <page>` reports the measurements.
+`bash <skill-dir>/scripts/page-shape.sh <page>` reports the measurements.
 
 ## README
 
@@ -112,15 +116,16 @@ Read it when writing, restructuring or reviewing a README.
 Catalogue with a bad and a good example each: [ai-tells.md](ai-tells.md).
 Read it when drafting a doc page or a commit body, and when a passage reads fluent while saying little.
 
-The ones worth holding without opening the file:
-- Inflated word where a plain one carries the fact: `delve`, `pivotal`, `underscore`, `leverage`, `utilize`, `serves as`.
-- A participle claiming a result the clause never established: "Fix the null pointer, improving stability."
+The ones worth holding without opening the file, under the names that page gives them:
+- Inflated vocabulary, where a plain word carries the fact: `delve`, `pivotal`, `underscore`, `leverage`, `utilize`, `serves as`.
+- Participial tack-on, claiming a result the clause never established: "Fix the null pointer, improving stability."
 - Stacked hedges on a fact that can be asserted: "could potentially leave the socket open."
-- A list landing on three items for rhythm.
-- Chat residue in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
-- A heading whose first sentence restates the heading.
-- A consequence welded to a fact with `so`, `thus` or `which means`, where the fact stands alone.
-- A restrictor emphasising a case the sentence already names: "Only takes effect after a restart."
+- Rule of three, a list landing on three items for rhythm.
+- Chat preamble in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
+- Prompt echo, a heading whose first sentence restates it.
+- Causal cadence, a consequence welded on with `so`, `thus` or `which means` where the fact stands alone.
+- Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
+  `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
 
 ## Docs
 
@@ -128,7 +133,8 @@ State the invariant, in present tense, third person.
 Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation that rots.
 Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
 Architecture and programming are separate subjects.
-A page describing the system names no source file, function, type or package path.
+A page describing the system names contract vocabulary: routes, config keys, wire message names, and the parts in plain words.
+No source file, function, type or package path appears.
 A decision is one line, and the reasoning that reached it is the author's working.
 A snippet opens with its destination, as a comment in the snippet's own language.
 A changelog entry names what somebody taking the release notices.
@@ -143,6 +149,7 @@ Project style rules add to these; on conflict this skill wins.
 
 ## Completion criteria
 
+A touched comment is finished once the checklist has run over it, it has been read against the line beneath it, and a second pass has cut it again.
 A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
 
 Nothing here is settled by a tool.

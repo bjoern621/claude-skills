@@ -2,7 +2,6 @@
 # Page-shape measurement for Markdown docs.
 # Usage: page-shape.sh <page.md> [page.md ...]
 # Locates the page worth re-reading. A signal outside the reference shape wants a reason, not an automatic edit.
-# Reference shape: docs/auth-flow.md.
 set -uo pipefail
 
 fail=0

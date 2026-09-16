@@ -12,7 +12,7 @@ What a contributor needs lives on its own page, linked from the bottom.
 
 Two different things stand between that reader and the decision.
 Either the value is already granted and only the facts are missing, or the reader arrives holding a default that this software contradicts.
-The second reader has to be argued with before install means anything, and that difference picks the shape below.
+The second reader has to be argued with before install means anything, and that difference picks one of the two shapes.
 
 ## The informing shape
 

@@ -1,7 +1,7 @@
 # Writing style reference
 
-Full ruleset for everything written into a repository.
-[SKILL.md](SKILL.md) carries the working checklist; this file settles the details and edge cases.
+Full ruleset for the prose this skill governs.
+[SKILL.md](SKILL.md) states that scope and carries the working checklist; this file settles the details and edge cases.
 
 ## Punctuation
 
@@ -16,7 +16,7 @@ One layer of parentheses maximum.
 
 Applies to architecture docs, doc comments, and the body of commit messages and PR descriptions.
 A README takes these rules with one exception, stated under "Register" in [readme.md](readme.md).
-Code comments take one further cut on top; see "Comments" below, which wins on any conflict about length or sentence form.
+Code comments take one further cut on top; see "Comments", which wins on any conflict about length or sentence form.
 
 **Neutral, third-person description.**
 State what the system does.
@@ -34,7 +34,7 @@ State the fact directly.
 
 **No sales-pitch framings.**
 Avoid "This is more than X", "X enables Y to thrive".
-"Not just X, but Y" is one shape of the pattern in "Paired negation" below.
+"Not just X, but Y" is one shape of the pattern in "Paired negation".
 
 **Written as a reference.**
 Documentation describes the finished state.
@@ -44,6 +44,7 @@ Avoid "First, we...", "Now we will...", "Next, let's...".
 If a behaviour fits in five lines, show it.
 
 **No closing recap.**
+The page ends on its last fact.
 The reader just read the body.
 
 **Cut hedging on facts.**
@@ -82,7 +83,8 @@ A pin in a config file is that file's business; the doc explains why the pin exi
 
 **Architecture and programming are separate subjects.**
 Architecture is what the parts are and what crosses between them; programming is which file holds it and what the function is called.
-A page describing the system names no source file, no function, no type and no package path, the code answering those completely and without going stale.
+A page describing the system names no source file, no function, no type and no package path.
+The code answers those completely, and without going stale.
 A reader reaches the code through the contract vocabulary, which the code spells the same way.
 [page-shape.md](page-shape.md) states the split in full, with the config keys and wire paths that do belong.
 - Bad: "`publish.SamePipeline` renders both settings objects and compares the strings."
@@ -158,8 +160,7 @@ Translating a setting's value into words says what the name and the value alread
 - Bad: `# 0: no inertial glide after the fingers lift. Takes effect on kitty restart.` over `momentum_scroll = 0.0`.
 - Good: no comment.
 A disabling value earns a line where the reason for disabling sits outside the file: which hardware misbehaves, which other setting it compensates for.
-Every setting in that config needs the same restart.
-The restart clause in the second example is routine and goes with the rest.
+Every setting in that kitty config needs the same restart, so the restart clause in the second example is routine and goes with the rest.
 
 **Upstream documentation is not copied into the repository.**
 A setting belongs to the tool that defines it, and that tool documents what it does.
@@ -287,7 +288,7 @@ As a claim about importance it states nothing a reader can use, and as a claim a
 
 An exclusivity a reader has to honour is an invariant, and it is written as one: "WriteManifest is the single writer of manifest.json."
 
-**`not only X but also Y` stages two facts as a climb**, which is why it sits among the paired-negation shapes above.
+**`not only X but also Y` stages two facts as a climb**, and "Paired negation" carries the rest of that family.
 - Bad: "The cache not only survives a reload but also shares entries across tabs."
 - Good: "The cache survives a reload and shares entries across tabs."
 

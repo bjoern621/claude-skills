@@ -112,8 +112,8 @@ Verbs normal in technical writing stay: a service holds, targets, refuses, retri
 Dramatic agency goes: nothing "spends whatever the picture costs" or "asks no more of a home router".
 
 **Blame-free problem words.**
-Not aimed at the reader or their input: "error", "failed", "invalid", "illegal", "bad", "abort", "fatal".
-Instead: "could not", "unable", "incorrect", "not supported", "stop".
+Name what happened: "could not", "unable", "incorrect", "not supported", "stop".
+"error", "failed", "invalid", "illegal", "bad", "abort" and "fatal" aim at the reader or their input.
 - Bad: "Invalid file name."
 - Good: "The file name cannot contain slashes."
 

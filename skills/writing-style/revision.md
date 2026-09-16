@@ -1,9 +1,10 @@
 # Revision passes
 
 How a draft reaches the state [SKILL.md](SKILL.md) describes.
+A draft here is prose a human reads out of the repository; [SKILL.md](SKILL.md) states what falls outside that.
 
 A single reading passes a rule stated in one place.
-Each pass below fixes which rules are in mind while it runs, and names the sections it sweeps rather than restating them.
+Each pass fixes which rules are in mind while it runs, and names the sections it sweeps rather than restating them.
 
 ## The passes
 
@@ -49,17 +50,27 @@ Each rule is stated once, on the page the sweep opens to reach it.
 1. [reference.md](reference.md), "Punctuation".
 2. [reference.md](reference.md), "Docs and prose".
 3. [SKILL.md](SKILL.md), "Comment checklist", then [reference.md](reference.md), "Comments".
-4. [SKILL.md](SKILL.md), "Paired negation" and "Restriction", then the same two sections of [reference.md](reference.md).
-5. [reference.md](reference.md), "Language states the present" and "Mood".
-6. [reference.md](reference.md), "Naming the parts".
-7. [ai-tells.md](ai-tells.md), one table per read: lexical, syntactic, structural, rhetorical.
-8. [page-shape.md](page-shape.md) for a docs page, [readme.md](readme.md) for a README.
+4. [reference.md](reference.md), "Naming the parts".
+5. [SKILL.md](SKILL.md), "Paired negation" and "Restriction", then the same two sections of [reference.md](reference.md).
+6. [reference.md](reference.md), "Language states the present" and "Mood".
+7. [reference.md](reference.md), "Changelog", for a changelog entry or a release note.
+8. [SKILL.md](SKILL.md), "Scope and addressee".
+9. [ai-tells.md](ai-tells.md), one table per read: lexical, syntactic, structural, rhetorical.
+10. [page-shape.md](page-shape.md) for a docs page or a README, then [readme.md](readme.md) for a README.
 
-A rule added to one of those sections joins the sweep with no edit here.
+Entries 1 to 7 open every rule-bearing section of [reference.md](reference.md), and entries 3, 5 and 8 add the sections of [SKILL.md](SKILL.md) that state a rule of their own.
+Entry 9 opens the four tables of [ai-tells.md](ai-tells.md); that page's "What only a reader catches" belongs to pass 3 and "The cure has its own tells" to pass 4.
+Entry 10 names [page-shape.md](page-shape.md) and [readme.md](readme.md) whole.
+The sections of [SKILL.md](SKILL.md) left out of the list condense reference sections the list already opens, or point into entries 9 and 10.
+"Scope of application", "Completion criteria" and each page's "Sources" carry no rule a draft can break.
+A rule added inside a listed section joins the sweep with no edit here.
 The exemptions in "False positives" of [ai-tells.md](ai-tells.md) hold over every entry.
 
 ## Completion criteria
 
+- Every capability claim in the draft has been checked against the code.
 - Every entry in the sweep list has had its own read of the whole draft.
+- Every rule under "What only a reader catches" has been asked of the whole draft, against the frequency gate closing that page.
+- Every comment written or touched has been read against the line beneath it, one comment at a time.
 - Every sentence the passes rewrote has been through the cure pass.
 - A cross-check has run, and each finding it returned has been accepted or refused with a reason.
