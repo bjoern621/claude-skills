@@ -26,11 +26,10 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 
 | Tell | Bad | Good |
 |---|---|---|
-| Labelling copula, `X is a Y` renaming the subject instead of saying what it does | `The reconciler is a state machine.` | `The reconciler walks each window to the state the model asks for.` |
+| Labelling copula, `X is a Y` renaming the subject instead of saying what it does, commonest as a paragraph opener | `A version is a tag on this project.` | `Tagging this project publishes a version.` |
 | Stacked hedges | `// Could potentially leave the socket open in some cases.` | `// Socket stays open when Close runs before the write completes.` |
 | Participial tack-on claiming a result the clause never established | `Fix null pointer in conflict resolver, improving stability and reliability.` | `Fix null pointer in conflict resolver when the remote reports no base revision.` |
 | Rhetorical question answering itself | `Why does the worker pool restart on a config change? Because nothing reconfigures it live.` | `The worker pool restarts on a config change. Nothing reconfigures it live.` |
-| Aphoristic copula opening a paragraph, re-labelling a noun the reader already holds | `A version is a tag on this project.` | `Tagging this project publishes a version.` |
 | Whether-list claiming coverage | `Whether the destination is one webhook or a hundred, fanout is the same.` | `Fanout is the same for one webhook and for a hundred.` |
 | Rule of three, a list landing on three items for rhythm | `Refactor the query builder for clarity, maintainability, and performance.` | `Split the 400-line query builder into one function per clause type.` |
 | Agentless passive hiding which component acts | `The version is read by the resolver and the value is derived from the lockfile.` | `The resolver reads the version from the lockfile.` |
