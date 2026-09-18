@@ -37,7 +37,7 @@ A reader reaches the code through the contract vocabulary, which the code spells
 "The publisher compares the rendered command" leads to the comparison by its own words, and keeps leading there after a rename.
 `publish.SamePipeline` leads there once.
 
-A page whose subject genuinely is the code, an onboarding map or a package tour, is a different page and says so in its title.
+A page whose subject genuinely is the code, an onboarding map or a package tour, says so in its title.
 
 ## Contract
 
@@ -45,7 +45,7 @@ A page names what survives a rename.
 
 | Kind | Belongs | Example |
 |---|---|---|
-| Contract vocabulary | Yes, this is the architecture | `POST /tokens`, `public/`, a config key, a wire message name, a third-party tool's own element name |
+| Contract vocabulary | Yes, it carries the architecture | `POST /tokens`, `public/`, a config key, a wire message name, a third-party tool's own element name |
 | A config file the reader edits | Yes | `deploy/gateway.yml` |
 | Role name, in plain words | Yes | the gateway, the relay, the decode host |
 | Implementation vocabulary | No, the code answers it | `authEngine`, `internal/authsvc`, `publish/live.go`, `App.run`, a struct field, a package-responsibility table |
@@ -55,7 +55,7 @@ They carry the architecture.
 An internal name holds until someone renames it.
 
 Test by renaming a type, then by moving a file.
-A page that changes either time is a page restating code.
+A page that changes either time restates code.
 
 - Good: "Filtering happens at the gateway, so a listing carries one tenant."
 - Bad: the same sentence with the package name closing the section.
@@ -84,7 +84,7 @@ Name the tool, and let its own docs answer for it.
 The addressee sets how much is said.
 Somebody configuring a plugin already runs the tool it plugs into.
 The page addresses a reader who knows that tool and came for this one.
-Explaining the addressee's own tools back to them reads as padding, and it is the first thing to cut from a page that runs long.
+Explaining the addressee's own tools back to them reads as padding, and a page that runs long cuts it first.
 
 Name the addressee in one line before writing, beside the thesis.
 The two together decide what a section is allowed to hold.
@@ -96,9 +96,9 @@ A reader pasting a snippet that names no destination guesses it.
 
 ## A page states the decision and stops
 
-Length is the defect a reader meets first, and it is usually the argument rather than the facts.
-A decision is one line.
-The reasoning that reached it, the alternative that lost, and the second and third consequence are the author's working, and the reader did not come for it.
+A reader meets length before any other defect, and the argument rather than the facts usually causes it.
+A decision takes one line.
+The reasoning that reached it, the alternative that lost, and the second and third consequence stay with the author, and the reader did not come for them.
 
 Cut, in the order these usually appear:
 
@@ -119,7 +119,7 @@ Good, one:
 
 > A relaunch is decided by rendering both configurations and comparing them, so a setting no pipeline is built from moves under a running stream.
 
-A rewrite landing near a tenth of the length is the ordinary result, and the facts all survive it.
+A rewrite lands near a tenth of the length, and the facts all survive it.
 What a measurement cost to obtain says nothing about how much page it deserves.
 
 ## A diagram replaces a paragraph
@@ -133,7 +133,7 @@ A flow carried by prose alone wants a diagram above it.
 ## A table holds comparable data
 
 A table earns its place with three or more related data points per row, and a header naming what the column holds.
-A row that is a clause is prose, and a table of situations and results is a state machine, which is reference material.
+A row holding a clause belongs in prose, and a table of situations and results states a machine, which belongs in reference material.
 [readme.md](readme.md) states what a README does with one.
 
 ## One screen per section
@@ -163,9 +163,10 @@ Name the exception when a signal fires for a reason like that one.
 ## Where the numbers read differently
 
 A rules reference measures unlike an architecture page, and some signals fire on it for a reason.
+Its prose takes the labelling-copula ban like any other page.
 Its sections are rule clusters holding one job, and a long section stays.
 Its code spans are specimens of the constructions it governs.
-Implementation spans are the subject rather than a defect.
+Implementation spans carry its subject rather than marking a defect.
 It describes no flow and draws no diagram.
 
 ## Completion criteria

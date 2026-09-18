@@ -11,7 +11,29 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Load writing-style before repository prose a human reads, and interface-text before a string a user reads. However small the edit.\"}}'",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/writing-style-reminder.sh UserPromptSubmit prompt",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/writing-style-reminder.sh PreToolUse source",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__docmost__(create_page|update_page|create_comment|update_comment)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/writing-style-reminder.sh PreToolUse rendered",
             "timeout": 5
           }
         ]

@@ -7,7 +7,7 @@ Full ruleset for the prose this skill governs.
 
 Em-dashes (`—`, U+2014) and the box-drawing `─` (U+2500) appear only inside ASCII-art diagrams drawn with `┌ ┐ └ ┘ │ ─`.
 Everywhere else a hyphen, comma, parenthesis, colon, or period takes their place.
-The same habit on a regular hyphen ("the handler is the bridge - it converts...") is the same fault with a different glyph: use a period or restructure.
+The same habit on a regular hyphen ("the handler is the bridge - it converts...") fails the same way with a different glyph: use a period or restructure.
 Prefer two sentences over a semicolon gluing two clauses.
 Reserve semicolons for list items containing internal commas.
 One layer of parentheses maximum.
@@ -24,7 +24,7 @@ Do not address the reader.
 - Bad: "You can call `OrThrow()` to extract the value."
 - Good: "`OrThrow()` extracts the success value or throws the error variant."
 - Words to avoid: "you", "your", "we", "we'll", "let's", "our".
-- A README is the exception, addressing somebody deciding whether to use the software. [readme.md](readme.md) states the scope.
+- A README addresses somebody deciding whether to use the software, and [readme.md](readme.md) states that scope.
 
 **No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready".
 
@@ -53,20 +53,30 @@ Reserve hedging for genuinely conditional behaviour.
 - Good: "Throws on null input".
 
 **One idea per sentence; one job per paragraph.**
-Comma-chained sentences with three subordinate clauses are an LLM tic.
+Comma-chained sentences with three subordinate clauses read as machine cadence.
 Break them up.
 
 **One sentence per line.**
 Break the source line at every sentence end.
 A sentence owns its line, however short.
 Diffs then show the sentence that changed instead of a reflowed block.
-- Applies to the source of Markdown, code comments, and commit bodies. Rendered Markdown joins the lines back, and readers see no difference.
-- A sentence longer than the file's comfortable width wraps at a clause boundary; a continuation line never starts a new sentence.
+- Applies to the source of Markdown files, code comments, and commit bodies. Rendered Markdown joins the lines back, and readers see no difference.
 - Line-oriented text already one item per line (bullets, tables, code) is unaffected.
+
+**A sentence breaks at punctuation in a code comment alone.**
+A comment too long for the file's width breaks after `,` `:` `;` or before a conjunction ("and", "or", "but", "so"), and the continuation line never starts a new sentence.
+Prose runs a sentence to its end on one source line, whatever the width, the wrapping belonging to the reader's editor.
+- Bad, in a Markdown file: a sentence split after its first comma, so the diff shows two lines for one edit.
+- Good: the whole sentence on its line, however far past the column guide it runs.
+
+**A rendered editor takes neither rule.**
+Docmost, every other wiki, and a forge's issue, review and description boxes turn a source line break into a break on the page.
+A paragraph goes in as one line, and the editor wraps it.
+Every other rule on this page holds there unchanged.
 
 **Documentation is time-agnostic.**
 The test for any sentence: would it become false because of work that has nothing to do with this document?
-Then it is an observation, and it rots into a confident lie.
+Then it rots into a confident lie.
 Do not write:
 - Counts and tallies: "46 dependencies across 28 files".
 - Point-in-time versions of things the repo does not itself pin: "the latest release is v1.12.0".
@@ -95,8 +105,8 @@ Name a contract term, a config key, a route or a heading; a line number rots on 
 Name sections instead of writing "the section above".
 
 **A decision is one line.**
-The mechanism behind it, the alternative that lost, and every consequence after the first are the author's working, and the page is not where that goes.
-A rewrite landing near a tenth of the length is the ordinary result, and the facts all survive it.
+The mechanism behind it, the alternative that lost, and every consequence after the first stay with the author, and the page carries none of them.
+A rewrite lands near a tenth of the length, and the facts all survive it.
 
 **Cut everything that does not pull its weight.**
 Before adding a section, diagram, table, or example, ask whether the reader needs it to use or modify the system.
@@ -117,7 +127,7 @@ Written down is only what the name cannot carry: a unit, a range, an invariant, 
 
 **A comment is written clipped.**
 Articles, copulas and self-reference go: "a", "an", "the", "is the", "which is", "this function".
-A noun phrase is a whole comment, and a fragment needs no trailing period.
+A noun phrase makes a whole comment, and a fragment needs no trailing period.
 - Bad: `// This function returns the resolved timeout for the given profile, or nil if the profile does not set one.`
 - Good: `// Resolved timeout. nil if profile sets none.`
 
@@ -181,7 +191,7 @@ A number chosen by taste needs no defence.
 Writing one invents a constraint the next reader then works around.
 
 **A comment on a line that carried none is justified before it is written.**
-Adding one is its own change, and its reason is the constraint a reader cannot get from the code.
+Adding one counts as its own change, and its reason names the constraint a reader cannot get from the code.
 The question is asked before typing: what does this tell a reader that the name, the value, and the rest of the repository do not?
 An answer that paraphrases the line means the line stays bare.
 
@@ -204,17 +214,49 @@ Cutting facts is not.
 
 ## Naming the parts
 
-**A list of members is a contract or it is cut.**
+**A list of members states a contract or it is cut.**
 Naming what something holds earns its place where the set is closed and the reader has to hit it: the values a field accepts, the flags a caller may combine, the parts a key is built from.
 A sample of the contents decides nothing, and it goes false the first time a member is added.
 The test is to add one: where the sentence stops being true it was a sample, and what the container decides is written in its place.
 - Bad: "The scheduler package holds the queue, the retry table, the worker pool and the metrics hook."
 - Good: "The scheduler decides when a job runs and how often it retries."
 
-**A closed set the code already shows is a restatement.**
+**A closed set the code already shows restates it.**
 Written down is the set the code cannot carry: text parsed into a value, the three spellings a string field accepts, a range narrower than the type's.
 - Bad: `// Fields: name, region, bucket, created.` over the struct declaring them.
 - Good: `// Region: "eu-west", "us-east", "ap-south". Anything else is refused.`
+
+## Labelling copula
+
+`X is a Y` hands the reader a second name for something they already hold, and it is banned.
+The complement re-labels the subject instead of saying what it does, so the sentence closes without giving the reader anything to act on.
+The shapes: `is a`, `is an`, `is the`, `are the`, `was a`, `were the`.
+Say what the thing does, and the fact comes back.
+- Bad: "A finding is a claim." Good: "Every finding is held against the product before it is believed."
+- Bad: "The binding layer is a bridge." Good: "The binding layer redraws the view when the model changes."
+- Bad: "Trust is a property of the channel." Good: "The channel carries trust from the handshake forward."
+- Bad: "A version is a tag on this project." Good: "Tagging this project publishes a version."
+- Bad: `// A retry budget is a per-profile cap.` Good: `// Retry budget comes from the table.`
+- Bad: "`StopSync` is a function that stops syncing." Good: "`StopSync` closes the watch. Already closed is success."
+
+**The ban reaches every position.**
+A paragraph opener, a heading's first sentence, a bullet, a table cell, a commit body and a comment take it alike.
+A copula opens a paragraph more often than it appears anywhere else, usually to set up a contrast the next clause then draws.
+Cutting the contrast without cutting the copula leaves the residue "Paired negation" warns about.
+
+**A predicate that measures stays.**
+"The file is empty", "The timeout is 30 s", "The socket is open" each report a reading of one subject.
+The ban covers the noun standing in for the verb the sentence owed the reader.
+
+**A definition stays.**
+A glossary row and a domain-model entry exist to hand the reader a term they do not hold, and the copula does that job there.
+Two surfaces keep it, and a page reaching for the shape outside them rewrites instead.
+
+**The rewrite reaches for a verb.**
+`serves as`, `stands as`, `functions as` and `represents` swap the copula for a longer one and change nothing.
+- Bad: "TokenIssuer serves as the boundary between login and session storage."
+- Bad: "TokenIssuer is the boundary between login and session storage."
+- Good: "TokenIssuer mints a session token once login succeeds."
 
 ## Paired negation
 
@@ -237,18 +279,12 @@ One such clause on a page is already a lot.
 
 **Cutting the negated half means rewriting the passage around it.**
 Where the contrast carried the sentence's only content, striking it leaves a sentence saying nothing.
-A dead sentence is a worse defect than the cadence it replaced.
+A dead sentence costs the reader more than the cadence it replaced.
 Read the neighbours and move the fact: usually the opener goes entirely because the sentence after it already carries the point, or the excluded alternative comes back as a positive statement of what does happen.
 - Bad cut: "A finding is a claim, not a verdict." to "A finding is a claim."
 - Good cut: drop the opener, and let "Every finding is held against the product before it is believed." carry it.
 - Bad cut: "Windows are reconciled, not opened by an event." to "Windows are reconciled."
 - Good cut: "A render pass opens the windows the model asks for."
-
-**An aphoristic copula is the same tell.**
-"A finding is a claim.", "The binding layer is a bridge.", "Trust is a property."
-A copula standing alone as a paragraph opener, re-labelling a noun the reader already holds, usually there to set up a contrast.
-Say what the thing does instead.
-A copula handing the reader a term they lack is a definition and stays, which is what a glossary row and a domain-model entry are built from.
 
 **A plain negative sentence is untouched by this.**
 "Restart drops no queued job" and `// nil when the profile sets no timeout` each state one fact about one subject.
@@ -269,7 +305,7 @@ The test is deletion: read the sentence without the word and ask whether it now 
 
 **A restriction that narrows a real set stays.**
 `// Safe only on the render thread.` loses a caller obligation the moment the word goes, and "runs only when the primary region is unreachable" widens into a claim about every request.
-That is the deletion test read the other way: what the sentence permits changes, and the word carries a fact.
+That reads the deletion test the other way round: what the sentence permits changes, and the word carries a fact.
 
 **Fronted `Only` with inversion stages a sequence as suspense.**
 The clause goes back to its plain order, and the inversion goes with it.
@@ -286,7 +322,7 @@ As a claim about importance it states nothing a reader can use, and as a claim a
 - Bad: "All you need is a token in the header."
 - Good: "The request carries a token in the header."
 
-An exclusivity a reader has to honour is an invariant, and it is written as one: "WriteManifest is the single writer of manifest.json."
+An exclusivity a reader has to honour is written as an invariant: "WriteManifest holds the only write path to manifest.json."
 
 **`not only X but also Y` stages two facts as a climb**, and "Paired negation" carries the rest of that family.
 - Bad: "The cache not only survives a reload but also shares entries across tabs."
@@ -307,7 +343,7 @@ Three faces:
 - Future: "not yet", "coming soon", "planned", "for now", "eventually".
 - Workshop: "by design", "we decided", "after some experimentation", "it turned out that".
 
-**A clause that argues with somebody is the clearest tell.**
+**A clause that argues with somebody shows this most plainly.**
 "and never was" rebuts a complaint nobody made.
 Writing reports a state and names a consequence.
 
@@ -318,7 +354,7 @@ Writing reports a state and names a consequence.
 Per surface:
 - Interface copy is the strictest: the reader holds no earlier version. Bad: "This field is no longer editable while syncing." Good: "Locked while syncing. Stop the sync to change it." Bad: "Dark mode is not supported yet." Good: "This theme ships light only."
 - Comments are written from the file. Bad: `// Now returns nil instead of an error.` Good: `// nil when the profile sets no timeout.` Bad: `// Moved here from Session.cs.` Good: no comment.
-- Docs describe the system. An upgrade guide is the page whose subject genuinely is the change.
+- Docs describe the system. An upgrade guide takes the change as its subject and says so in its title.
 - Identifiers name what the thing does. `newParser`, `parserV2`, `legacyPath`, `improvedRetry` are true for one release and confusing after the next.
 - Logs, asserts and test failures report the reading. Bad: `t.Fatal("this broke when the retry table landed")`. Good: `t.Fatalf("%s declares no retry budget", profile)`.
 
@@ -355,8 +391,9 @@ A test script, a CI step, a refactor and a page the package does not ship are al
 - Bad: "`npm test` compiles the sources and runs the case suite."
 - Good: no entry. The published package behaves as it did.
 
-The line between them is the artifact, rather than the size of the change.
-A one-word fix to a shipped README is an entry, and a rewritten build pipeline is not.
+The published artifact draws the line, rather than the size of the change.
+A one-word fix to a shipped README earns an entry.
+A rewritten build pipeline earns none.
 
 ## Sources
 

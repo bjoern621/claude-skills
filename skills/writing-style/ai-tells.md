@@ -2,16 +2,16 @@
 
 Constructions marking text as machine-drafted, in the register this skill governs: code comments, Markdown pages, commit and PR bodies.
 Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
-Every one of them is found by reading, and the fluent ones are the point: a tell survives a checklist by sounding finished.
+Every one of them is found by reading, and the fluent ones carry the risk: a tell survives a checklist by sounding finished.
 
-Paired negation, restriction, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
+The labelling copula, paired negation, restriction, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
 ## Lexical
 
 | Tell | Bad | Good |
 |---|---|---|
 | Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm` | `The CI runner underscores the pivotal role of job retries.` | `The CI runner caps job retries at three attempts.` |
-| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents` | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer is the boundary between login and session storage.` |
+| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents`, swapping the copula for a longer one | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer mints a session token once login succeeds.` |
 | Jargon verb for a plain one: `leverage`, `utilize`, `facilitate`, `streamline`, `harness` | `// Utilizes a mutex to leverage exclusive access.` | `// Locks indexMu before touching the manifest.` |
 | Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, the health check misses two heartbeats.` |
 | Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
@@ -26,6 +26,7 @@ Paired negation, restriction, em-dashes, changelog voice, marketing adjectives, 
 
 | Tell | Bad | Good |
 |---|---|---|
+| Labelling copula, `X is a Y` renaming the subject instead of saying what it does | `The reconciler is a state machine.` | `The reconciler walks each window to the state the model asks for.` |
 | Stacked hedges | `// Could potentially leave the socket open in some cases.` | `// Socket stays open when Close runs before the write completes.` |
 | Participial tack-on claiming a result the clause never established | `Fix null pointer in conflict resolver, improving stability and reliability.` | `Fix null pointer in conflict resolver when the remote reports no base revision.` |
 | Rhetorical question answering itself | `Why does the worker pool restart on a config change? Because nothing reconfigures it live.` | `The worker pool restarts on a config change. Nothing reconfigures it live.` |
@@ -82,7 +83,7 @@ Human prose mixes a short assertion with a longer qualified one.
 **Causal cadence.** Every fact on a page arriving with its consequence attached by `so`, `thus` or `which means`.
 A derivation the reader cannot make alone earns the connective.
 The rest of the sentences carry it for rhythm.
-A sentence opening on `So` or `Thus` is the same tic with the halves split across a full stop.
+A sentence opening on `So` or `Thus` repeats the tic with the halves split across a full stop.
 Bad: "The cache keys on the digest, so a rebuild hits. The digest covers the lockfile, so a dependency bump misses."
 Good: "The cache keys on the digest of the lockfile. A dependency bump misses it."
 
@@ -103,7 +104,7 @@ Cutting slop produces a second register that scans just as machine-made: bare fr
 The pass runs against its own output.
 Every sentence this style touched is re-read and asked whether it still states a fact a reader can use.
 A sentence that lost its content is rewritten rather than kept short.
-A dead sentence is a worse defect than the tell it replaced.
+A dead sentence costs the reader more than the tell it replaced.
 
 ## False positives
 

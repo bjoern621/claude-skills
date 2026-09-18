@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: Style for repository prose a human reads, agent-executed documents aside. Covers code comments, config and manifest comments, docstrings, identifiers, test names, log lines, markdown docs, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, when any wording question comes up, and when the user says "fix comments", "clean up docs" or "reads like AI".
+description: Style for repository prose a human reads, agent-executed documents aside. Covers code comments, config and manifest comments, docstrings, identifiers, test names, log lines, markdown docs, wiki and Docmost pages, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, when any wording question comes up, and when the user says "fix comments", "clean up docs" or "reads like AI". The labelling copula "X is a Y" is banned outright, and a sentence breaks at punctuation in code comments alone.
 ---
 
 # Writing style
@@ -33,13 +33,34 @@ Apply to every comment written or touched:
 8. Second pass: re-read each comment and cut again.
    Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
 
-## Line wrapping
+## Labelling copula
 
-Break lines at sentence ends, after `,` `:` `;`, or at a conjunction ("and", "or", "but", "so").
-One sentence per markdown source line.
-A continuation line continues its sentence.
-The rule binds the source; rendered Markdown joins the lines back.
+`X is a Y` hands the reader a second name for something they already hold, and it is banned.
+Say what the thing does, and the sentence carries a fact the reader can act on.
+- Bad: "A finding is a claim." Good: "Every finding is held against the product before it is believed."
+- Bad: "The binding layer is a bridge." Good: "The binding layer redraws the view when the model changes."
+- Bad: "A version is a tag on this project." Good: "Tagging this project publishes a version."
+- Bad: `// A retry budget is a per-profile cap.` Good: `// Retry budget comes from the table.`
+
+The ban holds wherever the complement re-labels the subject: `is a`, `is an`, `is the`, `are the`, and the past forms.
+It reaches a paragraph opener, a heading's first sentence, a bullet, a commit body and a comment alike.
+A predicate that measures rather than re-labels stays: "The file is empty", "The timeout is 30 s".
+A glossary row and a domain-model entry hand the reader a term they do not hold, and those two keep the copula.
+Rewrites and the surrounding cases: [reference.md](reference.md), "Labelling copula".
+
+## Line breaks
+
+One sentence per source line, in Markdown files, code comments and commit bodies.
+A sentence owns its line, however short, and the diff then shows the sentence that changed.
+Rendered Markdown joins the lines back.
 Text already one item per line, bullets, tables and code, is unaffected.
+
+A code comment breaks a sentence too long for the file's width after `,` `:` `;` or before a conjunction ("and", "or", "but", "so").
+Prose runs a sentence to its end on one source line, whatever the width.
+A continuation line continues its sentence.
+
+A rendered editor takes neither rule.
+Docmost, every other wiki, and a forge's issue, review and description boxes show a source line break on the page, so a paragraph goes in as one line and the editor wraps it.
 
 ## Paired negation
 
@@ -49,19 +70,14 @@ State the assertion and stop, leaving the excluded alternative unsaid: "X, not Y
 
 Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
-A residue like "A finding is a claim." or "Windows are reconciled." states nothing.
-A dead sentence is a worse defect than the cadence it replaced.
+A residue like "A finding is a claim." or "Windows are reconciled." states nothing, and the first of them trips the copula ban as well.
+A dead sentence costs the reader more than the cadence it replaced.
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
-
-An aphoristic copula is the same tell with the negated half already gone.
-"A finding is a claim.", "The binding layer is a bridge.", "A version is a tag on this project." each open a paragraph by re-labelling a noun the reader already holds.
-Say what the thing does: "Tagging this project publishes a version."
-A copula handing the reader a term they lack is a definition and stays.
 
 ## Restriction
 
 `only` and its family (`just`, `merely`, `simply`, `alone`, `nothing but`, `all it takes`) narrow a set.
-Where the sentence already names the narrow case, the word is emphasis and it is cut.
+Where the sentence already names the narrow case, the word carries emphasis and it is cut.
 Delete it and read again: a sentence that now covers a case the code rules out keeps the word.
 - Good: `// Takes effect after a restart.`
 - Bad: `// Only takes effect after a restart.`
@@ -84,7 +100,7 @@ Clauses opening with "if", "leaving", "without", "unless" or "instead of" are wh
 
 ## Naming the parts
 
-A list of members is a contract or it is cut.
+A list of members states a contract or it is cut.
 The set that stays is closed and binding: the values a field accepts, the parts a key is built from.
 A sample of what something holds decides nothing, and it goes false the first time a member is added.
 Test by adding one, then describe the container by what it decides.
@@ -96,12 +112,12 @@ Test by adding one, then describe the container by what it decides.
 A page carries what the project owns, and it addresses a reader who already runs the tools the project plugs into.
 Behaviour belonging to one of those tools is that tool's documentation.
 The page names the tool and stops.
-Explaining the addressee's own tools back to them is the first thing to cut from a page that runs long.
+A page that runs long cuts the addressee's own tools first.
 Worked examples: [page-shape.md](page-shape.md).
 
 ## Page shape
 
-[page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects, and how much of a draft is the author's working.
+[page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects, and how much of a draft stays with the author.
 Read it when starting a docs page, restructuring one, splitting one, or reviewing one that reads long.
 `bash <skill-dir>/scripts/page-shape.sh <page>` reports the measurements.
 
@@ -124,18 +140,19 @@ The ones worth holding without opening the file, under the names that page gives
 - Chat preamble in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
 - Prompt echo, a heading whose first sentence restates it.
 - Causal cadence, a consequence welded on with `so`, `thus` or `which means` where the fact stands alone.
+- Labelling copula, `X is a Y` renaming something instead of saying what it does: "The reconciler is a state machine."
 - Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
   `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
 
 ## Docs
 
 State the invariant, in present tense, third person.
-Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") is an observation that rots.
+Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") rots into a confident lie.
 Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
 Architecture and programming are separate subjects.
 A page describing the system names contract vocabulary: routes, config keys, wire message names, and the parts in plain words.
 No source file, function, type or package path appears.
-A decision is one line, and the reasoning that reached it is the author's working.
+A decision takes one line, and the reasoning that reached it stays with the author.
 A snippet opens with its destination, as a comment in the snippet's own language.
 A changelog entry names what somebody taking the release notices.
 Work leaving the published artifact as it was stays out.
@@ -150,6 +167,7 @@ Project style rules add to these; on conflict this skill wins.
 ## Completion criteria
 
 A touched comment is finished once the checklist has run over it, it has been read against the line beneath it, and a second pass has cut it again.
+No sentence of the draft re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
 A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
 
 Nothing here is settled by a tool.

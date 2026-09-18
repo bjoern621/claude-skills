@@ -31,7 +31,7 @@ A reader who stops at any point knows what the thing is.
 9. License.
 
 A section the project has nothing for is left out.
-The numbering is a default reading order rather than a schema.
+The numbering sets a default reading order rather than a schema.
 A project with a stated reason to move one section moves it, and the page still works.
 
 ## The arguing shape
@@ -45,18 +45,18 @@ The argument comes first and it runs on code.
 2. The problem, in the reader's own terms, with the code that produces it.
 3. The incumbent's answer to that same problem, at its real cost, in code.
 4. This software's answer to the same problem, at the same task, in code.
-5. The cases where its answer is the right one, each with the reason it is right there.
+5. The cases its answer fits, each with the reason it fits there.
 6. Install, use, configuration, where it works.
 7. The objection the reader raises next, answered in code.
 8. License.
 
-The comparison is the argument.
+The comparison carries the argument.
 Steps 3 and 4 perform one task twice and hold everything else identical between them.
 Annotating the incumbent's snippet keeps its cost where the reader is already looking.
 [examples/exhaustive-deps-exclude-readme.md](examples/exhaustive-deps-exclude-readme.md) runs this shape end to end.
 
 A default has to exist for this shape to be honest.
-Arguing against nothing is a sales pitch, and that project wanted the informing shape.
+Arguing against nothing reads as a sales pitch, and that project wanted the informing shape.
 
 ## Register
 
@@ -66,13 +66,13 @@ A reference page describes a system to somebody already committed to it, which i
 The rest of the sentence rules apply unchanged, one sentence per source line included.
 
 The arguing shape suspends no other rule.
-An argument made of code and named costs has no use for "powerful" or "seamless", and reaching for either is the sign that the comparison is missing.
+An argument made of code and named costs has no use for "powerful" or "seamless", and reaching for either shows the comparison went missing.
 
 ## Capabilities
 
-A capability list is a contract.
+A capability list states a contract.
 Every line on it is checked against the code before it ships.
-A claim the software does not honour is the one defect a reader cannot recover from, and it outweighs every style rule on this page.
+A reader recovers from no other defect the way they recover from a claim the software does not honour, and that outweighs every style rule on this page.
 
 A section named "Limits", "Caveats" or "Known issues" fronts what fails.
 The same facts state what works: the hosts that receive, the size a transfer handles in seconds, the setting that keeps typed lines out of history.
@@ -80,12 +80,12 @@ An unsupported case is named only where the reader was about to assume it works.
 
 ## Mechanism
 
-How it works is an explanation, and the deciding reader needs one sentence of it plus a link to the page holding the rest.
+How it works calls for an explanation, and the deciding reader needs one sentence of it plus a link to the page holding the rest.
 A project with no such page lets the examples its shape already calls for carry the mechanism, and adds no section walking through it.
 
 ## Prose over a table of cases
 
-A table of situations and results is a state machine, and a state machine is reference material.
+A table of situations and results states a machine, and that belongs in reference material.
 The main path gets a paragraph in the order the task happens, and each edge case gets a sentence after it.
 When a table does earn its place is stated in [page-shape.md](page-shape.md).
 
