@@ -39,6 +39,7 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Fronted `Only` with inversion, sequence staged as suspense | `Only after the lockfile is written does the install proceed.` | `The install proceeds after the lockfile is written.` |
 | `The only X is Y`, weight standing in for the mechanism | `The only thing that matters for throughput is the batch size.` | `Batch size sets throughput.` |
 | `not only X but also Y`, two facts staged as a climb | `The cache not only survives a reload but also shares entries across tabs.` | `The cache survives a reload and shares entries across tabs.` |
+| Rejected option hung off a fact's tail with `rather than`, `instead of`, `as opposed to`, `X over Y` | `Each review runs on a Claude subscription rather than per token.` | `Each review runs on a Claude subscription.` |
 
 ## Structural
 
@@ -117,6 +118,8 @@ The check for that construction skips it.
 **A fidelity word holds where something else would change the value.** `Paste the key verbatim` beside a form that trims whitespace, `as-is` naming the mode a flag selects.
 
 **A correction of fact is exempt.** `Use pnpm, not npm` and `Latency fell 40%, not 4%` carry the correction in the negated half.
+
+**A live choice between two options is exempt.** "Deleted rather than shortened" and "checked rather than applied" each name which of two paths the reader takes, and the sentence empties once the second path goes.
 
 **A restriction that narrows a real set is exempt.** Deleting `only` from `// Safe only on the render thread.` drops a caller obligation, and "runs only when the primary region is unreachable" widens into a claim about every request.
 

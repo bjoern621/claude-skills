@@ -291,6 +291,28 @@ Read the neighbours and move the fact: usually the opener goes entirely because 
 Two subjects put side by side are two statements, and "Cutting words is free. Cutting facts is not." stays.
 What is cut is one subject asserted and mirrored in the same breath.
 
+**The substitution shapes belong here.**
+"rather than", "instead of", "in place of", "as opposed to" and "X over Y" hang the rejected option off the tail of a fact, and the fact stands without it.
+- Bad: "Each review runs on a Claude subscription rather than per token."
+- Good: "Each review runs on a Claude subscription."
+- Bad: "The resolver reads the lockfile instead of the manifest."
+- Good: "The resolver reads the lockfile."
+
+They take the test above: say the rejected option out loud and ask what pointed the reader at it.
+A default the tool ships with, a habit the predecessor taught, the option the sentence before recommended: naming one of those saves a wrong assumption.
+
+**A contrast that survives the test moves into a parenthesis, in a shape that changes each time.**
+The main clause carries the fact, and the aside behind it carries the rejected option.
+A counterfactual aside takes "would", under "Mood".
+Two asides cut to the same pattern on one page turn the parenthesis into the tell the tail was, so length, verb and punctuation vary between them.
+- "Each review runs on a Claude subscription. (Per-token billing needs an API key in the environment.)"
+- "The resolver reads the lockfile (the manifest, up to 3.2)."
+- "Set `pool = shared` before the first query (otherwise every request would open its own connection)."
+
+**A contrast carrying the sentence's own content stays inline.**
+"A comment that restates the code is deleted rather than shortened." records which of two live options a reader takes, and nothing is left once one of them goes.
+What moves into an aside is a contrast hung on a fact that already stands without it.
+
 ## Restriction
 
 `only` narrows a set, and the family around it does the same work: `just`, `merely`, `simply`, `alone`, `purely`, `solely`, `nothing but`, `all it takes`.

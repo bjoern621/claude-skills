@@ -68,10 +68,15 @@ State the assertion and stop, leaving the excluded alternative unsaid: "X, not Y
 - Good: `// Retry budget comes from the table.`
 - Bad: `// The table decides the retry budget, not the caller.`
 
+"rather than", "instead of", "as opposed to" and "X over Y" carry the same move with no negative in them.
+- Good: "Each review runs on a Claude subscription."
+- Bad: "Each review runs on a Claude subscription rather than per token."
+
 Keep the negated half only where a reader was about to assume it, which is rare.
 Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
 A residue like "A finding is a claim." or "Windows are reconciled." states nothing, and the first of them trips the copula ban as well.
 A dead sentence costs the reader more than the cadence it replaced.
+A contrast surviving that test goes into a parenthesis, in a shape that changes each time: "Each review runs on a Claude subscription. (Per-token billing needs an API key in the environment.)"
 A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
 
 ## Restriction
