@@ -4,7 +4,7 @@ Constructions marking text as machine-drafted, in the register this skill govern
 Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
 Every one of them is found by reading, and the fluent ones carry the risk: a tell survives a checklist by sounding finished.
 
-The labelling copula, paired negation, restriction, em-dashes, changelog voice, marketing adjectives, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
+The labelling copula, paired negation, restriction, em-dashes, changelog voice, marketing adjectives, plain register, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
 ## Lexical
 
@@ -13,6 +13,7 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm` | `The CI runner underscores the pivotal role of job retries.` | `The CI runner caps job retries at three attempts.` |
 | Copula avoidance: `serves as`, `stands as`, `functions as`, `represents`, swapping the copula for a longer one | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer mints a session token once login succeeds.` |
 | Jargon verb for a plain one: `leverage`, `utilize`, `facilitate`, `streamline`, `harness` | `// Utilizes a mutex to leverage exclusive access.` | `// Locks indexMu before touching the manifest.` |
+| Register above developer speech: business or product wording where a plain verb exists (`bills`, `provisions`, `onboards`, `consumes`, `surfaces`, `is subject to`) | `Each review is billed to a Claude subscription.` | `Each review runs on a Claude subscription.` |
 | Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, the health check misses two heartbeats.` |
 | Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
 | Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the driver's connection pool. Adds no state.` |

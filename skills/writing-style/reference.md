@@ -28,6 +28,15 @@ Do not address the reader.
 
 **No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready".
 
+**Plain register.**
+Write the word a developer says at the desk.
+Business and product vocabulary sits a level above that, and it reads as a press release: "bills", "provisions", "onboards", "consumes", "surfaces", "enables", "is subject to".
+- Bad: "Each review is billed to a Claude subscription."
+- Good: "Each review runs on a Claude subscription."
+- Bad: "The runner consumes the artifact endpoint."
+- Good: "The runner downloads the artifact."
+The plain verb names the same event, and the reader stops on nothing.
+
 **No rhetorical scaffolding.**
 Drop "It is worth noting that", "Importantly,", "Notably,", "Note that", "In essence,", "Of course,".
 State the fact directly.

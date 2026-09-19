@@ -139,6 +139,7 @@ Read it when drafting a doc page or a commit body, and when a passage reads flue
 
 The ones worth holding without opening the file, under the names that page gives them:
 - Inflated vocabulary, where a plain word carries the fact: `delve`, `pivotal`, `underscore`, `leverage`, `utilize`, `serves as`.
+- Register above developer speech, business wording standing in for the plain verb: "Each review is billed to a Claude subscription."
 - Participial tack-on, claiming a result the clause never established: "Fix the null pointer, improving stability."
 - Stacked hedges on a fact that can be asserted: "could potentially leave the socket open."
 - Rule of three, a list landing on three items for rhythm.
