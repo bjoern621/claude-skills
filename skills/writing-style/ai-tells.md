@@ -1,8 +1,9 @@
 # AI tells
 
 Constructions marking text as machine-drafted, in the register this skill governs: code comments, Markdown pages, commit and PR bodies.
-Each row names the construction, shows an example that fails, and shows the same fact stated so it passes.
-Every one of them is found by reading, and the fluent ones carry the risk: a tell survives a checklist by sounding finished.
+Each row names the construction, shows an example that fails and shows the same fact stated so it passes.
+Every one of them is found by reading.
+The fluent ones carry the risk: a tell survives a checklist by sounding finished.
 
 The labelling copula, paired negation, restriction, em-dashes, changelog voice, marketing adjectives, plain register, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
@@ -36,6 +37,8 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Agentless passive hiding which component acts | `The version is read by the resolver and the value is derived from the lockfile.` | `The resolver reads the version from the lockfile.` |
 | Stacked range manufacturing breadth | `Supports rows from a thousand to a billion, from one column to a thousand, everything from Postgres to MySQL.` | `Supports a thousand to a billion rows, one to a thousand columns, on Postgres, MySQL or SQLite.` |
 | Parenthetical smuggling a scope qualifier | `// Retries the request (and in most cases this resolves it).` | `// Retries once. Resolves the timeout in most cases.` |
+| Comma before `and` closing a list | `Split the query builder into resolver, fetcher, and linker.` | `Split the query builder into resolver, fetcher and linker.` |
+| Two clauses glued with `, and` | `The cache keys on the digest, and a rebuild hits it.` | `The cache keys on the digest. A rebuild hits it.` |
 | Consequence welded to a fact with `so`, `thus`, `hence`, `therefore`, `as such`, `which means`, `in turn` | `// Runs on a copy of the manifest, so the original stays unchanged.` | `// Runs on a copy of the manifest.` |
 | Fronted `Only` with inversion, sequence staged as suspense | `Only after the lockfile is written does the install proceed.` | `The install proceeds after the lockfile is written.` |
 | `The only X is Y`, weight standing in for the mechanism | `The only thing that matters for throughput is the batch size.` | `Batch size sets throughput.` |
@@ -47,7 +50,7 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Tell | Bad | Good |
 |---|---|---|
 | Prompt echo: first sentence restates its heading | `## What StopSync does` over `StopSync is a function that stops syncing.` | `## StopSync` over `Closes the watch. Already closed is success.` |
-| Boilerplate section skeleton | `## Challenges and future outlook` | `## Known issues`, holding `The CI runner floors every retry at 30 s, and the config file exposes no key for it.` |
+| Boilerplate section skeleton | `## Challenges and future outlook` | `## Known issues`, holding `The CI runner floors every retry at 30 s. The config file exposes no key for it.` |
 | Parent heading holding only more headings | `## Architecture` straight into `### Overview` | `## Architecture` over `Three components: resolver, fetcher, linker.` |
 | Bolded label plus colon turning a fact into a glossary entry | `- **Fast**: schedules in under 5 ms.` | `Schedules in under 5 ms, retries three times, reads one config file.` |
 | Prose split into bullets, each one short clause | `- Hardware key check runs first.` `- Software OTP fallback runs on failure.` | `Auth tries the hardware key first and falls back to software OTP on failure.` |
@@ -76,7 +79,7 @@ They are asked at the second pass.
 **Elegant variation.** One entity renamed across a page to avoid repeating a word.
 No single grep finds every mention.
 Bad: "The client opens the socket. The peer sends a handshake. The consumer reads the reply."
-Good: "The client opens the socket, sends a handshake, and reads the reply."
+Good: "The client opens the socket, sends a handshake and reads the reply."
 
 **Uniform rhythm.** Every sentence in a passage running the same length and the same subject-verb-object shape.
 Human prose mixes a short assertion with a longer qualified one.
@@ -120,9 +123,10 @@ The check for that construction skips it.
 
 **A correction of fact is exempt.** `Use pnpm, not npm` and `Latency fell 40%, not 4%` carry the correction in the negated half.
 
-**A live choice between two options is exempt.** "Deleted rather than shortened" and "checked rather than applied" each name which of two paths the reader takes, and the sentence empties once the second path goes.
+**A live choice between two options is exempt.** "Deleted rather than shortened" and "checked rather than applied" each name which of two paths the reader takes.
+The sentence empties once the second path goes.
 
-**A restriction that narrows a real set is exempt.** Deleting `only` from `// Safe only on the render thread.` drops a caller obligation, and "runs only when the primary region is unreachable" widens into a claim about every request.
+**A restriction that narrows a real set is exempt.** Deleting `only` from `// Safe only on the render thread.` drops a caller obligation and "runs only when the primary region is unreachable" widens into a claim about every request.
 
 **Frequency gates the voice tells.** Transition openers, staccato, rule of three and causal cadence fire on a pattern across a document.
 One legitimate instance passes.

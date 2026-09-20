@@ -22,7 +22,7 @@ Fragments stay legitimate where the surface is a fragment: chip captions, list n
 
 **No opinions, no judgment, no humor.**
 The copy states facts and trades; the reader decides.
-Verdicts ("settings nobody asked for"), permissions ("entitled to make"), and jokes are cut.
+Verdicts ("settings nobody asked for"), permissions ("entitled to make") and jokes are cut.
 Humor reads once; settings text is read hundreds of times.
 
 ## Person
@@ -68,14 +68,14 @@ The fix is named only where one exists; a refusal with no way out ends after the
 - Good: "The converter is not installed, so this format cannot be read. Install it, or export as CSV instead."
 - Good, no fix known: "The database refused the connection on this machine."
 
-**Disabled control: why, and what enables it.**
+**Disabled control: why and what enables it.**
 A grayed control is never a communication dead end.
 - Good: "Locked while a backup runs. Stop the backup to change it."
 
 **Option description: what it does, when to pick it.**
 The observable effect beats the definition.
 - Bad: "Incremental mode retains only blocks whose checksum has changed."
-- Good: "Copies only what changed since the last run. Faster, and it needs the last run to still be there."
+- Good: "Copies only what changed since the last run. Faster, but it needs the last run to still be there."
 
 **Tooltip: 25 words at most.**
 Supplemental only; anything the reader must act on lives in the interface proper.
@@ -89,7 +89,7 @@ The first sentence carries the decision; mechanism follows only where the decisi
 Help text may teach; it may not lecture.
 
 **A list of contents describes nothing.**
-Naming what a screen holds repeats what the screen says once it is open, and it goes false the first time something is added.
+Naming what a screen holds repeats what the screen says once it is open. It goes false the first time something is added.
 Name what the surface decides.
 - Bad: "Settings for the app: reports, updates, logs and the linked account."
 - Good: "Settings for the app itself. They hold for every project."
@@ -104,7 +104,7 @@ Stated in full in [writing-style](../writing-style/reference.md).
 **One term per concept.**
 A concept renamed per surface sends the reader looking it up again on every surface.
 The term list belongs to the product.
-A project fixes its own names in one place, and every surface reads them from there.
+A project fixes its own names in one place. Every surface reads them from there.
 Check the project's design or style document for an existing term before coining one.
 
 **Personification stays standard.**

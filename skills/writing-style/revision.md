@@ -4,7 +4,7 @@ How a draft reaches the state [SKILL.md](SKILL.md) describes.
 A draft here means prose a human reads out of the repository; [SKILL.md](SKILL.md) states what falls outside that.
 
 A single reading passes a rule stated in one place.
-Each pass fixes which rules are in mind while it runs, and names the sections it sweeps rather than restating them.
+Each pass fixes which rules are in mind while it runs and names the sections it sweeps rather than restating them.
 
 ## The passes
 
@@ -22,7 +22,8 @@ Capability claims are checked against the code before any other rule, a false on
 
 One entry from the sweep list at a time, the whole draft read once per entry.
 The entry's section is open while its read runs.
-A section recalled from memory loses its quieter rules, and this pass exists to stop that.
+A section recalled from memory loses its quieter rules.
+This pass exists to stop that.
 
 ### 3. Document sweep
 
@@ -31,14 +32,14 @@ The frequency gate closing that page decides each one.
 
 ### 4. Cure pass
 
-Every sentence the earlier passes rewrote is read again, on its own, and asked what it now states.
+Every sentence the earlier passes rewrote is read again on its own and asked what it now states.
 Cutting a tell manufactures a register of its own: bare fragments, amputated contrasts, sentences that lost their content and kept their shape.
 A sentence that lost its content is rewritten rather than left short.
 
 ### 5. Cross-check
 
 A reader who did not write the draft reads it against this skill and reports what it finds.
-The author knows what each sentence was meant to say, and cannot read it for what it says.
+The author knows what each sentence was meant to say and cannot read it for what it says.
 In an agent session a subagent reads, handed the skill and the draft and nothing about the intent behind them.
 Its findings are checked rather than applied, a reader without the intent taking a deliberate choice for a slip.
 
@@ -58,7 +59,8 @@ Each rule is stated once, on the page the sweep opens to reach it.
 9. [ai-tells.md](ai-tells.md), one table per read: lexical, syntactic, structural, rhetorical.
 10. [page-shape.md](page-shape.md) for a docs page or a README, then [readme.md](readme.md) for a README.
 
-Entries 1 to 7 open every rule-bearing section of [reference.md](reference.md), and entries 3, 5 and 8 add the sections of [SKILL.md](SKILL.md) that state a rule of their own.
+Entries 1 to 7 open every rule-bearing section of [reference.md](reference.md).
+Entries 3, 5 and 8 add the sections of [SKILL.md](SKILL.md) that state a rule of their own.
 Entry 5 reads the draft once for the labelling copula alone, that shape surviving a general read by sounding like a definition.
 Entry 9 opens the four tables of [ai-tells.md](ai-tells.md); that page's "What only a reader catches" belongs to pass 3 and "The cure has its own tells" to pass 4.
 Entry 10 names [page-shape.md](page-shape.md) and [readme.md](readme.md) whole.
@@ -75,4 +77,4 @@ The exemptions in "False positives" of [ai-tells.md](ai-tells.md) hold over ever
 - Every comment written or touched has been read against the line beneath it, one comment at a time.
 - No sentence re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
 - Every sentence the passes rewrote has been through the cure pass.
-- A cross-check has run, and each finding it returned has been accepted or refused with a reason.
+- A cross-check has run. Each finding it returned has been accepted or refused with a reason.

@@ -10,7 +10,7 @@ copula="Labelling copula 'X is a Y' is banned. Say what the thing does."
 
 case $surface in
 prompt)
-    message="Load writing-style before repository prose a human reads, and interface-text before a string a user reads. However small the edit. $copula"
+    message="Load writing-style before repository prose a human reads and interface-text before a string a user reads. However small the edit. $copula"
     ;;
 rendered)
     message="writing-style governs this page. Load it unless it is already loaded. $copula A rendered editor takes no hard wrapping: a paragraph goes in as one line."

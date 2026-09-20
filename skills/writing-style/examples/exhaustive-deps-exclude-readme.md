@@ -1,7 +1,8 @@
 # Example: a README that argues
 
 The README of [eslint-plugin-exhaustive-deps-exclude](https://github.com/bjoern621/eslint-plugin-exhaustive-deps-exclude), reproduced below from the heading rule onward.
-It runs the arguing shape in [../readme.md](../readme.md) end to end, and it is the reference for that shape.
+It runs the arguing shape in [../readme.md](../readme.md) end to end.
+It is the reference for that shape.
 
 Every word is the original.
 The source line breaks follow the one-sentence-per-line rule, which changes the rendered page in no way.
@@ -12,10 +13,10 @@ What it does that the shape asks for:
 - The incumbent's answer to that problem is shown at its real cost, annotated inside the snippet where the cost sits.
 - Its own answer performs the same task, with the surrounding code held identical, so the comparison carries the argument by itself.
 - Each excluded-dependency case names the reason the exclusion is correct there.
-- The objection a reader raises next, `eslint-disable-next-line`, gets a section, and the answer is two snippets.
+- The objection a reader raises next, `eslint-disable-next-line`, gets a section and the answer is two snippets.
 
 The debounce line reads as paired negation and stays anyway: the negated half names the alternative trigger, which is the fact the sentence exists to settle.
-That is the case the rule reserves, and recognising it takes a reader.
+That is the case the rule reserves and recognising it takes a reader.
 
 ---
 

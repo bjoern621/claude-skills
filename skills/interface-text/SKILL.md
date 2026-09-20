@@ -1,6 +1,6 @@
 ---
 name: interface-text
-description: Style for any string a user reads. Covers labels, help text, option descriptions, tooltips, dialog and notification text, error and refusal messages, disabled-control explanations, empty states, CLI output. Load before writing or editing one, however small the edit, and when the user says "reword this", "user-facing text", "UI copy" or "microcopy".
+description: Style for any string a user reads. Covers labels, help text, option descriptions, tooltips, dialog and notification text, error and refusal messages, disabled-control explanations, empty states, CLI output. Load before writing or editing one, however small the edit and when the user says "reword this", "user-facing text", "UI copy" or "microcopy".
 ---
 
 # Interface text
@@ -29,13 +29,13 @@ Apply to every string written or touched:
 
 - Aim 15 words per sentence, cap 25. One idea per sentence.
 - Lead with the fact that carries the decision; detail after.
-- Periods, commas, and a colon before a list or an example. Nothing else.
+- Periods, commas and a colon before a list or an example. Nothing else.
 - Sentence case everywhere. A fragment carries no period; a full sentence does.
 
 ## Pattern per surface
 
 - Error or refusal: problem, cause, fix. Fix named only where one exists.
-- Disabled control: why it is unavailable, and what enables it. Never a dead end.
+- Disabled control: why it is unavailable and what enables it. Never a dead end.
 - Option description: what it does, when to pick it.
 - Tooltip: 25 words at most, adding what the label leaves out.
 - Empty state: what is so, then the next step.
@@ -53,5 +53,5 @@ Apply to every string written or touched:
 
 ## Completion criteria
 
-- Every written or touched string passes the checklist, its surface pattern, and the Shape and Words rules.
-- Second pass, one string at a time: name the fact each word carries, and cut the words that carry none.
+- Every written or touched string passes the checklist, its surface pattern and the Shape and Words rules.
+- Second pass, one string at a time: name the fact each word carries and cut the words that carry none.
