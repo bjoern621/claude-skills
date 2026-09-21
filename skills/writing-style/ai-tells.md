@@ -58,6 +58,9 @@ The labelling copula, paired negation, restriction, em-dashes, quotation marks, 
 | Prose split into bullets, each one short clause | `- Hardware key check runs first.` `- Software OTP fallback runs on failure.` | `Auth tries the hardware key first and falls back to software OTP on failure.` |
 | Count in a heading, chosen for the format | `## Five things to know about the connection pool` | `## Connection pool` |
 | Title Case heading | `## Setting Up The Development Environment` | `## Setting up the development environment` |
+| Decoration on a heading or an item: emoji, arrow, check mark, a horizontal rule between sections | `## :rocket: Launch phase` | `## Launch phase` |
+| Emphasis by typography: ALL CAPS, a period between each word, bold on a term | `The lock is released on EVERY path out of the function.` | `All four return paths release the lock.` |
+| Closer repeated under one heading after another | `Caching cuts repeat work.` `That is the real win.` `Retries hide brief outages.` `That is the real win.` | `Caching cuts repeat work. Retries hide brief outages.` |
 | Transition openers on consecutive paragraphs: `Additionally`, `Furthermore`, `Moreover` | `Additionally, the job scheduler buffers three tasks. Furthermore, it drops the oldest.` | `The job scheduler buffers three tasks and drops the oldest on overflow.` |
 
 ## Rhetorical

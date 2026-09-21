@@ -77,6 +77,17 @@ If a behaviour fits in five lines, show it.
 **No closing recap.**
 The page ends on its last fact.
 The reader just read the body.
+A closer repeated under each section runs the same move at the scale of the page: "That is the real win." under one heading after another.
+
+**No decoration.**
+An emoji, an arrow ("->"), a check mark or a cross in a heading, a bullet or a table cell dresses the item and states nothing about it.
+A horizontal rule between sections repeats the break the heading already makes.
+
+**Emphasis stays in the words.**
+ALL CAPS on a word, a period between each word ("every. single. day.") and bold on a term ask the reader to lean on a claim the sentence never made.
+A claim that needs weight takes the number behind it.
+- Bad: "The lock is released on EVERY path out of the function."
+- Good: "All four return paths release the lock."
 
 **Cut hedging on facts.**
 Reserve hedging for genuinely conditional behaviour.
