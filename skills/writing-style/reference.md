@@ -15,6 +15,10 @@ German writes its lists the same way.
 Prefer two sentences over a semicolon gluing two clauses.
 Reserve semicolons for list items containing internal commas.
 One layer of parentheses maximum.
+Straight quotation marks throughout, `"` and `'`.
+The curly forms come from an editor that substitutes them on the way in and they break a command copied out of the page.
+A hyphenated pair keeps its hyphen in front of the noun and drops it behind: "a high-quality report", "the report is high quality".
+The pair carrying its hyphen in every position marks machine drafting: `third-party`, `cross-functional`, `data-driven`, `real-time`, `end-to-end`.
 
 ## Docs and prose
 

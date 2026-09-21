@@ -5,7 +5,7 @@ Each row names the construction, shows an example that fails and shows the same 
 Every one of them is found by reading.
 The fluent ones carry the risk: a tell survives a checklist by sounding finished.
 
-The labelling copula, paired negation, restriction, em-dashes, changelog voice, marketing adjectives, plain register, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
+The labelling copula, paired negation, restriction, em-dashes, quotation marks, hyphenation, changelog voice, marketing adjectives, plain register, rhetorical scaffolding, second person and closing recaps live in [reference.md](reference.md).
 
 ## Lexical
 
