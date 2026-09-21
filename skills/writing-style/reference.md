@@ -342,6 +342,16 @@ The fact stands without it.
 They take the test above: say the rejected option out loud and ask what pointed the reader at it.
 A default the tool ships with, a habit the predecessor taught, the option the sentence before recommended: naming one of those saves a wrong assumption.
 
+**An option nobody proposed is raised so the text can reject it.**
+"A tempting approach would be", "One might be tempted to", "An obvious approach would be" and "You might think X, but" put a plan on the page for the knocking down.
+The plan got there from the author's own thinking and the reader arrives without it.
+The defensive openers do the same with an objection: "To be clear", "This is not to say", "Some might say X, but".
+- Bad: "Session tokens rotate every 24 hours. A tempting approach would be to restart the auth service on a cron, but that drops every active session."
+- Good: "Session tokens rotate in place every 24 hours. Clients refresh without a new login."
+
+Both take the test above.
+An option a reader arrives holding stays, with the reason it lost.
+
 **A contrast that survives the test moves into a parenthesis, in a shape that changes each time.**
 The main clause carries the fact.
 The aside behind it carries the rejected option.

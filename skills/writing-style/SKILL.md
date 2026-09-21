@@ -161,6 +161,7 @@ The ones worth holding without opening the file, under the names that page gives
   `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
 - Singularity claimed with `the one X`, where a count states the same fact: "the one filled button the design system draws."
 - Dramatized fact, a rule written as decree: "Red belongs to destruction and no other fill exists."
+- Option nobody proposed, raised so the text can reject it: "A tempting approach would be to rotate on a cron, but that drops every session."
 
 ## Docs
 
