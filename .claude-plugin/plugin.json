@@ -1,6 +1,7 @@
 {
   "name": "bjoern",
   "description": "Personal writing conventions: style enforcement for comments, docs, commit bodies, and user-facing interface text.",
+  "version": "1.0.0",
   "author": {
     "name": "Björn",
     "url": "https://github.com/bjoern621"
