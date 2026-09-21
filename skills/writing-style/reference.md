@@ -34,7 +34,7 @@ Do not address the reader.
 - Words to avoid: "you", "your", "we", "we'll", "let's", "our".
 - A README addresses somebody deciding whether to use the software. [readme.md](readme.md) states that scope.
 
-**No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready".
+**No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready", "vibrant", "renowned", "groundbreaking", "showcase", "enhance".
 
 **Plain register.**
 Write the word a developer says at the desk.

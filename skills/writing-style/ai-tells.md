@@ -11,12 +11,12 @@ The labelling copula, paired negation, restriction, em-dashes, quotation marks, 
 
 | Tell | Bad | Good |
 |---|---|---|
-| Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm` | `The CI runner underscores the pivotal role of job retries.` | `The CI runner caps job retries at three attempts.` |
-| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents`, swapping the copula for a longer one | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer mints a session token once login succeeds.` |
+| Inflated vocabulary: `delve`, `intricate`, `pivotal`, `underscore`, `testament`, `garner`, `myriad`, `paramount`, `tapestry`, `landscape`, `realm`, `showcase`, `enhance`, `interplay`, `meticulous`, `enduring` | `The CI runner underscores the pivotal role of job retries.` | `The CI runner caps job retries at three attempts.` |
+| Copula avoidance: `serves as`, `stands as`, `functions as`, `represents`, `boasts`, `features`, `offers`, `maintains`, swapping the copula for a longer one | `TokenIssuer serves as the boundary between login and session storage.` | `TokenIssuer mints a session token once login succeeds.` |
 | Jargon verb for a plain one: `leverage`, `utilize`, `facilitate`, `streamline`, `harness` | `// Utilizes a mutex to leverage exclusive access.` | `// Locks indexMu before touching the manifest.` |
 | Register above developer speech: business or product wording where a plain verb exists (`bills`, `provisions`, `onboards`, `consumes`, `surfaces`, `is subject to`) | `Each review is billed to a Claude subscription.` | `Each review runs on a Claude subscription.` |
 | Unnamed authority | `// Best practice suggests polling under 500 ms.` | `// Poll interval 500 ms. Above it, the health check misses two heartbeats.` |
-| Vague relational preposition | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
+| Vague relational preposition: `in connection with`, `associated with`, `linked to`, `tied to` | `// Runs in connection with the lockfile check.` | `// Runs after ResolveLockfile confirms no version conflict.` |
 | Intensifier carrying no fact: `very`, `truly`, `fundamentally`, `essentially`, `literally` | `// Fundamentally just a thin wrapper.` | `// Wraps the driver's connection pool. Adds no state.` |
 | Fidelity emphasis the verb already carries: `verbatim`, `word-for-word`, `character-for-character`, `exactly as written`, `as-is` | `// Forwards the Authorization header verbatim.` | `// Forwards the Authorization header. Any rewrite breaks the signature.` |
 | Significance noun: `cornerstone`, `testament`, `landmark` | `This refactor is a cornerstone of the editor's undo system.` | `This refactor moves undo-stack merging into the history table.` |
@@ -30,7 +30,7 @@ The labelling copula, paired negation, restriction, em-dashes, quotation marks, 
 |---|---|---|
 | Labelling copula, `X is a Y` renaming the subject instead of saying what it does, commonest as a paragraph opener | `A version is a tag on this project.` | `Tagging this project publishes a version.` |
 | Stacked hedges | `// Could potentially leave the socket open in some cases.` | `// Socket stays open when Close runs before the write completes.` |
-| Participial tack-on claiming a result the clause never established | `Fix null pointer in conflict resolver, improving stability and reliability.` | `Fix null pointer in conflict resolver when the remote reports no base revision.` |
+| Participial tack-on claiming a result the clause never established: `highlighting`, `underscoring`, `showcasing`, `reflecting`, `ensuring`, `symbolizing`, `contributing to` | `Fix null pointer in conflict resolver, improving stability and reliability.` | `Fix null pointer in conflict resolver when the remote reports no base revision.` |
 | Rhetorical question answering itself | `Why does the worker pool restart on a config change? Because nothing reconfigures it live.` | `The worker pool restarts on a config change. Nothing reconfigures it live.` |
 | Whether-list claiming coverage | `Whether the destination is one webhook or a hundred, fanout is the same.` | `Fanout is the same for one webhook and for a hundred.` |
 | Rule of three, a list landing on three items for rhythm | `Refactor the query builder for clarity, maintainability, and performance.` | `Split the 400-line query builder into one function per clause type.` |
