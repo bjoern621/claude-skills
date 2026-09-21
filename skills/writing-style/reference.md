@@ -50,6 +50,9 @@ The reader stops on nothing.
 **No rhetorical scaffolding.**
 Drop "It is worth noting that", "Importantly,", "Notably,", "Note that", "In essence,", "Of course,".
 State the fact directly.
+Depth framing announces a hidden truth and hands over no detail: "The real question is", "At its core", "What really matters", "The heart of the matter", "Here's the thing".
+- Bad: "At its core, what really matters is whether the cache survives a restart."
+- Good: "A restart drops the cache."
 
 **No sales-pitch framings.**
 Avoid "This is more than X", "X enables Y to thrive".

@@ -72,6 +72,7 @@ The labelling copula, paired negation, restriction, em-dashes, quotation marks, 
 | Tool given a will or acting on itself | `The reconciler fixes itself when the settings file goes stale.` | `The reconciler rereads the settings file on every pass.` |
 | Fact raised to decree: a thing pointed at an abstract (`belongs to destruction`), an abstract noun standing in for the case, an exclusivity restated once it has landed | `Red belongs to destruction and never carries a fill, and no other fill exists.` | `Red marks a destructive action. That button stays unfilled.` |
 | Novelty inflation | `Introduces a novel retry strategy.` | `Retries with jittered backoff. A pool-wide reconnect spreads over 30 s.` |
+| Depth framing, an ordinary fact announced as a hidden truth: `The real question is`, `At its core`, `What really matters`, `The heart of the matter` | `At its core, what really matters is whether the cache survives a restart.` | `A restart drops the cache.` |
 | Objection answered where nobody raised it: `To be clear`, `This is not to say`, `Some might say X, but` | `Some might say the cache is redundant, but it saves a round trip.` | `The cache saves a round trip on every repeated lookup.` |
 | Templated concession naming no size | `While the fallback path is simple, it remains a limitation worth watching.` | `The fallback path adds 200 ms and skips the cache. It runs only when the primary region is unreachable.` |
 
