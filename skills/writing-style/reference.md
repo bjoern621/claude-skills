@@ -16,7 +16,8 @@ Prefer two sentences over a semicolon gluing two clauses.
 Reserve semicolons for list items containing internal commas.
 One layer of parentheses maximum.
 Straight quotation marks throughout, `"` and `'`.
-The curly forms come from an editor that substitutes them on the way in and they break a command copied out of the page.
+The curly forms come from an editor that substitutes them on the way in.
+A command copied out of the page then fails in the shell.
 A hyphenated pair keeps its hyphen in front of the noun and drops it behind: "a high-quality report", "the report is high quality".
 The pair carrying its hyphen in every position marks machine drafting: `third-party`, `cross-functional`, `data-driven`, `real-time`, `end-to-end`.
 
@@ -80,7 +81,8 @@ The reader just read the body.
 A closer repeated under each section runs the same move at the scale of the page: "That is the real win." under one heading after another.
 
 **No decoration.**
-An emoji, an arrow ("->"), a check mark or a cross in a heading, a bullet or a table cell dresses the item and states nothing about it.
+An emoji, an arrow, a check mark or a cross dresses a heading, a bullet or a table cell.
+It states nothing about the item.
 A horizontal rule between sections repeats the break the heading already makes.
 
 **Emphasis stays in the words.**
@@ -356,9 +358,10 @@ The fact stands without it.
 They take the test above: say the rejected option out loud and ask what pointed the reader at it.
 A default the tool ships with, a habit the predecessor taught, the option the sentence before recommended: naming one of those saves a wrong assumption.
 
-**An option nobody proposed is raised so the text can reject it.**
-"A tempting approach would be", "One might be tempted to", "An obvious approach would be" and "You might think X, but" put a plan on the page for the knocking down.
-The plan got there from the author's own thinking and the reader arrives without it.
+**A fake alternative raises an option nobody proposed.**
+"A tempting approach would be", "One might be tempted to", "An obvious approach would be" and "You might think X, but" put a plan on the page and reject it in the same breath.
+The plan got there from the author's own thinking.
+The reader arrives without it.
 The defensive openers do the same with an objection: "To be clear", "This is not to say", "Some might say X, but".
 - Bad: "Session tokens rotate every 24 hours. A tempting approach would be to restart the auth service on a cron, but that drops every active session."
 - Good: "Session tokens rotate in place every 24 hours. Clients refresh without a new login."
