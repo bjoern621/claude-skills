@@ -147,3 +147,4 @@ One legitimate instance passes.
 - [Pangram: spotting AI writing patterns](https://www.pangram.com/blog/comprehensive-guide-to-spotting-ai-writing-patterns)
 - [Google developer documentation style guide, headings](https://developers.google.com/style/headings): sentence case, behind the Title Case row
 - The `unslop` skill's reference corpus, for the technical-register translation and the detection machinery
+- The `humanizer` skill's pattern list, for the fake alternative, the depth framing, the decoration rules and the word lists
