@@ -42,6 +42,7 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Consequence welded to a fact with `so`, `thus`, `hence`, `therefore`, `as such`, `which means`, `in turn` | `// Runs on a copy of the manifest, so the original stays unchanged.` | `// Runs on a copy of the manifest.` |
 | Fronted `Only` with inversion, sequence staged as suspense | `Only after the lockfile is written does the install proceed.` | `The install proceeds after the lockfile is written.` |
 | `The only X is Y`, weight standing in for the mechanism | `The only thing that matters for throughput is the batch size.` | `Batch size sets throughput.` |
+| `the one X`, singularity claimed where a count states the fact | `The accent carries the one filled button the design system draws.` | `One button per screen carries a fill, in the accent colour.` |
 | `not only X but also Y`, two facts staged as a climb | `The cache not only survives a reload but also shares entries across tabs.` | `The cache survives a reload and shares entries across tabs.` |
 | Rejected option hung off a fact's tail with `rather than`, `instead of`, `as opposed to`, `X over Y` | `Each review runs on a Claude subscription rather than per token.` | `Each review runs on a Claude subscription.` |
 
@@ -68,6 +69,7 @@ The labelling copula, paired negation, restriction, em-dashes, changelog voice, 
 | Text praising its own quality | `Refactored the builder to ensure clarity and provide a more complete solution.` | `Split the resolver into one function per version constraint.` |
 | Data narrating itself | `The benchmark numbers speak for themselves.` | `Benchmark: 12 ms median, 40 ms p99, at 500 requests per second.` |
 | Tool given a will or acting on itself | `The reconciler fixes itself when the settings file goes stale.` | `The reconciler rereads the settings file on every pass.` |
+| Fact raised to decree: a thing pointed at an abstract (`belongs to destruction`), an abstract noun standing in for the case, an exclusivity restated once it has landed | `Red belongs to destruction and never carries a fill, and no other fill exists.` | `Red marks a destructive action. That button stays unfilled.` |
 | Novelty inflation | `Introduces a novel retry strategy.` | `Retries with jittered backoff. A pool-wide reconnect spreads over 30 s.` |
 | Templated concession naming no size | `While the fallback path is simple, it remains a limitation worth watching.` | `The fallback path adds 200 ms and skips the cache. It runs only when the primary region is unreachable.` |
 

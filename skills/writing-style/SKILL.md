@@ -159,6 +159,8 @@ The ones worth holding without opening the file, under the names that page gives
 - Labelling copula, `X is a Y` renaming something instead of saying what it does: "The reconciler is a state machine."
 - Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
   `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
+- Singularity claimed with `the one X`, where a count states the same fact: "the one filled button the design system draws."
+- Dramatized fact, a rule written as decree: "Red belongs to destruction and no other fill exists."
 
 ## Docs
 

@@ -1,7 +1,7 @@
 # README shape
 
 What a README carries, for whom and in which order.
-The sentence rules in [reference.md](reference.md) hold here, with the one exception named under "Register".
+The sentence rules in [reference.md](reference.md) hold here, with the exception named under "Register".
 The page rules in [page-shape.md](page-shape.md) hold as well.
 
 ## Reader

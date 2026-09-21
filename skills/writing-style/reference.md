@@ -51,6 +51,15 @@ State the fact directly.
 Avoid "This is more than X", "X enables Y to thrive".
 "Not just X, but Y" is one shape of the pattern in "Paired negation".
 
+**No dramatization.**
+A rule written as decree sits a register above the fact and carries less of it.
+The shapes: an allegiance verb pointing a thing at an abstract ("belongs to destruction", "is reserved for danger"), an abstract noun standing in for the case ("destruction" for a destructive action) and an exclusivity restated once it has landed.
+"Plain register" above names the business wording that sits over the fact.
+A decree sits over it from the other side.
+Plain ownership keeps the verb: "A setting belongs to the tool that defines it" names who documents it.
+- Bad: "The accent carries the one filled button the design system draws. Red belongs to destruction and never carries a fill, and no other fill exists."
+- Good: "One button per screen carries a fill, in the accent colour. Red marks a destructive action and its button stays unfilled."
+
 **Written as a reference.**
 Documentation describes the finished state.
 Avoid "First, we...", "Now we will...", "Next, let's...".
@@ -377,6 +386,14 @@ As a claim about the code it goes false the first time a second path appears.
 - Good: "The request carries a token in the header."
 
 An exclusivity a reader has to honour is written as an invariant: "WriteManifest holds the only write path to manifest.json."
+
+**`the one X` claims singularity for weight.**
+The determiner tells the reader how rare the thing is where a count tells them how many there are.
+A count survives the second one appearing.
+- Bad: "The accent carries the one filled button the design system draws."
+- Good: "One button per screen carries a fill, in the accent colour."
+- Bad: "That leaves the one place the token is read."
+- Good: "The session endpoint reads the token."
 
 **`not only X but also Y` stages two facts as a climb**.
 "Paired negation" carries the rest of that family.
