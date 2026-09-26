@@ -435,6 +435,34 @@ A count survives the second one appearing.
 Several defensible instances in one passage read as cadence.
 Each takes the deletion test rather than passing on the strength of the first.
 
+## The word well
+
+"well" and "wells" keep three senses:
+- "as well", meaning also.
+- a hole dug for water.
+- in good health, the answer to "how are you".
+
+Every other use is replaced, wherever the word appears: prose, comments, identifiers, class names, design tokens, UI strings, prompt files.
+The adverb gives way to the measure it stands for.
+- Bad: "Score the note on how well it serves that reader."
+- Good: "Score the note on how much it helps that reader."
+- Bad: "The cache performs well under load."
+- Good: "The cache answers in under 5 ms at 2000 requests a second."
+
+A `well-` compound gives way to the plain adjective.
+- Bad: "well-formed", "well-defined", "well-known", "well-tested".
+- Good: "valid", "defined", "known", "covered by tests".
+
+The discourse opener goes.
+- Bad: "Well, the retry never fires."
+- Good: "The retry never fires."
+
+A design term borrowed from the water well takes the plain word for what it names.
+- Bad: `--surface-well`, `tone="well"`, "On a well, hover steps one further."
+- Good: `--surface-muted`, `tone="muted"`, "On a muted surface, hover steps one further."
+
+A name a standard fixes keeps its spelling: `/.well-known/openid-configuration` comes from RFC 8615.
+
 ## Language states the present
 
 Every word describes the thing as it stands.

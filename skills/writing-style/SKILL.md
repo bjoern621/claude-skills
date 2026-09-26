@@ -100,6 +100,20 @@ The mechanism takes its place.
 An exclusivity a reader has to honour is written as an invariant.
 Rewrites: [reference.md](reference.md).
 
+## The word "well"
+
+"well" and "wells" carry three senses and no others:
+- "as well", meaning also: "The job scans the main window as well."
+- a hole dug for water: "The village draws from two wells."
+- in good health: "I am well."
+
+Every other use takes a different word, in prose, identifiers, UI strings and design tokens alike.
+- Bad: "Score the note on how well it serves that reader." Good: "Score the note on how much it helps that reader."
+- Bad: "a well-formed address". Good: "a valid address".
+- Bad: `--surface-well` for a second background tone. Good: `--surface-muted`.
+
+Rewrites: [reference.md](reference.md), "The word well".
+
 ## Mood
 
 A consequence of a path the page argues against takes "would", because the indicative asserts that it happens.
