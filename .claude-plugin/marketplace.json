@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "bjoern",
-      "description": "Writing conventions for repositories: comment and doc style enforcement.",
+      "description": "Writing conventions for repositories and merge request review rounds.",
       "source": "./",
       "category": "productivity"
     }
