@@ -4,8 +4,8 @@ Claude Code plugin marketplace carrying personal skills.
 
 ## Plugins
 
-`bjoern`: writing conventions.
-Ships two skills and a per-turn reminder hook.
+`bjoern`: writing conventions and merge request review rounds.
+Ships three skills and a per-turn reminder hook.
 
 `writing-style`: style for comments, docs and commit bodies.
 Clipped comments, line breaks at punctuation, one sentence per markdown line, time-agnostic docs.
@@ -16,6 +16,12 @@ Page shape and README shape: [skills/writing-style/page-shape.md](skills/writing
 `interface-text`: style for user-facing interface text.
 Plain conversational register, problem-cause-fix errors, positive framing, no opinions or humor.
 Full rules: [skills/interface-text/reference.md](skills/interface-text/reference.md).
+
+`address-mr`: one review round on a GitLab merge request, invoked as `/address-mr <merge request>`.
+Triages every open thread, note and suggestion, pushes the fixes that hold up to the source branch and replies on each thread.
+Declined threads stay open for the author.
+Needs `glab` logged in to the merge request's host.
+Steps: [skills/address-mr/SKILL.md](skills/address-mr/SKILL.md).
 
 ## Use in a repository
 
