@@ -50,6 +50,7 @@ Apply to every string written or touched:
 - "please" only when asking the user to wait or redo work; "sorry" only for serious loss.
 - Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
 - Positive framing: what is so and what to do.
+- "well" means "as well", a water well or good health. Every other use takes a different word, as the `writing-style` skill sets out under "The word well".
 
 ## Completion criteria
 
