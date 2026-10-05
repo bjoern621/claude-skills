@@ -27,11 +27,16 @@ Apply to every comment written or touched:
 4. Delete what the tool's own documentation carries.
    A setting reachable by searching its name is already written down, somewhere that stays current: `// Merge requests opened per project per hour.` over `prHourlyLimit: 3`.
    What earns a line is why this project chose this value and only where that reason sits outside the file.
-5. Write clipped fragments: noun phrases, articles and copulas dropped.
+5. Delete a comment that would stand alone in a block, a method or a file holding none, unless item 1 admits it.
+6. Describe the code as it stands.
+   What changed belongs to the commit and the merge request; "now", "no longer", "added", "instead of the old" mark a comment telling the change.
+   A comment addresses the next reader of the code, so the reviewer, the ticket history and commented-out code stay out, and a TODO names its issue.
+7. Keep paths, line numbers and counts out, in written comments and in annotations a tool commits (turn those off where the tool allows).
+8. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
-6. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
-7. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
-8. Second pass: re-read each comment and cut again.
+9. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
+10. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
+11. Second pass: re-read each comment and cut again.
    Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
 
 ## Labelling copula

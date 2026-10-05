@@ -246,6 +246,37 @@ Its reason names the constraint a reader cannot get from the code.
 The question is asked before typing: what does this tell a reader that the name, the value and the rest of the repository do not?
 An answer that paraphrases the line means the line stays bare.
 
+**A lone comment signals a needless one.**
+A comment that would be the first in a block, a method or a file holding none meets a reader who got along without comments so far.
+It stays out unless it carries a constraint the checklist above admits.
+- Bad: `// Realm signs tokens for each of its clients.` above `ValidateAudience = true`, in a block with no other comment.
+- Good: no comment.
+
+**A comment describes the code as it stands.**
+What changed, and why, belongs to the commit message and the merge request, which keep it beside the diff that made it.
+A comment narrating the change turns false the day the next change lands.
+"now", "no longer", "previously", "added", "removed", "new" and "instead of the old" mark it.
+- Bad: `// Now validates the audience as well.`
+- Bad: `// Removed the retry loop, the queue retries.` left where the loop stood.
+- Good: no comment.
+- Good: `// Queue retries a failed send.` above code that hands a failure to the queue, where a reader would add a retry.
+
+**A comment addresses the code's next reader.**
+The reviewer, the ticket and the author's own process stay out of it.
+- Bad: `// As requested in review.`
+- Bad: `// See !41.` as a record of how the line arrived.
+- Good: `// Workaround for dotnet/runtime#98765, drop once it ships.`
+A TODO names the issue that tracks it: `// TODO(#12): route IMAP accounts to their own adapter.`
+
+**Locations that move with every edit stay out.**
+A source path, a line number or a count goes stale on the next edit near it.
+The same holds for annotations a tool writes into committed files, such as the `#:` source references in a gettext catalog: such output gets turned off where the tool allows it.
+- Bad: `// Called from MenuBar.tsx line 120.`
+- Bad: `# 18 strings below.`
+
+**Commented-out code is deleted.**
+Version control keeps the old code, and a disabled block reads as either a bug or a promise.
+
 **An absence is explained only where a reader would restore it.**
 "Why this is not here" is worth a line when the missing thing looks required, was there before, or is what the neighbouring code does.
 It is noise when nothing pointed that way.
@@ -257,6 +288,9 @@ Ask, in order:
 - Restates the code? Delete it.
 - Glosses the value on the line below? Delete it.
 - Answered by the documentation of the tool that owns the setting? Delete it.
+- The only comment in its block? Delete it.
+- Tells the story of the change, or speaks to a reviewer? Delete it.
+- Names a path, a line or a count? Cut that part.
 - Which words carry no fact? Cut them.
 - Can it be shorter without losing a fact? Then it is not finished.
 
