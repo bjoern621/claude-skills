@@ -11,7 +11,9 @@ So is a document an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt 
 That document is written to make an agent's behaviour repeatable.
 These rules are written to make a human's reading fast.
 Full ruleset with examples: [reference.md](reference.md).
-Read it before the first comment or doc edit of a session.
+Loading this skill before the first touched comment, doc line, commit or PR body of a task is mandatory, however small the edit.
+A global or project `CLAUDE.md` restating these rules replaces nothing: the skill is loaded anyway, and on conflict this skill wins.
+Read [reference.md](reference.md) before the first comment or doc edit of a session.
 [revision.md](revision.md) revises a draft in five passes and runs on a docs page, a README or a commit body rather than on a comment touched in passing.
 
 ## Comment checklist
@@ -21,7 +23,7 @@ Apply to every comment written or touched:
 1. Keep only comments stating a constraint the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
    Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
 2. Name the reason before adding a comment to a line that carried none: the constraint a reader cannot get from the code.
-   An answer that paraphrases the line means the line stays bare.
+   An answer that paraphrases the line, or one already carried by the commit body, means the line stays bare: the default for such a line is no comment.
 3. Delete a value gloss on sight.
    `# 0: no blink.` over `cursor_blink_interval = 0` and `# 0: no inertial glide after the fingers lift.` over `momentum_scroll = 0.0` say what the name and the value already say.
 4. Delete what the tool's own documentation carries.
