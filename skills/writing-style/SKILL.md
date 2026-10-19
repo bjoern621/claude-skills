@@ -110,7 +110,7 @@ Rewrites: [reference.md](reference.md).
 ## Relative clauses
 
 A relative clause keeps its `that`.
-Dropped, it leaves a noun stacked onto `the`, a second noun and a verb, and the reader backtracks to find the first noun as the verb's object.
+Dropped, it leaves a noun stacked onto a second noun phrase and its verb (`the build reads`, `a field accepts`), and the reader backtracks to find the first noun as the verb's object.
 The ban holds in prose, comments, docstrings, test names, log lines and commit bodies alike.
 - Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
 - Good: "src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads."

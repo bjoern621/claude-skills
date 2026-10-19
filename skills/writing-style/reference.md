@@ -472,7 +472,7 @@ Each takes the deletion test rather than passing on the strength of the first.
 ## Relative clauses
 
 **A relative clause keeps its `that`.**
-Dropping the pronoun stacks a noun straight onto `the`, a second noun and a verb.
+Dropping the pronoun stacks a noun straight onto a second noun phrase and its verb: `the build reads`, `a field accepts`, `this page argues`.
 The reader parses the first noun as finished, meets the verb and backtracks to hang the noun on it as its object.
 Generated prose reaches for the shape far more often than people do.
 It is banned in prose, comments, docstrings, test names, log lines and commit bodies alike.
@@ -488,7 +488,7 @@ It is banned in prose, comments, docstrings, test names, log lines and commit bo
 - Good: "the provider that the user signed in with", "the address that the user consented to".
 
 **Finding it.**
-Read each `the` that follows a noun directly.
+Read each `the`, `a`, `this` or `each` that follows a noun directly.
 Where the noun before it turns out to be the object of a verb further on, a `that` belongs between them.
 `which` takes the place of `that` before a non-restrictive clause set off by a comma.
 
