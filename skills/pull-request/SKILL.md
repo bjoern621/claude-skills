@@ -45,7 +45,7 @@ Take the smallest rung that carries the change:
    > - Delete- und Status-Buttons werden nicht verzerrt
    > - Bei zu vielen Geräten erscheint eine Scrollbar nur für die registrierten Geräte
 
-The body opens with the issue link on its own line: `Closes #21` for the issue it finishes, `Siehe #262` or `Part of #262` for one it only touches.
+The body opens with the issue link on its own line: `Closes #21` for the issue that it finishes, `Siehe #262` or `Part of #262` for one that it only touches.
 
 After the rung, add each of these that applies, one or two sentences each:
 - **Reason that the diff hides.** Why a choice that looks wrong is right, with a link when one explains it.
@@ -62,7 +62,7 @@ A description that fits on one screen without headings needs none.
 
 ## 4. Picture
 
-Add the picture that the change has, placed right under the sentence it shows:
+Add the picture that the change has, placed right under the sentence that it shows:
 
 | Change | Picture |
 |---|---|

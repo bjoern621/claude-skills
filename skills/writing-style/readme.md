@@ -47,7 +47,7 @@ The argument comes first and it runs on code.
 2. The problem, in the reader's own terms, with the code that produces it.
 3. The incumbent's answer to that same problem, at its real cost, in code.
 4. This software's answer to the same problem, at the same task, in code.
-5. The cases its answer fits, each with the reason it fits there.
+5. The cases that its answer fits, each with the reason that it fits there.
 6. Install, use, configuration, where it works.
 7. The objection that the reader raises next, answered in code.
 8. License.

@@ -39,7 +39,7 @@ Turn the snapshot into **items**:
 Leave out system notes (`system: true`), resolved threads, notes that ask for nothing (approvals, thanks, status), and threads already answered: the last note is by `username` and follows a note by someone else.
 Notes that the user wrote count as feedback like any other.
 
-Done when every discussion in the snapshot either maps to items or has a reason it stays out.
+Done when every discussion in the snapshot either maps to items or has a reason that it stays out.
 
 ## 3. Check out the source branch
 
@@ -55,13 +55,13 @@ A mismatch means commits reached the branch after the snapshot: continue on the 
 
 ## 4. Triage each item
 
-Triage takes a quick look, sized to the item: open the file at the lines it names on the current head (a diff position can be outdated), check the claim against the code, and decide.
+Triage takes a quick look, sized to the item: open the file at the lines that it names on the current head (a diff position can be outdated), check the claim against the code, and decide.
 Weigh every item on its merit, whoever wrote it; a bot finding and a maintainer's remark get the same check.
 
 Each item gets one verdict and a one-line reason:
 - **fix**: the claim holds on the current code and the change belongs in this merge request.
 - **answer**: the item asks a question; the reply answers it from the code.
-- **stale**: the current head already addresses it, or the code it names is gone.
+- **stale**: the current head already addresses it, or the code that it names is gone.
 - **decline**: the claim does not hold, the change contradicts the merge request's purpose or the repository's conventions, it asks for work outside this merge request, or two items ask for opposite changes.
   A declined item leaves the decision to the author, so its thread stays open.
 

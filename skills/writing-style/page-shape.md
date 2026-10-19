@@ -25,7 +25,7 @@ A page carrying four theses is four pages sharing a filename.
 Architecture is what the parts are, what crosses between them and what decides what.
 Programming is which file holds it, what the function is called and what type it returns.
 The code answers the second completely and without going stale.
-A page reaching for it spends its length on the half it is worst at.
+A page reaching for it spends its length on the half that it is worst at.
 
 An architecture page names no source file, no function, no type and no package path.
 
@@ -84,7 +84,7 @@ Name the tool and let its own docs answer for it.
 - Good: the configuration example carries a `files` entry. The page explains ESLint nowhere.
 
 The addressee sets how much is said.
-Somebody configuring a plugin already runs the tool it plugs into.
+Somebody configuring a plugin already runs the tool that it plugs into.
 The page addresses a reader who knows that tool and came for this one.
 Explaining the addressee's own tools back to them reads as padding.
 A page that runs long cuts it first.

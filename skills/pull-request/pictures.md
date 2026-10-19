@@ -1,6 +1,6 @@
 # Pictures
 
-Capture the picture from the running branch, upload it to the forge, then paste the returned Markdown under the sentence it shows.
+Capture the picture from the running branch, upload it to the forge, then paste the returned Markdown under the sentence that it shows.
 
 ## Capture
 

@@ -53,7 +53,7 @@ Several candidate wordings for a UI string go in as a list for the team to pick 
 
 ## Pictures
 
-A UI task carries the wireframe or mockup it builds.
+A UI task carries the wireframe or mockup that it builds.
 A change between two states shows both: "Vor Hinzufügen:" with one screenshot, "Nach Hinzufügen:" with the other.
 A bug shows the broken screen or the console error.
 

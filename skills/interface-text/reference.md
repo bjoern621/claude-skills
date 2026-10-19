@@ -10,7 +10,7 @@ The rule shows through rather than one product's vocabulary.
 ## Register
 
 **Copy passes unnoticed.**
-Interface text helps somebody to the thing they want and is forgotten on the way.
+Interface text helps somebody to the thing that they want and is forgotten on the way.
 A sentence that the reader stops to admire, or to decode, is rewritten.
 - Bad: "That is a trade you are entitled to make: it opens anywhere, and it costs you."
 - Good: "It opens in any editor, at the cost of a larger file."
