@@ -62,7 +62,7 @@ A page that changes either time restates code.
 - Bad: the same sentence with the package name closing the section.
 - Bad: a table mapping each package to what it owns.
 
-## A heading names the rule at the level it applies
+## A heading names the rule at the level where it applies
 
 The case that prompted the rule belongs to the example under it.
 A heading naming that case sends a reader carrying a different one straight past the rule that covers them.

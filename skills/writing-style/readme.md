@@ -77,7 +77,7 @@ Reaching for either shows the comparison went missing.
 
 A capability list states a contract.
 Every line on it is checked against the code before it ships.
-A reader recovers from no other defect the way they recover from a claim that the software does not honour.
+A reader recovers from no other defect the way that they recover from a claim that the software does not honour.
 That outweighs every style rule on this page.
 
 A section named "Limits", "Caveats" or "Known issues" fronts what fails.
