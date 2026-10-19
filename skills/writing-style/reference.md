@@ -472,7 +472,7 @@ Each takes the deletion test rather than passing on the strength of the first.
 ## Relative clauses
 
 **A relative clause keeps its `that`.**
-Dropping the pronoun stacks a noun straight onto a second noun phrase and its verb: `the build reads`, `a field accepts`, `this page argues`.
+Dropping the pronoun stacks a noun straight onto the clause's subject and verb: `the build reads`, `a field accepts`, `its pipeline was built from`, `it reads`, `Pidgemail cannot link`.
 The reader parses the first noun as finished, meets the verb and backtracks to hang the noun on it as its object.
 Generated prose reaches for the shape far more often than people do.
 It is banned in prose, comments, docstrings, test names, log lines and commit bodies alike.
@@ -483,13 +483,18 @@ It is banned in prose, comments, docstrings, test names, log lines and commit bo
 - Bad: "Deleting the account removes everything the account holds."
 - Good: "Deleting the account removes everything that the account holds."
 
+**The subject decides nothing.**
+A possessive, a pronoun and a name drop the `that` the same way a noun phrase does, and take it back the same way.
+- Bad: "the settings its pipeline was built from", "the files it reads", "everything you need", "a provider Pidgemail cannot link".
+- Good: "the settings that its pipeline was built from", "the files that it reads", "everything that you need", "a provider that Pidgemail cannot link".
+
 **A clause ending on a preposition takes the same repair.**
 - Bad: "the provider the user signed in with", "the address the user consented to".
 - Good: "the provider that the user signed in with", "the address that the user consented to".
 
 **Finding it.**
-Read each `the`, `a`, `this` or `each` that follows a noun directly.
-Where the noun before it turns out to be the object of a verb further on, a `that` belongs between them.
+Read each noun that a subject follows directly: a determiner (`the`, `a`, `its`, `their`), a pronoun (`it`, `they`, `you`, `we`) or a name.
+Where the noun turns out to be the object of the verb after that subject, a `that` belongs between them.
 `which` takes the place of `that` before a non-restrictive clause set off by a comma.
 
 **A verb and its object stay.**

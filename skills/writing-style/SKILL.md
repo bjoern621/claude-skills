@@ -110,12 +110,15 @@ Rewrites: [reference.md](reference.md).
 ## Relative clauses
 
 A relative clause keeps its `that`.
-Dropped, it leaves a noun stacked onto a second noun phrase and its verb (`the build reads`, `a field accepts`), and the reader backtracks to find the first noun as the verb's object.
+Dropped, it leaves a noun stacked onto the clause's subject and verb, and the reader backtracks to find the first noun as the verb's object.
+The subject decides nothing: a noun phrase (`the build reads`), a possessive (`its pipeline was built from`), a pronoun (`it reads`, `you need`) and a name (`Pidgemail cannot link`) all take the `that`.
 The ban holds in prose, comments, docstrings, test names, log lines and commit bodies alike.
 - Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
 - Good: "src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads."
 - Bad: `// Callback the server owns.` Good: `// Callback that the server owns.`
 - Bad: "the provider the user signed in with". Good: "the provider that the user signed in with".
+- Bad: "the settings its pipeline was built from". Good: "the settings that its pipeline was built from".
+- Bad: "everything you need". Good: "everything that you need".
 
 Rewrites: [reference.md](reference.md), "Relative clauses".
 
