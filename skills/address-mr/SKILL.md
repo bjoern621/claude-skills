@@ -8,7 +8,7 @@ disable-model-invocation: true
 # Address merge request feedback
 
 One round: the feedback present at the **snapshot** in step 2 gets handled, and the run ends at the report.
-Feedback arriving later, the review the push triggers included, belongs to the next run.
+Feedback arriving later, the review that the push triggers included, belongs to the next run.
 
 Every call to the forge goes through `glab api --hostname <host>`, with `<project>` URL-encoded (`pidgemail%2Fci`).
 List endpoints take `--paginate`.
@@ -20,7 +20,7 @@ Parse `$ARGUMENTS`:
 - `<group>/<project>!<iid>` or a bare `<iid>`: host and project from the `origin` remote of the repository in the working directory.
 
 Fetch `projects/<project>/merge_requests/<iid>`.
-Stop and say why when its `state` differs from `opened`, or when `source_project_id` differs from `target_project_id` (a fork branch takes a push this skill cannot make).
+Stop and say why when its `state` differs from `opened`, or when `source_project_id` differs from `target_project_id` (a fork branch takes a push that this skill cannot make).
 Keep `source_branch`, `target_branch`, `diff_refs.head_sha` and `web_url`.
 Fetch `user` and keep its `username`: replies go out under that account.
 
@@ -37,7 +37,7 @@ Turn the snapshot into **items**:
 - A ```` ```suggestion ```` block inside a thread belongs to that thread's item.
 
 Leave out system notes (`system: true`), resolved threads, notes that ask for nothing (approvals, thanks, status), and threads already answered: the last note is by `username` and follows a note by someone else.
-Notes the user wrote count as feedback like any other.
+Notes that the user wrote count as feedback like any other.
 
 Done when every discussion in the snapshot either maps to items or has a reason it stays out.
 
@@ -72,7 +72,7 @@ Done when every item carries a verdict and a reason tied to a line of code or to
 ## 5. Fix, check, commit, push
 
 Apply every **fix** item.
-Run the checks the repository defines for the touched code (Taskfile, `package.json` scripts, `flake.nix` checks, the jobs in `.gitlab-ci.yml`) and repair what the fixes broke.
+Run the checks that the repository defines for the touched code (Taskfile, `package.json` scripts, `flake.nix` checks, the jobs in `.gitlab-ci.yml`) and repair what the fixes broke.
 A fix that cannot pass its checks turns into a **decline** carrying the failure as its reason, with its edits reverted.
 
 Commit in coherent commits, one per self-contained change, each item's fix in exactly one commit.

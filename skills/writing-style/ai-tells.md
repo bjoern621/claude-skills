@@ -1,6 +1,6 @@
 # AI tells
 
-Constructions marking text as machine-drafted, in the register this skill governs: code comments, Markdown pages, commit and PR bodies.
+Constructions marking text as machine-drafted, in the register that this skill governs: code comments, Markdown pages, commit and PR bodies.
 Each row names the construction, shows an example that fails and shows the same fact stated so it passes.
 Every one of them is found by reading.
 The fluent ones carry the risk: a tell survives a checklist by sounding finished.
@@ -101,11 +101,11 @@ Bad: "The cache keys on the digest, so a rebuild hits. The digest covers the loc
 Good: "The cache keys on the digest of the lockfile. A dependency bump misses it."
 
 **Both-sidesism.** A design page listing what each option costs while leaving the taken one unnamed.
-The page names the decision it was written to record.
+The page names the decision that it was written to record.
 
-**Over-determination.** A sentence stating the conclusion the code above it already showed.
+**Over-determination.** A sentence stating the conclusion that the code above it already showed.
 Bad: `// This shows the design favours composition over inheritance.`
-Good: no comment, or the constraint a reader cannot see: `// Composed rather than subclassed, so a mock swaps in without a fake base class.`
+Good: no comment, or the constraint that a reader cannot see: `// Composed rather than subclassed, so a mock swaps in without a fake base class.`
 
 **Staccato.** Three or more one-line paragraphs under eight words, cutting for punch rather than because the content breaks there.
 
@@ -115,7 +115,7 @@ Cutting slop produces a second register that scans just as machine-made: bare fr
 `A finding is a claim.` and `Windows are reconciled.` are what a paired negation leaves behind when the negated half was carrying the sentence.
 
 The pass runs against its own output.
-Every sentence this style touched is re-read and asked whether it still states a fact a reader can use.
+Every sentence that this style touched is re-read and asked whether it still states a fact a reader can use.
 A sentence that lost its content is rewritten rather than kept short.
 A dead sentence costs the reader more than the tell it replaced.
 
@@ -128,7 +128,7 @@ The check for that construction skips it.
 
 **A literal sense is exempt.** `leverage` in a finance context, `robust` as a measured property of an estimator, `seamless` describing a texture.
 
-**A fidelity word holds where something else would change the value.** `Paste the key verbatim` beside a form that trims whitespace, `as-is` naming the mode a flag selects.
+**A fidelity word holds where something else would change the value.** `Paste the key verbatim` beside a form that trims whitespace, `as-is` naming the mode that a flag selects.
 
 **A correction of fact is exempt.** `Use pnpm, not npm` and `Latency fell 40%, not 4%` carry the correction in the negated half.
 

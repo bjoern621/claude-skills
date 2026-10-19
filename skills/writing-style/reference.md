@@ -38,7 +38,7 @@ Do not address the reader.
 **No marketing adjectives or filler.** Cut words that praise the code rather than describe it: "elegant", "clean", "robust", "powerful", "seamless", "leverage", "utilize", "essentially", "crucial", "critical", "simply", "just", "easily", "battle-tested", "production-ready", "vibrant", "renowned", "groundbreaking", "showcase", "enhance".
 
 **Plain register.**
-Write the word a developer says at the desk.
+Write the word that a developer says at the desk.
 Business and product vocabulary sits a level above that.
 It reads as a press release: "bills", "provisions", "onboards", "consumes", "surfaces", "enables", "is subject to".
 - Bad: "Each review is billed to a Claude subscription."
@@ -124,7 +124,7 @@ The test for any sentence: would it become false because of work that has nothin
 Then it rots into a confident lie.
 Do not write:
 - Counts and tallies: "46 dependencies across 28 files".
-- Point-in-time versions of things the repo does not itself pin: "the latest release is v1.12.0".
+- Point-in-time versions of things that the repo does not itself pin: "the latest release is v1.12.0".
 - Status snapshots: "nine updates are pending", "this is not yet supported".
 - Temporal words: "currently", "now", "recently", "as of", "at the time of writing", "new", "still", "today", "soon".
 - Dates and "last updated" lines. Git records them accurately.
@@ -161,7 +161,7 @@ Remove on sight: diagrams for one-line operations, tables restating nearby prose
 
 ## Comments
 
-A comment states the constraint the code cannot show and nothing else.
+A comment states the constraint that the code cannot show and nothing else.
 A comment that restates the code is deleted rather than shortened.
 This governs `//`, `#`, `///`, `/** */`, XML doc comments and docstrings.
 
@@ -189,7 +189,7 @@ A comment that shrinks and still answers the "why" got better; one that shrinks 
 
 **The language's own comment convention comes first.**
 Clipping happens inside that shape.
-Where the convention demands a word these rules would cut, the convention wins.
+Where the convention demands a word that these rules would cut, the convention wins.
 - Go: a doc comment starts with the identifier. `// StartWatch opens a watcher for the path. Already open is success.`
 - C#: XML doc comments, one clipped line per tag.
 - TypeScript/JavaScript: JSDoc, `@param` and `@returns` carry the facts.
@@ -206,7 +206,7 @@ Editing the code under a comment means re-reading that comment and bringing it t
 
 **Only the unusual is commented.**
 A comment earns its place by stating what a reader cannot get from the code or from the rest of the repository.
-Routine gets none: a setting three other files already set the same way, a service enabled the way every host enables it.
+Routine gets none: a setting that three other files already set the same way, a service enabled the way every host enables it.
 The test: could this comment be pasted, unchanged, above the same construct somewhere else in the repository? Then it says nothing about here.
 - Bad: `# A GitOps mirror, like the other servers: the pipeline updates every host centrally and this one converges by pulling.`
 - Bad: `# As root, which is the only account here, so it needs no sudo rule.` Nothing suggested a sudo rule.
@@ -238,17 +238,17 @@ That earns a line only where the reason sits outside the file.
 - Good: `# vmk3s reserves nearly all its CPU, so a larger request never schedules.` over `cpu_request = "50m"`.
 
 A number chosen by taste needs no defence.
-Writing one invents a constraint the next reader then works around.
+Writing one invents a constraint that the next reader then works around.
 
 **A comment on a line that carried none is justified before it is written.**
 Adding one counts as its own change.
-Its reason names the constraint a reader cannot get from the code.
+Its reason names the constraint that a reader cannot get from the code.
 The question is asked before typing: what does this tell a reader that the name, the value and the rest of the repository do not?
 An answer that paraphrases the line means the line stays bare.
 
 **A lone comment signals a needless one.**
 A comment that would be the first in a block, a method or a file holding none meets a reader who got along without comments so far.
-It stays out unless it carries a constraint the checklist above admits.
+It stays out unless it carries a constraint that the checklist above admits.
 - Bad: `// Realm signs tokens for each of its clients.` above `ValidateAudience = true`, in a block with no other comment.
 - Good: no comment.
 
@@ -270,7 +270,7 @@ A TODO names the issue that tracks it: `// TODO(#12): route IMAP accounts to the
 
 **Locations that move with every edit stay out.**
 A source path, a line number or a count goes stale on the next edit near it.
-The same holds for annotations a tool writes into committed files, such as the `#:` source references in a gettext catalog: such output gets turned off where the tool allows it.
+The same holds for annotations that a tool writes into committed files, such as the `#:` source references in a gettext catalog: such output gets turned off where the tool allows it.
 - Bad: `// Called from MenuBar.tsx line 120.`
 - Bad: `# 18 strings below.`
 
@@ -300,7 +300,7 @@ Cutting facts is not.
 ## Naming the parts
 
 **A list of members states a contract or it is cut.**
-Naming what something holds earns its place where the set is closed and the reader has to hit it: the values a field accepts, the flags a caller may combine, the parts a key is built from.
+Naming what something holds earns its place where the set is closed and the reader has to hit it: the values that a field accepts, the flags that a caller may combine, the parts that a key is built from.
 A sample of the contents decides nothing.
 It goes false the first time a member is added.
 The test is to add one: where the sentence stops being true it was a sample.
@@ -309,13 +309,13 @@ What the container decides is written in its place.
 - Good: "The scheduler decides when a job runs and how often it retries."
 
 **A closed set the code already shows restates it.**
-Written down is the set the code cannot carry: text parsed into a value, the three spellings a string field accepts, a range narrower than the type's.
+Written down is the set that the code cannot carry: text parsed into a value, the three spellings that a string field accepts, a range narrower than the type's.
 - Bad: `// Fields: name, region, bucket, created.` over the struct declaring them.
 - Good: `// Region: "eu-west", "us-east", "ap-south". Anything else is refused.`
 
 ## Labelling copula
 
-`X is a Y` hands the reader a second name for something they already hold.
+`X is a Y` hands the reader a second name for something that they already hold.
 It is banned.
 The complement re-labels the subject instead of saying what it does, so the sentence closes without giving the reader anything to act on.
 The shapes: `is a`, `is an`, `is the`, `are the`, `was a`, `were the`.
@@ -329,15 +329,15 @@ Say what the thing does and the fact comes back.
 
 **The ban reaches every position.**
 A paragraph opener, a heading's first sentence, a bullet, a table cell, a commit body and a comment take it alike.
-A copula opens a paragraph more often than it appears anywhere else, usually to set up a contrast the next clause then draws.
-Cutting the contrast without cutting the copula leaves the residue "Paired negation" warns about.
+A copula opens a paragraph more often than it appears anywhere else, usually to set up a contrast that the next clause then draws.
+Cutting the contrast without cutting the copula leaves the residue that "Paired negation" warns about.
 
 **A predicate that measures stays.**
 "The file is empty", "The timeout is 30 s", "The socket is open" each report a reading of one subject.
-The ban covers the noun standing in for the verb the sentence owed the reader.
+The ban covers the noun standing in for the verb that the sentence owed the reader.
 
 **A definition stays.**
-A glossary row and a domain-model entry exist to hand the reader a term they do not hold.
+A glossary row and a domain-model entry exist to hand the reader a term that they do not hold.
 The copula does that job there.
 Two surfaces keep it.
 A page reaching for the shape outside them rewrites instead.
@@ -364,7 +364,7 @@ It carries no fact and exists to make the sentence swing.
 **The negated half earns its place only where a reader was about to assume it.**
 The test is to say the alternative out loud and ask whether anything pointed that way.
 "Asserted in release builds too, not only in debug" answers a real expectation.
-"Checked by arithmetic, never by a round trip" answers an expectation nobody had.
+"Checked by arithmetic, never by a round trip" answers an expectation that nobody had.
 One such clause on a page is already a lot.
 
 **Cutting the negated half means rewriting the passage around it.**
@@ -374,7 +374,7 @@ Read the neighbours and move the fact: usually the opener goes entirely because 
 - Bad cut: "A finding is a claim, not a verdict." to "A finding is a claim."
 - Good cut: drop the opener and let "Every finding is held against the product before it is believed." carry it.
 - Bad cut: "Windows are reconciled, not opened by an event." to "Windows are reconciled."
-- Good cut: "A render pass opens the windows the model asks for."
+- Good cut: "A render pass opens the windows that the model asks for."
 
 **A plain negative sentence is untouched by this.**
 "Restart drops no queued job" and `// nil when the profile sets no timeout` each state one fact about one subject.
@@ -390,7 +390,7 @@ The fact stands without it.
 - Good: "The resolver reads the lockfile."
 
 They take the test above: say the rejected option out loud and ask what pointed the reader at it.
-A default the tool ships with, a habit the predecessor taught, the option the sentence before recommended: naming one of those saves a wrong assumption.
+A default that the tool ships with, a habit that the predecessor taught, the option that the sentence before recommended: naming one of those saves a wrong assumption.
 
 **A fake alternative raises an option nobody proposed.**
 "A tempting approach would be", "One might be tempted to", "An obvious approach would be" and "You might think X, but" put a plan on the page and reject it in the same breath.
@@ -401,13 +401,13 @@ The defensive openers do the same with an objection: "To be clear", "This is not
 - Good: "Session tokens rotate in place every 24 hours. Clients refresh without a new login."
 
 Both take the test above.
-An option a reader arrives holding stays, with the reason it lost.
+An option that a reader arrives holding stays, with the reason it lost.
 
 **A contrast that survives the test moves into a parenthesis, in a shape that changes each time.**
 The main clause carries the fact.
 The aside behind it carries the rejected option.
 A counterfactual aside takes "would", under "Mood".
-Two asides cut to the same pattern on one page turn the parenthesis into the tell the tail was, so length, verb and punctuation vary between them.
+Two asides cut to the same pattern on one page turn the parenthesis into the tell that the tail was, so length, verb and punctuation vary between them.
 - "Each review runs on a Claude subscription. (Per-token billing needs an API key in the environment.)"
 - "The resolver reads the lockfile (the manifest, up to 3.2)."
 - "Set `pool = shared` before the first query (otherwise every request would open its own connection)."
@@ -422,7 +422,7 @@ What moves into an aside is a contrast hung on a fact that already stands withou
 `only` narrows a set.
 The family around it does the same work: `just`, `merely`, `simply`, `alone`, `purely`, `solely`, `nothing but`, `all it takes`.
 Where the sentence already names the narrow case, the word carries emphasis and it is cut.
-The test is deletion: read the sentence without the word and ask whether it now covers a case the code rules out.
+The test is deletion: read the sentence without the word and ask whether it now covers a case that the code rules out.
 - Bad: `// Only takes effect after a restart.`
 - Good: `// Takes effect after a restart.`
 - Bad: "Wiring the hook up only takes one key in the settings file."
@@ -450,7 +450,7 @@ As a claim about the code it goes false the first time a second path appears.
 - Bad: "All you need is a token in the header."
 - Good: "The request carries a token in the header."
 
-An exclusivity a reader has to honour is written as an invariant: "WriteManifest holds the only write path to manifest.json."
+An exclusivity that a reader has to honour is written as an invariant: "WriteManifest holds the only write path to manifest.json."
 
 **`the one X` claims singularity for weight.**
 The determiner tells the reader how rare the thing is where a count tells them how many there are.
@@ -504,7 +504,7 @@ A participle after its noun stays too: "the events published on the bus".
 - in good health, the answer to "how are you".
 
 Every other use is replaced, wherever the word appears: prose, comments, identifiers, class names, design tokens, UI strings, prompt files.
-The adverb gives way to the measure it stands for.
+The adverb gives way to the measure that it stands for.
 - Bad: "Score the note on how well it serves that reader."
 - Good: "Score the note on how much it helps that reader."
 - Bad: "The cache performs well under load."
@@ -522,7 +522,7 @@ A design term borrowed from the water well takes the plain word for what it name
 - Bad: `--surface-well`, `tone="well"`, "On a well, hover steps one further."
 - Good: `--surface-muted`, `tone="muted"`, "On a muted surface, hover steps one further."
 
-A name a standard fixes keeps its spelling: `/.well-known/openid-configuration` comes from RFC 8615.
+A name that a standard fixes keeps its spelling: `/.well-known/openid-configuration` comes from RFC 8615.
 
 ## Language states the present
 
@@ -536,7 +536,7 @@ Three faces:
 - Workshop: "by design", "we decided", "after some experimentation", "it turned out that".
 
 **A clause that argues with somebody shows this most plainly.**
-"and never was" rebuts a complaint nobody made.
+"and never was" rebuts a complaint that nobody made.
 Writing reports a state and names a consequence.
 
 **Naming an absence teaches a capability and then takes it away.**
@@ -564,22 +564,22 @@ The test, clause by clause:
 
 The indicative asserts that something happens.
 A clause carries it only where it does.
-A consequence belonging to a path the page argues against takes "would".
+A consequence belonging to a path that the page argues against takes "would".
 
 - Bad, under a snippet that switches the other rule off: "Both rules report the same missing dependencies, so leaving React's on reports each one twice."
 - Good: "Both rules report the same missing dependencies, so leaving React's on would report each one twice."
 
 Run the check on any clause opening with "if", "leaving", "without", "unless" or "instead of".
-Read the clause on its own: a reader taking it as written believes the project does the thing the page argues against.
+Read the clause on its own: a reader taking it as written believes the project does the thing that the page argues against.
 
 A path the page genuinely offers keeps the indicative, because somebody takes it.
 "Registering the plugin yourself sets the severity" describes one of two supported paths and needs no "would".
 
 ## Changelog
 
-An entry names what somebody taking the release notices: behaviour, a message, a supported version, a file the package ships.
+An entry names what somebody taking the release notices: behaviour, a message, a supported version, a file that the package ships.
 Work that leaves the published artifact as it was stays out, whatever share of the diff it was.
-A test script, a CI step, a refactor and a page the package does not ship are all invisible to the reader deciding whether to upgrade.
+A test script, a CI step, a refactor and a page that the package does not ship are all invisible to the reader deciding whether to upgrade.
 
 - Bad: "`npm test` compiles the sources and runs the case suite."
 - Good: no entry. The published package behaves as it did.

@@ -7,7 +7,7 @@ description: Style for repository prose a human reads, agent-executed documents 
 
 Governs what a human reads out of a repository: code comments, config-file comments, docstrings, identifiers, test names, log lines, markdown docs, READMEs, changelogs, commit and PR bodies.
 Chat replies are out of scope (caveman rules govern those).
-So is a document an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt file.
+So is a document that an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt file.
 That document is written to make an agent's behaviour repeatable.
 These rules are written to make a human's reading fast.
 Full ruleset with examples: [reference.md](reference.md).
@@ -20,9 +20,9 @@ Read [reference.md](reference.md) before the first comment or doc edit of a sess
 
 Apply to every comment written or touched:
 
-1. Keep only comments stating a constraint the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
+1. Keep only comments stating a constraint that the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
    Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
-2. Name the reason before adding a comment to a line that carried none: the constraint a reader cannot get from the code.
+2. Name the reason before adding a comment to a line that carried none: the constraint that a reader cannot get from the code.
    An answer that paraphrases the line, or one already carried by the commit body, means the line stays bare: the default for such a line is no comment.
 3. Delete a value gloss on sight.
    `# 0: no blink.` over `cursor_blink_interval = 0` and `# 0: no inertial glide after the fingers lift.` over `momentum_scroll = 0.0` say what the name and the value already say.
@@ -33,7 +33,7 @@ Apply to every comment written or touched:
 6. Describe the code as it stands.
    What changed belongs to the commit and the merge request; "now", "no longer", "added", "instead of the old" mark a comment telling the change.
    A comment addresses the next reader of the code, so the reviewer, the ticket history and commented-out code stay out, and a TODO names its issue.
-7. Keep paths, line numbers and counts out, in written comments and in annotations a tool commits (turn those off where the tool allows).
+7. Keep paths, line numbers and counts out, in written comments and in annotations that a tool commits (turn those off where the tool allows).
 8. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
 9. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
@@ -43,7 +43,7 @@ Apply to every comment written or touched:
 
 ## Labelling copula
 
-`X is a Y` hands the reader a second name for something they already hold.
+`X is a Y` hands the reader a second name for something that they already hold.
 It is banned.
 Say what the thing does and the sentence carries a fact the reader can act on.
 - Bad: "A finding is a claim." Good: "Every finding is held against the product before it is believed."
@@ -54,7 +54,7 @@ Say what the thing does and the sentence carries a fact the reader can act on.
 The ban holds wherever the complement re-labels the subject: `is a`, `is an`, `is the`, `are the` and the past forms.
 It reaches a paragraph opener, a heading's first sentence, a bullet, a commit body and a comment alike.
 A predicate that measures rather than re-labels stays: "The file is empty", "The timeout is 30 s".
-A glossary row and a domain-model entry hand the reader a term they do not hold.
+A glossary row and a domain-model entry hand the reader a term that they do not hold.
 Those two keep the copula.
 Rewrites and the surrounding cases: [reference.md](reference.md), "Labelling copula".
 
@@ -95,7 +95,7 @@ A plain negative statement about one subject is unaffected: `// nil when the pro
 
 `only` and its family (`just`, `merely`, `simply`, `alone`, `nothing but`, `all it takes`) narrow a set.
 Where the sentence already names the narrow case, the word carries emphasis and it is cut.
-Delete it and read again: a sentence that now covers a case the code rules out keeps the word.
+Delete it and read again: a sentence that now covers a case that the code rules out keeps the word.
 - Good: `// Takes effect after a restart.`
 - Bad: `// Only takes effect after a restart.`
 - Good: `// Safe only on the render thread.`, where deletion drops a caller obligation.
@@ -104,7 +104,7 @@ Fronted "Only after X does Y" stages a sequence as suspense.
 The clause goes back to its plain order.
 "The only X is Y" reaches for weight.
 The mechanism takes its place.
-An exclusivity a reader has to honour is written as an invariant.
+An exclusivity that a reader has to honour is written as an invariant.
 Rewrites: [reference.md](reference.md).
 
 ## Relative clauses
@@ -135,7 +135,7 @@ Rewrites: [reference.md](reference.md), "The word well".
 
 ## Mood
 
-A consequence of a path the page argues against takes "would", because the indicative asserts that it happens.
+A consequence of a path that the page argues against takes "would", because the indicative asserts that it happens.
 - Bad, under a snippet switching the other rule off: "Leaving React's rule on reports each dependency twice."
 - Good: "Leaving React's rule on would report each dependency twice."
 
@@ -145,7 +145,7 @@ Clauses opening with "if", "leaving", "without", "unless" or "instead of" are wh
 ## Naming the parts
 
 A list of members states a contract or it is cut.
-The set that stays is closed and binding: the values a field accepts, the parts a key is built from.
+The set that stays is closed and binding: the values that a field accepts, the parts that a key is built from.
 A sample of what something holds decides nothing.
 It goes false the first time a member is added.
 Test by adding one, then describe the container by what it decides.
@@ -155,7 +155,7 @@ Test by adding one, then describe the container by what it decides.
 ## Scope and addressee
 
 A page carries what the project owns.
-It addresses a reader who already runs the tools the project plugs into.
+It addresses a reader who already runs the tools that the project plugs into.
 Behaviour belonging to one of those tools is that tool's documentation.
 The page names the tool and stops.
 A page that runs long cuts the addressee's own tools first.
@@ -171,7 +171,7 @@ Read it when starting a docs page, restructuring one, splitting one, or reviewin
 
 [readme.md](readme.md): who a README is read by, the two shapes it comes in and which one a project's reader picks.
 A reader who already grants the value takes the informing shape.
-A reader arriving with a default this software contradicts takes the arguing shape.
+A reader arriving with a default that this software contradicts takes the arguing shape.
 Read it when writing, restructuring or reviewing a README.
 
 ## AI tells

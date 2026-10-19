@@ -1,6 +1,6 @@
 # Issues
 
-Shape of an issue, modelled on the PeerDrop issues the team wrote by hand (numbers below 250).
+Shape of an issue, modelled on the PeerDrop issues that the team wrote by hand (numbers below 250).
 Wording follows [writing-style](../writing-style/SKILL.md); pictures follow the table in [SKILL.md](SKILL.md), step 4.
 
 ## Template
@@ -22,7 +22,7 @@ Name the problem or the capability in 2 to 6 words.
 
 **User story.**
 One sentence in the form "As a <role> I can <capability>, so that <benefit>": "Als Benutzer habe ich neben der Anzeige meines persönlichen Token einen Copy Button, damit der Token schnell kopiert wird."
-Acceptance criteria follow as checkboxes, each one a state somebody can check by looking:
+Acceptance criteria follow as checkboxes, each one a state that somebody can check by looking:
 > - [ ] Der Copy Button wird auf der LandingPage angezeigt
 > - [ ] Nach dem Kopieren erscheint eine Meldung
 
@@ -59,4 +59,4 @@ A bug shows the broken screen or the console error.
 
 ## Finished
 
-The issue is finished once the template's sections with content are filled, every acceptance criterion and repro step can be checked by somebody else, each dependency is linked and the picture the type calls for is in.
+The issue is finished once the template's sections with content are filled, every acceptance criterion and repro step can be checked by somebody else, each dependency is linked and the picture that the type calls for is in.

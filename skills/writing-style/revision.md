@@ -1,10 +1,10 @@
 # Revision passes
 
-How a draft reaches the state [SKILL.md](SKILL.md) describes.
-A draft here means prose a human reads out of the repository; [SKILL.md](SKILL.md) states what falls outside that.
+How a draft reaches the state that [SKILL.md](SKILL.md) describes.
+A draft here means prose that a human reads out of the repository; [SKILL.md](SKILL.md) states what falls outside that.
 
 A single reading passes a rule stated in one place.
-Each pass fixes which rules are in mind while it runs and names the sections it sweeps rather than restating them.
+Each pass fixes which rules are in mind while it runs and names the sections that it sweeps rather than restating them.
 
 ## The passes
 
@@ -32,7 +32,7 @@ The frequency gate closing that page decides each one.
 
 ### 4. Cure pass
 
-Every sentence the earlier passes rewrote is read again on its own and asked what it now states.
+Every sentence that the earlier passes rewrote is read again on its own and asked what it now states.
 Cutting a tell manufactures a register of its own: bare fragments, amputated contrasts, sentences that lost their content and kept their shape.
 A sentence that lost its content is rewritten rather than left short.
 
@@ -45,8 +45,8 @@ Its findings are checked rather than applied, a reader without the intent taking
 
 ## Sweep list
 
-The sections pass 2 walks, in order.
-Each rule is stated once, on the page the sweep opens to reach it.
+The sections that pass 2 walks, in order.
+Each rule is stated once, on the page that the sweep opens to reach it.
 
 1. [reference.md](reference.md), "Punctuation".
 2. [reference.md](reference.md), "Docs and prose".
@@ -64,8 +64,8 @@ Entries 3, 5 and 8 add the sections of [SKILL.md](SKILL.md) that state a rule of
 Entry 5 reads the draft once for the labelling copula alone, that shape surviving a general read by sounding like a definition.
 Entry 9 opens the four tables of [ai-tells.md](ai-tells.md); that page's "What only a reader catches" belongs to pass 3 and "The cure has its own tells" to pass 4.
 Entry 10 names [page-shape.md](page-shape.md) and [readme.md](readme.md) whole.
-The sections of [SKILL.md](SKILL.md) left out of the list condense reference sections the list already opens, or point into entries 9 and 10.
-"Scope of application", "Completion criteria" and each page's "Sources" carry no rule a draft can break.
+The sections of [SKILL.md](SKILL.md) left out of the list condense reference sections that the list already opens, or point into entries 9 and 10.
+"Scope of application", "Completion criteria" and each page's "Sources" carry no rule that a draft can break.
 A rule added inside a listed section joins the sweep with no edit here.
 The exemptions in "False positives" of [ai-tells.md](ai-tells.md) hold over every entry.
 
@@ -76,5 +76,5 @@ The exemptions in "False positives" of [ai-tells.md](ai-tells.md) hold over ever
 - Every rule under "What only a reader catches" has been asked of the whole draft, against the frequency gate closing that page.
 - Every comment written or touched has been read against the line beneath it, one comment at a time.
 - No sentence re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
-- Every sentence the passes rewrote has been through the cure pass.
-- A cross-check has run. Each finding it returned has been accepted or refused with a reason.
+- Every sentence that the passes rewrote has been through the cure pass.
+- A cross-check has run. Each finding that it returned has been accepted or refused with a reason.

@@ -39,7 +39,7 @@ glab api --hostname <host> --method POST "projects/<url-encoded project>/uploads
 ```
 
 Paste the printed `![after](/uploads/…/after.png)` into the description.
-The path resolves inside that project alone, so upload to the project the merge request belongs to.
+The path resolves inside that project alone, so upload to the project that the merge request belongs to.
 
 ### GitHub
 
@@ -47,7 +47,7 @@ GitHub's API has no endpoint for attachments.
 Upload through the web editor with `claude-in-chrome`:
 1. Open the pull request in a new tab.
 2. Hand the file to the comment box's file input with `file_upload`.
-3. Read the `![…](https://github.com/user-attachments/assets/…)` line the editor inserts.
+3. Read the `![…](https://github.com/user-attachments/assets/…)` line that the editor inserts.
 4. Clear the comment box without submitting, close the tab.
 5. Put the line into the description with `gh pr edit <number> --body-file <file>`.
 

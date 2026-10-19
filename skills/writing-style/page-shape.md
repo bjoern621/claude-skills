@@ -9,7 +9,7 @@ Sentence style, wrapping, changelog voice and time-agnostic phrasing live in [re
 A page answers one question.
 The first three lines state it.
 Every section serves that question.
-[Diátaxis](https://diataxis.fr/) names four needs a page can serve: learning, doing a task, looking a fact up, understanding.
+[Diátaxis](https://diataxis.fr/) names four needs that a page can serve: learning, doing a task, looking a fact up, understanding.
 A page serves one of them.
 
 Name the thesis in one sentence before writing.
@@ -76,7 +76,7 @@ The example stays as concrete as it was.
 ## Scope and addressee
 
 A page carries what the project owns.
-Behaviour belonging to a tool the project plugs into is that tool's documentation.
+Behaviour belonging to a tool that the project plugs into is that tool's documentation.
 Restating it here goes stale the first time that tool changes.
 Name the tool and let its own docs answer for it.
 
@@ -122,7 +122,7 @@ Bad, five lines:
 
 Good, one:
 
-> A relaunch is decided by rendering both configurations and comparing them, so a setting no pipeline is built from moves under a running stream.
+> A relaunch is decided by rendering both configurations and comparing them, so a setting that no pipeline is built from moves under a running stream.
 
 A rewrite lands near a tenth of the length.
 The facts all survive it.

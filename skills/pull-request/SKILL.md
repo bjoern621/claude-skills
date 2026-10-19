@@ -9,19 +9,19 @@ Decides the shape of a pull request or merge request: what the title names, how 
 Wording inside it follows [writing-style](../writing-style/SKILL.md).
 An issue takes [issues.md](issues.md) instead of the steps below.
 
-The model throughout: PRs and issues a student team wrote by hand for PeerDrop (github.com/bjoern621/PeerDrop, numbers below 250).
+The model throughout: PRs and issues that a student team wrote by hand for PeerDrop (github.com/bjoern621/PeerDrop, numbers below 250).
 They read like a teammate's note to the reviewer.
 The reviewer opens the diff next to the description, so the description carries what the diff cannot show.
 
 ## 1. Language
 
-Write in the language the project's people write in, read off their recent issue titles, PR titles and commit subjects.
+Write in the language that the project's people write in, read off their recent issue titles, PR titles and commit subjects.
 Identifiers, commands and quoted UI strings stay as written.
 PeerDrop writes German around English names: "Copy Button für eigenes Token hinzugefügt".
 
 ## 2. Title
 
-Name one change in 3 to 8 words, in the form the project's own titles take.
+Name one change in 3 to 8 words, in the form that the project's own titles take.
 
 - `wss:// in Production statt ws://`
 - `Copy Button für eigenes Token hinzugefügt`
@@ -30,7 +30,7 @@ Name one change in 3 to 8 words, in the form the project's own titles take.
 - `Add /address-mr for one review round on a merge request`
 
 A title needing "and" or a comma to cover the work names two changes.
-Split the branch, or name the goal both changes serve.
+Split the branch, or name the goal that both changes serve.
 
 ## 3. Description
 
@@ -48,21 +48,21 @@ Take the smallest rung that carries the change:
 The body opens with the issue link on its own line: `Closes #21` for the issue it finishes, `Siehe #262` or `Part of #262` for one it only touches.
 
 After the rung, add each of these that applies, one or two sentences each:
-- **Reason the diff hides.** Why a choice that looks wrong is right, with a link when one explains it.
+- **Reason that the diff hides.** Why a choice that looks wrong is right, with a link when one explains it.
   > Fälschlicherweise wurden die TURN Server entfernt. Diese wurden wieder eingeführt, warum? Lies nach was TURN macht: https://www.metered.ca/docs/turn-server-service/what-is-turn
 - **Open point.** What is still missing and what unblocks it.
   > Aktuell muss noch ein Hash für den OTP Input Style Tag verwendet werden. Dieser sollte eher mit einem Nonce ersetzt werden, ein [Pull Request](https://github.com/guilhermerodz/input-otp/pull/104) muss dafür in die Library gemergt werden.
 - **Teammate action.** What somebody does differently from now on, addressed to them.
   > @HomeMichi dadurch sollte der Schritt mit der Datenbank in Rider komplett optional sein. Du kannst jetzt die Docker Compose ausführen und alles sollte sofort funktionieren.
 - **Manual check.** Numbered steps when the reviewer has to see the change run to believe it.
-- **Design source.** A link to the Figma frame, mockup or issue comment the change implements.
+- **Design source.** A link to the Figma frame, mockup or issue comment that the change implements.
 
-Everything the diff, the CI checks and the issue already show stays there: file lists, the mechanism, build and lint results, acceptance criteria.
+Everything that the diff, the CI checks and the issue already show stays there: file lists, the mechanism, build and lint results, acceptance criteria.
 A description that fits on one screen without headings needs none.
 
 ## 4. Picture
 
-Add the picture the change has, placed right under the sentence it shows:
+Add the picture that the change has, placed right under the sentence it shows:
 
 | Change | Picture |
 |---|---|
@@ -100,7 +100,7 @@ sequenceDiagram
 The PR is finished once:
 - the title names one change in the project's language,
 - the first body line links the issue, or no issue exists,
-- every sentence answers something the diff, CI and issue leave open,
+- every sentence answers something that the diff, CI and issue leave open,
 - a change from the first five table rows carries its picture, or the report to the user says which picture is missing and why,
 - [writing-style](../writing-style/SKILL.md) has run over title and body.
 

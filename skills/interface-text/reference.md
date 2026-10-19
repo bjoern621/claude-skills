@@ -11,7 +11,7 @@ The rule shows through rather than one product's vocabulary.
 
 **Copy passes unnoticed.**
 Interface text helps somebody to the thing they want and is forgotten on the way.
-A sentence the reader stops to admire, or to decode, is rewritten.
+A sentence that the reader stops to admire, or to decode, is rewritten.
 - Bad: "That is a trade you are entitled to make: it opens anywhere, and it costs you."
 - Good: "It opens in any editor, at the cost of a larger file."
 
@@ -78,7 +78,7 @@ The observable effect beats the definition.
 - Good: "Copies only what changed since the last run. Faster, but it needs the last run to still be there."
 
 **Tooltip: 25 words at most.**
-Supplemental only; anything the reader must act on lives in the interface proper.
+Supplemental only; anything that the reader must act on lives in the interface proper.
 Never a restatement of the visible label.
 
 **Empty state: what is so, then the next step.**
@@ -94,7 +94,7 @@ Name what the surface decides.
 - Bad: "Settings for the app: reports, updates, logs and the linked account."
 - Good: "Settings for the app itself. They hold for every project."
 
-The list stays where the reader has to hit it: the formats a field accepts, the values a control takes.
+The list stays where the reader has to hit it: the formats that a field accepts, the values that a control takes.
 Stated in full in [writing-style](../writing-style/reference.md).
 
 ## Words

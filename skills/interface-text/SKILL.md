@@ -7,7 +7,7 @@ description: Style for any string a user reads. Covers labels, help text, option
 
 Governs every string a user reads on screen, whichever surface renders it.
 A user-facing string takes this skill even though it lives in code; comments, docs and commits take [writing-style](../writing-style/SKILL.md) instead.
-A string an agent reads, a tool description or a prompt file, takes neither skill.
+A string that an agent reads, a tool description or a prompt file, takes neither skill.
 Full ruleset with examples: [reference.md](reference.md).
 Open its section for the surface being written, before the first copy edit of a session.
 
@@ -43,7 +43,7 @@ Apply to every string written or touched:
 ## Words
 
 - American English, one variant throughout.
-- One term per concept, fixed in one place the project owns. Read the project's design or style document before coining a name.
+- One term per concept, fixed in one place that the project owns. Read the project's design or style document before coining a name.
 - Verbs normal in technical writing, such as holds, targets, refuses, retries, serves. No dramatic agency.
 - Name what happened: "could not", "unable", "incorrect", "not supported", "stop".
   "error", "failed", "invalid", "illegal", "bad", "abort" and "fatal" aim at the user or their input.

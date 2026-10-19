@@ -31,16 +31,16 @@ A reader who stops at any point knows what the thing is.
 8. One line on the internals, linking the pages that hold them.
 9. License.
 
-A section the project has nothing for is left out.
+A section that the project has nothing for is left out.
 The numbering sets a default reading order rather than a schema.
 A project with a stated reason to move one section moves it.
 The page still works.
 
 ## The arguing shape
 
-For software that contradicts a default the reader arrives with.
+For software that contradicts a default that the reader arrives with.
 A competitor to the standard library, a lint rule that disagrees with the framework's own, a workflow replacing the documented one.
-Install and configuration answer a question this reader has not asked yet.
+Install and configuration answer a question that this reader has not asked yet.
 The argument comes first and it runs on code.
 
 1. Name and one to three lines stating what it does.
@@ -49,7 +49,7 @@ The argument comes first and it runs on code.
 4. This software's answer to the same problem, at the same task, in code.
 5. The cases its answer fits, each with the reason it fits there.
 6. Install, use, configuration, where it works.
-7. The objection the reader raises next, answered in code.
+7. The objection that the reader raises next, answered in code.
 8. License.
 
 The comparison carries the argument.
@@ -77,11 +77,11 @@ Reaching for either shows the comparison went missing.
 
 A capability list states a contract.
 Every line on it is checked against the code before it ships.
-A reader recovers from no other defect the way they recover from a claim the software does not honour.
+A reader recovers from no other defect the way they recover from a claim that the software does not honour.
 That outweighs every style rule on this page.
 
 A section named "Limits", "Caveats" or "Known issues" fronts what fails.
-The same facts state what works: the hosts that receive, the size a transfer handles in seconds, the setting that keeps typed lines out of history.
+The same facts state what works: the hosts that receive, the size that a transfer handles in seconds, the setting that keeps typed lines out of history.
 An unsupported case is named only where the reader was about to assume it works.
 
 ## Mechanism
