@@ -42,7 +42,8 @@ The labelling copula, paired negation, restriction, em-dashes, quotation marks, 
 | Consequence welded to a fact with `so`, `thus`, `hence`, `therefore`, `as such`, `which means`, `in turn` | `// Runs on a copy of the manifest, so the original stays unchanged.` | `// Runs on a copy of the manifest.` |
 | Fronted `Only` with inversion, sequence staged as suspense | `Only after the lockfile is written does the install proceed.` | `The install proceeds after the lockfile is written.` |
 | `The only X is Y`, weight standing in for the mechanism | `The only thing that matters for throughput is the batch size.` | `Batch size sets throughput.` |
-| `the one X`, singularity claimed where a count states the fact | `The accent carries the one filled button the design system draws.` | `One button per screen carries a fill, in the accent colour.` |
+| `the one X`, singularity claimed where a count states the fact | `The accent carries the one filled button that the design system draws.` | `One button per screen carries a fill, in the accent colour.` |
+| Dropped relative pronoun, a noun stacked onto `the` + noun + verb whose object it is | `src-3f9a1c0d2e4b5a67 hashes 412 files the build reads.` | `src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads.` |
 | `not only X but also Y`, two facts staged as a climb | `The cache not only survives a reload but also shares entries across tabs.` | `The cache survives a reload and shares entries across tabs.` |
 | Rejected option hung off a fact's tail with `rather than`, `instead of`, `as opposed to`, `X over Y` | `Each review runs on a Claude subscription rather than per token.` | `Each review runs on a Claude subscription.` |
 | Option nobody proposed, raised so the text can reject it: `A tempting approach would be`, `One might be tempted to`, `You might think X, but` | `A tempting approach would be to rotate tokens on a cron, but that drops every session.` | `Tokens rotate in place every 24 hours.` |

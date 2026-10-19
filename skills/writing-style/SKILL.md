@@ -107,6 +107,18 @@ The mechanism takes its place.
 An exclusivity a reader has to honour is written as an invariant.
 Rewrites: [reference.md](reference.md).
 
+## Relative clauses
+
+A relative clause keeps its `that`.
+Dropped, it leaves a noun stacked onto `the`, a second noun and a verb, and the reader backtracks to find the first noun as the verb's object.
+The ban holds in prose, comments, docstrings, test names, log lines and commit bodies alike.
+- Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
+- Good: "src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads."
+- Bad: `// Callback the server owns.` Good: `// Callback that the server owns.`
+- Bad: "the provider the user signed in with". Good: "the provider that the user signed in with".
+
+Rewrites: [reference.md](reference.md), "Relative clauses".
+
 ## The word "well"
 
 "well" and "wells" carry three senses and no others:
@@ -180,7 +192,8 @@ The ones worth holding without opening the file, under the names that page gives
 - Labelling copula, `X is a Y` renaming something instead of saying what it does: "The reconciler is a state machine."
 - Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
   `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
-- Singularity claimed with `the one X`, where a count states the same fact: "the one filled button the design system draws."
+- Singularity claimed with `the one X`, where a count states the same fact: "the one filled button that the design system draws."
+- Dropped relative pronoun, a noun stacked onto the clause whose object it is: "412 files the build reads."
 - Dramatized fact, a rule written as decree: "Red belongs to destruction and no other fill exists."
 - Option nobody proposed, raised so the text can reject it: "A tempting approach would be to rotate on a cron, but that drops every session."
 

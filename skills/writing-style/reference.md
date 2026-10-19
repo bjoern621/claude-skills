@@ -469,6 +469,33 @@ A count survives the second one appearing.
 Several defensible instances in one passage read as cadence.
 Each takes the deletion test rather than passing on the strength of the first.
 
+## Relative clauses
+
+**A relative clause keeps its `that`.**
+Dropping the pronoun stacks a noun straight onto `the`, a second noun and a verb.
+The reader parses the first noun as finished, meets the verb and backtracks to hang the noun on it as its object.
+Generated prose reaches for the shape far more often than people do.
+It is banned in prose, comments, docstrings, test names, log lines and commit bodies alike.
+- Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
+- Good: "src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads."
+- Bad: `// ULID the client generates.`
+- Good: `// ULID that the client generates.`
+- Bad: "Deleting the account removes everything the account holds."
+- Good: "Deleting the account removes everything that the account holds."
+
+**A clause ending on a preposition takes the same repair.**
+- Bad: "the provider the user signed in with", "the address the user consented to".
+- Good: "the provider that the user signed in with", "the address that the user consented to".
+
+**Finding it.**
+Read each `the` that follows a noun directly.
+Where the noun before it turns out to be the object of a verb further on, a `that` belongs between them.
+`which` takes the place of `that` before a non-restrictive clause set off by a comma.
+
+**A verb and its object stay.**
+"returns the matching messages", "reads the signing keys" and "lists the open threads" carry no clause.
+A participle after its noun stays too: "the events published on the bus".
+
 ## The word well
 
 "well" and "wells" keep three senses:
