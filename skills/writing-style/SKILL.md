@@ -1,254 +1,115 @@
 ---
 name: writing-style
-description: Style for repository prose a human reads, agent-executed documents aside. Covers code comments, config and manifest comments, docstrings, identifiers, test names, log lines, markdown docs, wiki and Docmost pages, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing one, however small the edit, when any wording question comes up and when the user says "fix comments", "clean up docs" or "reads like AI". The labelling copula "X is a Y" is banned outright and a sentence breaks at punctuation in code comments alone.
+description: Style for repository prose that a human reads. Covers code and config comments, docstrings, identifiers, test names, log lines, Markdown docs, wiki pages, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing any of them, however small the edit. Also load it when the user asks to make text read less like AI.
 ---
 
 # Writing style
 
-Governs what a human reads out of a repository: code comments, config-file comments, docstrings, identifiers, test names, log lines, markdown docs, READMEs, changelogs, commit and PR bodies.
-Chat replies are out of scope (caveman rules govern those).
-So is a document that an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt file.
-That document is written to make an agent's behaviour repeatable.
-Its prose follows the `writing-for-agents` skill.
-These rules are written to make a human's reading fast.
-Full ruleset with examples: [reference.md](reference.md).
-Loading this skill before the first touched comment, doc line, commit or PR body of a task is mandatory, however small the edit.
-A global or project `CLAUDE.md` restating these rules replaces nothing: the skill is loaded anyway.
-On conflict this skill wins.
-Read [reference.md](reference.md) before the first comment or doc edit of a session.
-[revision.md](revision.md) revises a draft in five passes and runs on a docs page, a README or a commit body rather than on a comment touched in passing.
+A chat reply follows the `caveman` plugin.
+A string on screen follows `interface-text`.
+A document that an agent executes (a skill, `AGENTS.md`, `CLAUDE.md`, a prompt) follows `writing-for-agents` from `mattpocock-skills`.
+On conflict with project style rules or a `CLAUDE.md`, this skill wins.
 
-## Comment checklist
+A docs or wiki page and a README also take [docs.md](docs.md).
+Open [reference.md](reference.md) for a changelog entry, a docs page, a README, a commit body over five lines or a case that a rule below leaves open.
 
-Apply to every comment written or touched:
+## Sentences
 
-1. Keep only comments stating a constraint that the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
-   Delete a comment that restates the code or repeats what is routine elsewhere in the repository.
-2. Name the reason before adding a comment to a line that carried none: the constraint that a reader cannot get from the code.
-   An answer that paraphrases the line, or one already carried by the commit body, means the line stays bare: the default for such a line is no comment.
-3. Delete a value gloss on sight.
-   `# 0: no blink.` over `cursor_blink_interval = 0` and `# 0: no inertial glide after the fingers lift.` over `momentum_scroll = 0.0` say what the name and the value already say.
-4. Delete what the tool's own documentation carries.
-   A setting reachable by searching its name is already written down, somewhere that stays current: `// Merge requests opened per project per hour.` over `prHourlyLimit: 3`.
-   What earns a line is why this project chose this value and only where that reason sits outside the file.
-5. Delete a comment that would stand alone in a block, a method or a file holding none, unless item 1 admits it.
-6. Describe the code as it stands.
-   What changed belongs to the commit and the merge request; "now", "no longer", "added", "instead of the old" mark a comment telling the change.
-   A comment addresses the next reader of the code.
-   The reviewer, the ticket history and commented-out code stay out of it.
-   A TODO names its issue.
-7. Keep paths, line numbers and counts out, in written comments and in annotations that a tool commits (turn those off where the tool allows).
-8. Write clipped fragments: noun phrases, articles and copulas dropped.
-   `// Resolved timeout. nil if profile sets none.`
-9. Show formats and ranges by example: `// Key: "eu-west/ARCHIVE".`, `// ms, 1..60000.`
-10. Keep the language's own convention (Go doc comments start with the identifier, JSDoc tags carry the facts) and clip inside it.
-11. Second pass: re-read each comment and cut again.
-   Shortest form that keeps every fact wins; cutting words is free, cutting facts is not.
+**Say what the thing does.**
+`is a`, `is an`, `is the`, `are the` and `serves as` re-label the subject.
+Give it a verb.
+"The binding layer is a bridge." becomes "The binding layer redraws the view when the model changes."
+A measuring predicate stays: "The timeout is 30 s".
+A glossary row keeps the copula.
 
-## Labelling copula
+**One independent clause per sentence.**
+`, and` or `;` leading into a second subject with its own verb becomes a period.
+"A tag sits on a message, and a thread carries its tags." becomes "A tag sits on a message. A thread carries its tags."
+One subject with two verbs stays one sentence: "The job scans the window and retries once."
 
-`X is a Y` hands the reader a second name for something that they already hold.
-It is banned.
-Say what the thing does and the sentence carries a fact the reader can act on.
-- Bad: "A finding is a claim." Good: "Every finding is held against the product before it is believed."
-- Bad: "The binding layer is a bridge." Good: "The binding layer redraws the view when the model changes."
-- Bad: "A version is a tag on this project." Good: "Tagging this project publishes a version."
-- Bad: `// A retry budget is a per-profile cap.` Good: `// Retry budget comes from the table.`
+**No comma before `and`.**
+The last item follows `and` or `or` with no comma: "resolver, fetcher and linker".
 
-The ban holds wherever the complement re-labels the subject: `is a`, `is an`, `is the`, `are the` and the past forms.
-It reaches a paragraph opener, a heading's first sentence, a bullet, a commit body and a comment alike.
-A predicate that measures rather than re-labels stays: "The file is empty", "The timeout is 30 s".
-A glossary row and a domain-model entry hand the reader a term that they do not hold.
-Those two keep the copula.
-Rewrites and the surrounding cases: [reference.md](reference.md), "Labelling copula".
+**State the fact and stop.**
+"X, not Y", "X, never Y", "not Y but X", "rather than", "instead of" and "X over Y" mirror the fact or hang a rejected option off it.
+Cut the mirror: "Runs on a subscription rather than per token." becomes "Runs on a subscription."
+An alternative that the reader arrives holding goes into a parenthesis.
+A correction of fact ("Use pnpm, not npm") and a choice between two live options ("deleted rather than shortened") stay inline.
 
-## One clause, one sentence
+**Keep `that` in a relative clause.**
+"the files the build reads" becomes "the files that the build reads", whatever the subject: "everything that you need".
 
-Every independent clause owns its sentence.
-Where a comma and "and" lead into a second subject with its own verb, a period takes their place.
-The second clause starts a sentence of its own.
-- Bad: "A tag sits on a message, and a thread carries the tags of its messages."
-- Good: "A tag sits on a message. A thread carries the tags of its messages."
-- Bad: `// Cache keys on the digest, and a rebuild hits it.` Good: `// Cache keys on the digest. Rebuild hits it.`
+**Cut a restriction that narrows nothing.**
+Delete `only`, `just`, `simply` or `merely` and reread.
+Same meaning: the word goes.
+Wider meaning: it stays, as in `// Safe only on the render thread.`
 
-Two verbs sharing one subject stay in one sentence and drop the comma: "The job scans the window and retries once."
-The rule reaches every string this skill governs, an OpenAPI `description` and a schema docstring included.
-Details: [reference.md](reference.md), "Punctuation".
+**Let a fact stand alone.**
+Cut `so`, `thus` and `which means` where the reader derives the consequence.
+Cut a tacked-on participle (`, improving stability`): it claims a result that the clause never showed.
+
+**Plain words.**
+"The runner leverages the cache." becomes "The runner reads the cache."
+"Each review is billed to a subscription." becomes "Each review runs on a subscription."
+Cut inflated words, hedges on facts, scaffolding ("Note that", "At its core"), ALL CAPS, bold terms and emoji.
+"well" appears as "as well", a water well or good health.
+Every other sense takes another word: "valid" for "well-formed".
+
+**Describe what stands.**
+"now", "new", "no longer", "not yet", "currently", "recently", "soon", dates and counts that other work changes belong in commits and changelogs.
+State the invariant that produces the fact.
+
+**"would" for the path argued against.**
+"Leaving the rule on would report each dependency twice."
+A path that the page offers keeps the indicative.
+
+**A list of members states a contract.**
+A closed set that the reader has to hit stays: the values that a field accepts.
+A sample of contents goes false with the next member.
+
+**Punctuation.**
+A period, comma, colon or parenthesis takes the place of an em-dash, a `─` or a spaced hyphen standing in for one.
+ASCII diagrams keep their box-drawing lines.
+Straight quotes, one layer of parentheses, a hyphenated pair in front of its noun alone ("a high-quality report").
+
+**Third person** in docs, a README aside.
 
 ## Line breaks
 
-One sentence per source line, in Markdown files, code comments and commit bodies.
-A sentence owns its line, however short.
-The diff then shows the sentence that changed.
-Rendered Markdown joins the lines back.
-Text already one item per line, bullets, tables and code, is unaffected.
+One sentence per source line in Markdown, code comments and commit bodies.
+A code comment too wide for the file breaks after `,` `:` `;` or before a conjunction.
+Prose runs a sentence to its end on one line, whatever the width.
+A wiki page, an issue, a PR or MR description and a review note show every line break: a paragraph goes in as one line.
 
-A code comment breaks a sentence too long for the file's width after `,` `:` `;` or before a conjunction ("and", "or", "but", "so").
-Prose runs a sentence to its end on one source line, whatever the width.
-A continuation line continues its sentence.
+## Comments
 
-A rendered editor takes neither rule.
-Docmost, every other wiki and a forge's issue, review and description boxes show a source line break on the page, so a paragraph goes in as one line and the editor wraps it.
-
-## Paired negation
-
-State the assertion and stop, leaving the excluded alternative unsaid: "X, not Y", "X, never Y", "X and never Y", "not Y but X".
-- Good: `// Retry budget comes from the table.`
-- Bad: `// The table decides the retry budget, not the caller.`
-
-"rather than", "instead of", "as opposed to" and "X over Y" carry the same move with no negative in them.
-- Good: "Each review runs on a Claude subscription."
-- Bad: "Each review runs on a Claude subscription rather than per token."
-
-Keep the negated half only where a reader was about to assume it, which is rare.
-Cutting it means rewriting the passage: where the contrast carried the only content, the opener goes entirely and the next sentence carries the fact.
-A residue like "A finding is a claim." or "Windows are reconciled." states nothing.
-The first of them trips the copula ban as well.
-A dead sentence costs the reader more than the cadence it replaced.
-A contrast surviving that test goes into a parenthesis, in a shape that changes each time: "Each review runs on a Claude subscription. (Per-token billing needs an API key in the environment.)"
-A plain negative statement about one subject is unaffected: `// nil when the profile sets no timeout.`
-
-## Restriction
-
-`only` and its family (`just`, `merely`, `simply`, `alone`, `nothing but`, `all it takes`) narrow a set.
-Where the sentence already names the narrow case, the word carries emphasis and it is cut.
-Delete it and read again: a sentence that now covers a case that the code rules out keeps the word.
-- Good: `// Takes effect after a restart.`
-- Bad: `// Only takes effect after a restart.`
-- Good: `// Safe only on the render thread.`, where deletion drops a caller obligation.
-
-Fronted "Only after X does Y" stages a sequence as suspense.
-The clause goes back to its plain order.
-"The only X is Y" reaches for weight.
-The mechanism takes its place.
-An exclusivity that a reader has to honour is written as an invariant.
-Rewrites: [reference.md](reference.md).
-
-## Relative clauses
-
-A relative clause keeps its `that`.
-Dropped, it leaves a noun stacked onto the clause's subject and verb.
-The reader then backtracks to find the first noun as the verb's object.
-The subject decides nothing: a noun phrase (`the build reads`), a possessive (`its pipeline was built from`), a pronoun (`it reads`, `you need`) and a name (`Pidgemail cannot link`) all take the `that`.
-The ban holds in prose, comments, docstrings, test names, log lines and commit bodies alike.
-- Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
-- Good: "src-3f9a1c0d2e4b5a67 hashes the 412 files that the build reads."
-- Bad: `// Callback the server owns.` Good: `// Callback that the server owns.`
-- Bad: "the provider the user signed in with". Good: "the provider that the user signed in with".
-- Bad: "the settings its pipeline was built from". Good: "the settings that its pipeline was built from".
-- Bad: "everything you need". Good: "everything that you need".
-
-Rewrites: [reference.md](reference.md), "Relative clauses".
-
-## The word "well"
-
-"well" and "wells" carry three senses and no others:
-- "as well", meaning also: "The job scans the main window as well."
-- a hole dug for water: "The village draws from two wells."
-- in good health: "I am well."
-
-Every other use takes a different word, in prose, identifiers, UI strings and design tokens alike.
-- Bad: "Score the note on how well it serves that reader." Good: "Score the note on how much it helps that reader."
-- Bad: "a well-formed address". Good: "a valid address".
-- Bad: `--surface-well` for a second background tone. Good: `--surface-muted`.
-
-Rewrites: [reference.md](reference.md), "The word well".
-
-## Mood
-
-A consequence of a path that the page argues against takes "would", because the indicative asserts that it happens.
-- Bad, under a snippet switching the other rule off: "Leaving React's rule on reports each dependency twice."
-- Good: "Leaving React's rule on would report each dependency twice."
-
-A path the page genuinely offers keeps the indicative, because somebody takes it.
-Clauses opening with "if", "leaving", "without", "unless" or "instead of" are where this goes wrong.
-
-## Naming the parts
-
-A list of members states a contract or it is cut.
-The set that stays is closed and binding: the values that a field accepts, the parts that a key is built from.
-A sample of what something holds decides nothing.
-It goes false the first time a member is added.
-Test by adding one, then describe the container by what it decides.
-- Bad: "Settings for the app: reports, updates, logs and the linked account."
-- Good: "Settings for the app itself. They hold for every project."
-
-## Scope and addressee
-
-A page carries what the project owns.
-It addresses a reader who already runs the tools that the project plugs into.
-Behaviour belonging to one of those tools is that tool's documentation.
-The page names the tool and stops.
-A page that runs long cuts the addressee's own tools first.
-Worked examples: [page-shape.md](page-shape.md).
-
-## Page shape
-
-[page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects and how much of a draft stays with the author.
-Read it when starting a docs page, restructuring one, splitting one or reviewing one that reads long.
-`bash <skill-dir>/scripts/page-shape.sh <page>` reports the measurements.
-
-## README
-
-[readme.md](readme.md): who a README is read by, the two shapes it comes in and which one a project's reader picks.
-A reader who already grants the value takes the informing shape.
-A reader arriving with a default that this software contradicts takes the arguing shape.
-Read it when writing, restructuring or reviewing a README.
-
-## AI tells
-
-Catalogue with a bad and a good example each: [ai-tells.md](ai-tells.md).
-Read it when drafting a doc page or a commit body and when a passage reads fluent while saying little.
-
-The ones worth holding without opening the file, under the names that page gives them:
-- Inflated vocabulary, where a plain word carries the fact: `delve`, `pivotal`, `underscore`, `leverage`, `utilize`, `serves as`.
-- Register above developer speech, business wording standing in for the plain verb: "Each review is billed to a Claude subscription."
-- Participial tack-on, claiming a result the clause never established: "Fix the null pointer, improving stability."
-- Stacked hedges on a fact that can be asserted: "could potentially leave the socket open."
-- Rule of three, a list landing on three items for rhythm.
-- Chat preamble in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
-- Prompt echo, a heading whose first sentence restates it.
-- Comma before "and" closing a list: "resolver, fetcher, and linker".
-- Two clauses glued with ", and", each with a subject of its own: "A tag sits on a message, and a thread carries the tags of its messages."
-- Causal cadence, a consequence welded on with `so`, `thus` or `which means` where the fact stands alone.
-- Labelling copula, `X is a Y` renaming something instead of saying what it does: "The reconciler is a state machine."
-- Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
-  `// Safe only on the render thread.` keeps the word, deletion dropping a caller obligation.
-- Singularity claimed with `the one X`, where a count states the same fact: "the one filled button that the design system draws."
-- Dropped relative pronoun, a noun stacked onto the clause whose object it is: "412 files the build reads."
-- Dramatized fact, a rule written as decree: "Red belongs to destruction and no other fill exists."
-- Option nobody proposed, raised so the text can reject it: "A tempting approach would be to rotate on a cron, but that drops every session."
-
-## Docs
-
-State the invariant, in present tense, third person.
-Time-agnostic: a sentence that work elsewhere would falsify (counts, unpinned versions, status snapshots, "currently"/"soon") rots into a confident lie.
-Changelog voice ("used to", "not yet", "moved here") lives in commits and PRs alone.
-Architecture and programming are separate subjects.
-A page describing the system names contract vocabulary: routes, config keys, wire message names and the parts in plain words.
-No source file, function, type or package path appears.
-A decision takes one line.
-The reasoning that reached it stays with the author.
-A snippet opens with its destination, as a comment in the snippet's own language.
-A changelog entry names what somebody taking the release notices.
-Work leaving the published artifact as it was stays out.
-Cut every section, table and diagram the reader can do without.
-
-## Scope of application
-
-A touched comment is rewritten to this style in the same change.
-Untouched comments stay as they are; whole-file sweeps happen only on request.
-Project style rules add to these; on conflict this skill wins.
+1. A comment states what the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
+   A paraphrase of the line, a value gloss (`# 0: no blink.`), what the tool's documentation already says and routine code stay uncommented.
+2. The first comment in a block, method or file holding none stays out unless it carries a constraint from item 1.
+3. It describes the code as it stands, for the code's next reader.
+   History, the reviewer and commented-out code stay out.
+   A TODO names its issue: `// TODO(#12): ...`.
+4. Paths, line numbers and counts stay out.
+   For a tool-written annotation (gettext `#:` origins), turn the tool's option off.
+5. Clipped fragments: `// Resolved timeout. nil if profile sets none.`
+   Formats by example: `// ms, 1..60000.`
+   A cut keeps every fact.
+6. Clipping happens inside the language's own convention.
+   A Go doc comment opens on the identifier.
+   JSDoc tags carry the facts.
+7. A touched comment gets rewritten in the same change.
+   Untouched ones stay.
+8. A test name states what the test proves.
+   A log line reports the reading: `"%s declares no retry budget"`.
 
 ## Completion criteria
 
-A touched comment is finished once the checklist has run over it, it has been read against the line beneath it and a second pass has cut it again.
-No sentence of the draft re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
-Every `, and` in the draft has been read against what follows it.
-None of them leads into a second subject with its own verb.
-A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
+- Every sentence written or touched has been read against each rule under "Sentences", one rule at a time.
+- Every `, and` and `;` has been read against what follows.
+  None leads into a second subject.
+- Every comment has been read against the line beneath it and cut on a second pass.
+- A docs page, a README and a commit body over five lines have been read once more by a subagent handed this skill and the draft alone.
+  Each finding got accepted or refused with a reason.
 
-Nothing here is settled by a tool.
-A pattern match catches a handful of shapes and passes every comment that is fluent and empty.
-A report saying "clean" stops the reading that would have caught the rest.
-Every pass is done by reading.
+Reading settles each of these.
+A pattern match passes every fluent, empty sentence.
