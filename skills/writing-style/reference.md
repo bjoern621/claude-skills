@@ -253,7 +253,7 @@ It stays out unless it carries a constraint that the checklist above admits.
 - Good: no comment.
 
 **A comment describes the code as it stands.**
-What changed, and why, belongs to the commit message and the merge request, which keep it beside the diff that made it.
+The change and its reason belong to the commit message and the merge request, which keep them beside the diff that made it.
 A comment narrating the change turns false the day the next change lands.
 "now", "no longer", "previously", "added", "removed", "new" and "instead of the old" mark it.
 - Bad: `// Now validates the audience as well.`
@@ -275,7 +275,8 @@ The same holds for annotations that a tool writes into committed files, such as 
 - Bad: `# 18 strings below.`
 
 **Commented-out code is deleted.**
-Version control keeps the old code, and a disabled block reads as either a bug or a promise.
+Version control keeps the old code.
+A disabled block reads as either a bug or a promise.
 
 **An absence is explained only where a reader would restore it.**
 "Why this is not here" is worth a line when the missing thing looks required, was there before, or is what the neighbouring code does.
@@ -484,7 +485,7 @@ It is banned in prose, comments, docstrings, test names, log lines and commit bo
 - Good: "Deleting the account removes everything that the account holds."
 
 **The subject decides nothing.**
-A possessive, a pronoun and a name drop the `that` the same way a noun phrase does, and take it back the same way.
+A possessive, a pronoun and a name drop the `that` the same way a noun phrase does and take it back the same way.
 - Bad: "the settings its pipeline was built from", "the files it reads", "everything you need", "a provider Pidgemail cannot link".
 - Good: "the settings that its pipeline was built from", "the files that it reads", "everything that you need", "a provider that Pidgemail cannot link".
 

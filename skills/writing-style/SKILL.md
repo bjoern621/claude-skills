@@ -12,7 +12,8 @@ That document is written to make an agent's behaviour repeatable.
 These rules are written to make a human's reading fast.
 Full ruleset with examples: [reference.md](reference.md).
 Loading this skill before the first touched comment, doc line, commit or PR body of a task is mandatory, however small the edit.
-A global or project `CLAUDE.md` restating these rules replaces nothing: the skill is loaded anyway, and on conflict this skill wins.
+A global or project `CLAUDE.md` restating these rules replaces nothing: the skill is loaded anyway.
+On conflict this skill wins.
 Read [reference.md](reference.md) before the first comment or doc edit of a session.
 [revision.md](revision.md) revises a draft in five passes and runs on a docs page, a README or a commit body rather than on a comment touched in passing.
 
@@ -32,7 +33,9 @@ Apply to every comment written or touched:
 5. Delete a comment that would stand alone in a block, a method or a file holding none, unless item 1 admits it.
 6. Describe the code as it stands.
    What changed belongs to the commit and the merge request; "now", "no longer", "added", "instead of the old" mark a comment telling the change.
-   A comment addresses the next reader of the code, so the reviewer, the ticket history and commented-out code stay out, and a TODO names its issue.
+   A comment addresses the next reader of the code.
+   The reviewer, the ticket history and commented-out code stay out of it.
+   A TODO names its issue.
 7. Keep paths, line numbers and counts out, in written comments and in annotations that a tool commits (turn those off where the tool allows).
 8. Write clipped fragments: noun phrases, articles and copulas dropped.
    `// Resolved timeout. nil if profile sets none.`
@@ -110,7 +113,8 @@ Rewrites: [reference.md](reference.md).
 ## Relative clauses
 
 A relative clause keeps its `that`.
-Dropped, it leaves a noun stacked onto the clause's subject and verb, and the reader backtracks to find the first noun as the verb's object.
+Dropped, it leaves a noun stacked onto the clause's subject and verb.
+The reader then backtracks to find the first noun as the verb's object.
 The subject decides nothing: a noun phrase (`the build reads`), a possessive (`its pipeline was built from`), a pronoun (`it reads`, `you need`) and a name (`Pidgemail cannot link`) all take the `that`.
 The ban holds in prose, comments, docstrings, test names, log lines and commit bodies alike.
 - Bad: "src-3f9a1c0d2e4b5a67 hashes 412 files the build reads."
