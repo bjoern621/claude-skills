@@ -9,6 +9,7 @@ Governs what a human reads out of a repository: code comments, config-file comme
 Chat replies are out of scope (caveman rules govern those).
 So is a document that an agent executes: a skill, `AGENTS.md`, `CLAUDE.md`, a prompt file.
 That document is written to make an agent's behaviour repeatable.
+Its prose follows the `writing-for-agents` skill.
 These rules are written to make a human's reading fast.
 Full ruleset with examples: [reference.md](reference.md).
 Loading this skill before the first touched comment, doc line, commit or PR body of a task is mandatory, however small the edit.
@@ -61,7 +62,6 @@ A glossary row and a domain-model entry hand the reader a term that they do not 
 Those two keep the copula.
 Rewrites and the surrounding cases: [reference.md](reference.md), "Labelling copula".
 
-## Line breaks
 ## One clause, one sentence
 
 Every independent clause owns its sentence.
@@ -75,6 +75,7 @@ Two verbs sharing one subject stay in one sentence and drop the comma: "The job 
 The rule reaches every string this skill governs, an OpenAPI `description` and a schema docstring included.
 Details: [reference.md](reference.md), "Punctuation".
 
+## Line breaks
 
 One sentence per source line, in Markdown files, code comments and commit bodies.
 A sentence owns its line, however short.
@@ -243,9 +244,9 @@ Project style rules add to these; on conflict this skill wins.
 
 A touched comment is finished once the checklist has run over it, it has been read against the line beneath it and a second pass has cut it again.
 No sentence of the draft re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
-A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
 Every `, and` in the draft has been read against what follows it.
 None of them leads into a second subject with its own verb.
+A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
 
 Nothing here is settled by a tool.
 A pattern match catches a handful of shapes and passes every comment that is fluent and empty.
