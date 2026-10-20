@@ -1,58 +1,71 @@
 ---
 name: interface-text
-description: Style for any string a user reads. Covers labels, help text, option descriptions, tooltips, dialog and notification text, error and refusal messages, disabled-control explanations, empty states, CLI output. Load before writing or editing one, however small the edit and when the user says "reword this", "user-facing text", "UI copy" or "microcopy".
+description: Style for any string that a user reads on screen. Covers labels, buttons, help text, option descriptions, tooltips, dialogs, notifications, error and refusal messages, disabled-control explanations, empty states and CLI output. Load before writing or editing one, however small the edit. Also load it when the user says "UI copy".
 ---
 
 # Interface text
 
-Governs every string a user reads on screen, whichever surface renders it.
-A user-facing string takes this skill even though it lives in code; comments, docs and commits take [writing-style](../writing-style/SKILL.md) instead.
-A string that an agent reads, a tool description or a prompt file, takes neither skill.
-Full ruleset with examples: [reference.md](reference.md).
-Open its section for the surface being written, before the first copy edit of a session.
+Governs every string that a user reads on screen, wherever it lives in the code.
+Comments, docs and commits follow `writing-style`.
+A string that an agent reads (a tool description, a prompt) follows `writing-for-agents`.
 
-## Voice checklist
+## Voice
 
-Apply to every string written or touched:
-
-1. Plain conversational register: full short sentences, everyday words, no narrator.
-   Copy passes unnoticed; a sentence with an author's voice in it is rewritten.
-2. Neutral by default; "you/your" only where ownership is otherwise ambiguous.
-   Never "the user", "the customer" or any third-person name for the person reading.
-3. State the trade and let the reader decide.
-   Opinions, judgments of a choice, asides and humor stay out.
-4. Positive contractions allowed ("it's"); negatives spelled out ("cannot", "does not").
-5. Name the part that acts: "the sync service", "the installer".
-   "We", "I" and "this app" stay out.
+Copy reads like a competent colleague talking and passes unnoticed.
+A sentence that the reader stops to admire or decode gets rewritten.
+- Full short sentences in everyday words.
+  A fragment fits where the surface holds one: a chip, a table cell, a list note.
+- The person reading goes unnamed or gets "you", the latter where ownership would blur otherwise.
+  "the user", "the customer", "we", "I" and "this app" stay out.
+- The part that acts gets named: "the sync service", "the installer".
+- Actions take the imperative: "Pick a different backup schedule."
+- Facts and trades, with the decision left to the reader.
+  Opinions, verdicts on a choice, jokes and asides stay out.
+- Positive contractions ("it's"), negatives spelled out ("cannot").
 
 ## Shape
 
-- Aim 15 words per sentence, cap 25. One idea per sentence.
-- Lead with the fact that carries the decision; detail after.
-- Periods, commas and a colon before a list or an example. Nothing else.
-- Sentence case everywhere. A fragment carries no period; a full sentence does.
+- About 15 words per sentence, 25 at most, one idea each.
+- The fact that carries the decision comes first.
+- Periods, commas, parentheses around an identifier and a colon before a list or an example.
+  No `;`, `!` or dashes.
+- Sentence case everywhere.
+  A fragment standing alone (a label, a chip, a cell) ends without a period.
+  A sentence or a fragment in running text ends with one.
 
-## Pattern per surface
+## Per surface
 
-- Error or refusal: problem, cause, fix. Fix named only where one exists.
-- Disabled control: why it is unavailable and what enables it. Never a dead end.
-- Option description: what it does, when to pick it.
+- Error or refusal: problem, cause, fix, with exact names and the reader's own values.
+  The fix appears where one exists.
+  "The converter is not installed, so the importer cannot read this format. Install it or export as CSV."
+- Disabled control: why and what enables it.
+  "Locked while a backup runs. Stop the backup to change it."
+- Option description: the observable effect and when to pick it.
+  "Copies what changed since the last run. Faster, but it needs the last run to still be there."
 - Tooltip: 25 words at most, adding what the label leaves out.
+  Anything that the reader must act on goes in the interface proper.
 - Empty state: what is so, then the next step.
+  "No saved configurations. Name the configuration below to keep it."
+- A screen's description names what it decides.
+  A list of what it holds goes false with the next addition.
 
 ## Words
 
-- American English, one variant throughout.
-- One term per concept, fixed in one place that the project owns. Read the project's design or style document before coining a name.
-- Verbs normal in technical writing, such as holds, targets, refuses, retries, serves. No dramatic agency.
-- Name what happened: "could not", "unable", "incorrect", "not supported", "stop".
-  "error", "failed", "invalid", "illegal", "bad", "abort" and "fatal" aim at the user or their input.
-- "please" only when asking the user to wait or redo work; "sorry" only for serious loss.
+- American English.
+- One term per concept, taken from the project's design or style document before coining a new one.
+- Ordinary technical verbs: holds, targets, refuses, retries, serves.
+- Problem words name what happened: "could not", "unable", "not supported".
+  "error", "failed", "invalid", "illegal" and "fatal" stay out: they aim at the reader.
+  "Invalid file name." becomes "The file name cannot contain slashes."
+- "please" for a request to wait or redo work, "sorry" for serious loss.
 - Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
-- Positive framing: what is so and what to do.
-- "well" means "as well", a water well or good health. Every other use takes a different word, as the `writing-style` skill sets out under "The word well".
+- What is so and what to do.
+  An absence gets named only where the reader would try to restore it.
+- The current state, with "no longer", "not yet" and "new" left out: the reader holds no earlier version.
+- "well" appears as "as well", a water well or good health.
+  Every other sense takes another word.
 
 ## Completion criteria
 
-- Every written or touched string passes the checklist, its surface pattern and the Shape and Words rules.
-- Second pass, one string at a time: name the fact each word carries and cut the words that carry none.
+- Every string written or touched has been read against Voice, Shape, its surface and Words.
+- A second pass, one string at a time, named the fact that each word carries and cut the words carrying none.
