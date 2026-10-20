@@ -62,6 +62,19 @@ Those two keep the copula.
 Rewrites and the surrounding cases: [reference.md](reference.md), "Labelling copula".
 
 ## Line breaks
+## One clause, one sentence
+
+Every independent clause owns its sentence.
+Where a comma and "and" lead into a second subject with its own verb, a period takes their place.
+The second clause starts a sentence of its own.
+- Bad: "A tag sits on a message, and a thread carries the tags of its messages."
+- Good: "A tag sits on a message. A thread carries the tags of its messages."
+- Bad: `// Cache keys on the digest, and a rebuild hits it.` Good: `// Cache keys on the digest. Rebuild hits it.`
+
+Two verbs sharing one subject stay in one sentence and drop the comma: "The job scans the window and retries once."
+The rule reaches every string this skill governs, an OpenAPI `description` and a schema docstring included.
+Details: [reference.md](reference.md), "Punctuation".
+
 
 One sentence per source line, in Markdown files, code comments and commit bodies.
 A sentence owns its line, however short.
@@ -194,7 +207,8 @@ The ones worth holding without opening the file, under the names that page gives
 - Rule of three, a list landing on three items for rhythm.
 - Chat preamble in a commit body: "Certainly! Here is", `oaicite`, "I hope this helps".
 - Prompt echo, a heading whose first sentence restates it.
-- Comma before "and", closing a list or gluing two clauses: "resolver, fetcher, and linker".
+- Comma before "and" closing a list: "resolver, fetcher, and linker".
+- Two clauses glued with ", and", each with a subject of its own: "A tag sits on a message, and a thread carries the tags of its messages."
 - Causal cadence, a consequence welded on with `so`, `thus` or `which means` where the fact stands alone.
 - Labelling copula, `X is a Y` renaming something instead of saying what it does: "The reconciler is a state machine."
 - Restrictive emphasis on a case the sentence already names: "Only takes effect after a restart."
@@ -230,6 +244,8 @@ Project style rules add to these; on conflict this skill wins.
 A touched comment is finished once the checklist has run over it, it has been read against the line beneath it and a second pass has cut it again.
 No sentence of the draft re-labels its subject with `is a`, `is an`, `is the` or `are the`, outside a glossary row and a domain-model entry.
 A draft is finished once the five passes in [revision.md](revision.md) have run and that page's criteria are met.
+Every `, and` in the draft has been read against what follows it.
+None of them leads into a second subject with its own verb.
 
 Nothing here is settled by a tool.
 A pattern match catches a handful of shapes and passes every comment that is fluent and empty.
