@@ -18,7 +18,8 @@ With a browser already driven through `claude-in-chrome`, its screenshot action 
 A page depending on the colour scheme gets the scheme its users default to.
 
 **Before shot.**
-Run the default branch in a second worktree at `origin/<default-branch>`, detached, and shoot the same view with the same viewport.
+Run the default branch in a detached second worktree at `origin/<default-branch>`.
+Shoot the same view there with the same viewport.
 Remove that worktree afterwards.
 
 **GIF.**

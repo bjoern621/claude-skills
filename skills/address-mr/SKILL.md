@@ -7,7 +7,8 @@ disable-model-invocation: true
 
 # Address merge request feedback
 
-One round: the feedback present at the **snapshot** in step 2 gets handled, and the run ends at the report.
+One round: the feedback present at the **snapshot** in step 2 gets handled.
+The run ends at the report.
 Feedback arriving later, the review that the push triggers included, belongs to the next run.
 
 Every call to the forge goes through `glab api --hostname <host>`, with `<project>` URL-encoded (`pidgemail%2Fci`).
@@ -36,7 +37,7 @@ Turn the snapshot into **items**:
 - A review note listing several findings (the `claude-review` job posts one) yields one item per finding.
 - A ```` ```suggestion ```` block inside a thread belongs to that thread's item.
 
-Leave out system notes (`system: true`), resolved threads, notes that ask for nothing (approvals, thanks, status), and threads already answered: the last note is by `username` and follows a note by someone else.
+Leave out system notes (`system: true`), resolved threads, notes that ask for nothing (approvals, thanks, status) and threads already answered: the last note is by `username` and follows a note by someone else.
 Notes that the user wrote count as feedback like any other.
 
 Done when every discussion in the snapshot either maps to items or has a reason that it stays out.
@@ -55,7 +56,7 @@ A mismatch means commits reached the branch after the snapshot: continue on the 
 
 ## 4. Triage each item
 
-Triage takes a quick look, sized to the item: open the file at the lines that it names on the current head (a diff position can be outdated), check the claim against the code, and decide.
+Triage takes a quick look, sized to the item: open the file at the lines that it names on the current head (a diff position can be outdated), check the claim against the code and decide.
 Weigh every item on its merit, whoever wrote it; a bot finding and a maintainer's remark get the same check.
 
 Each item gets one verdict and a one-line reason:
@@ -98,8 +99,14 @@ Replies follow the `writing-style` skill, one paragraph per line (the forge rend
 Resolve the discussions of **fix**, **answer** and **stale** items: `PUT .../discussions/<discussion_id>` with `resolved=true`, for resolvable ones.
 **decline** threads stay unresolved.
 
-Done when every discussion holding an item carries exactly one reply from this run, and every **fix**, **answer** and **stale** discussion reads resolved.
+Done when both hold:
+- every discussion holding an item carries exactly one reply from this run
+- every **fix**, **answer** and **stale** discussion reads resolved
 
 ## 7. Report
 
-End with a list: each item's author, location, verdict and reason, the commits pushed with their SHAs, the worktree path, and the threads left open for the author.
+End with a list holding:
+- each item's author, location, verdict and reason
+- the commits pushed, with their SHAs
+- the worktree path
+- the threads left open for the author
