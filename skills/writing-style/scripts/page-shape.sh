@@ -27,7 +27,7 @@ for f in "$@"; do
     words=$(wc -w < "$f")
     diagrams=$(rg -c '^```mermaid' "$f" 2>/dev/null || echo 0)
     spans=$(rg -o '`[^`]+`' "$f" 2>/dev/null | wc -l)
-    # Implementation vocabulary: a source file, a package path, or a dotted code identifier.
+    # Implementation vocabulary: a source file, a package path or a dotted code identifier.
     # A route, a bare directory, a config key and a config file are contract, so none of them match.
     impl=$(rg -o '`[^`]+`' "$f" 2>/dev/null \
         | rg -v '`[^`]*\.(md|ya?ml|json|toml|ini|conf|env)`' \

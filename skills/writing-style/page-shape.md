@@ -181,7 +181,7 @@ It describes no flow and draws no diagram.
 ## Completion criteria
 
 - The thesis fits one sentence. Every section serves it.
-- Every code span on the page is contract vocabulary, a config file the reader edits, or a term the page defines.
+- Every code span on the page is contract vocabulary, a config file that the reader edits or a term that the page defines.
 - No source file, function, type or package path appears, unless the page's subject is the code and its title says so.
 - Every decision is stated in a line, with the working cut.
 - Every flow has its diagram. The prose under it states the consequence.

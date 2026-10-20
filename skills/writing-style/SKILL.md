@@ -185,7 +185,7 @@ Worked examples: [page-shape.md](page-shape.md).
 ## Page shape
 
 [page-shape.md](page-shape.md): what a page answers, which names it may carry, why architecture and programming are separate subjects and how much of a draft stays with the author.
-Read it when starting a docs page, restructuring one, splitting one, or reviewing one that reads long.
+Read it when starting a docs page, restructuring one, splitting one or reviewing one that reads long.
 `bash <skill-dir>/scripts/page-shape.sh <page>` reports the measurements.
 
 ## README

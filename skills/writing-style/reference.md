@@ -6,7 +6,7 @@ Full ruleset for the prose this skill governs.
 ## Punctuation
 
 Em-dashes (`—`, U+2014) and the box-drawing `─` (U+2500) appear only inside ASCII-art diagrams drawn with `┌ ┐ └ ┘ │ ─`.
-Everywhere else a hyphen, comma, parenthesis, colon, or period takes their place.
+Everywhere else a hyphen, comma, parenthesis, colon or period takes their place.
 The same habit on a regular hyphen ("the handler is the bridge - it converts...") fails the same way with a different glyph: use a period or restructure.
 A comma never stands before "and".
 The last two items of a list join on the word alone: "a hyphen, a parenthesis and a colon".
@@ -156,7 +156,7 @@ A rewrite lands near a tenth of the length.
 The facts all survive it.
 
 **Cut everything that does not pull its weight.**
-Before adding a section, diagram, table, or example, ask whether the reader needs it to use or modify the system.
+Before adding a section, diagram, table or example, ask whether the reader needs it to use or modify the system.
 Remove on sight: diagrams for one-line operations, tables restating nearby prose, "Overview" sections that preview instead of state, historical archeology, "Concepts" sections that exist to look thorough, the same fact repeated in different wording.
 
 ## Comments
@@ -279,7 +279,7 @@ Version control keeps the old code.
 A disabled block reads as either a bug or a promise.
 
 **An absence is explained only where a reader would restore it.**
-"Why this is not here" is worth a line when the missing thing looks required, was there before, or is what the neighbouring code does.
+"Why this is not here" is worth a line when the missing thing looks required, was there before or is what the neighbouring code does.
 It is noise when nothing pointed that way.
 
 **Every comment gets a second pass.**

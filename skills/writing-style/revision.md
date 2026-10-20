@@ -15,7 +15,7 @@ A pass that rewrites a sentence sends the draft back through every pass already 
 
 Read for what each sentence gives a reader who does not have the code open.
 A sentence stating a fact the reader can act on stays.
-A sentence restating its neighbour, its heading, or the line beneath it goes.
+A sentence restating its neighbour, its heading or the line beneath it goes.
 Capability claims are checked against the code before any other rule, a false one outweighing all of them.
 
 ### 2. Rule sweep
