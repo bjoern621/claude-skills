@@ -1,22 +1,20 @@
 #!/usr/bin/env bash
 # $1: hook event name, echoed back so the host accepts the payload.
-# $2: surface, selecting the line-break clause that applies there.
+# $2: surface, "prompt" or "source".
+# Messages hold no " or \: printf writes them into the JSON unescaped.
 set -eu
 
 event=$1
 surface=${2:-source}
 
-copula="Labelling copula 'X is a Y' is banned. Say what the thing does."
+core="Say what a thing does, with no 'X is a Y'. One independent clause per sentence."
 
 case $surface in
 prompt)
-    message="Load writing-style before repository prose a human reads and interface-text before a string a user reads. However small the edit. $copula"
-    ;;
-rendered)
-    message="writing-style governs this page. Load it unless it is already loaded. $copula A rendered editor takes no hard wrapping: a paragraph goes in as one line."
+    message="Load writing-style before repository prose that a human reads and interface-text before a string on screen, however small the edit. $core"
     ;;
 *)
-    message="writing-style governs every word written into this repository. Load it before this edit unless it is already loaded. $copula One sentence per source line. Break a sentence at punctuation or a conjunction in code comments alone."
+    message="writing-style governs repository prose that a human reads. Load it before this edit unless it is already loaded. $core One sentence per source line, a paragraph per line in a PR, issue or wiki body. interface-text governs a string on screen."
     ;;
 esac
 

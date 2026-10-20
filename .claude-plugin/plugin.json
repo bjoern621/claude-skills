@@ -1,6 +1,6 @@
 {
   "name": "bjoern",
-  "description": "Personal conventions: style enforcement for comments, docs, commit bodies, pull requests and user-facing interface text, plus merge request review rounds.",
+  "description": "Personal conventions: style for comments, docs, commit bodies, pull requests and interface text, plus merge request review rounds.",
   "author": {
     "name": "Björn",
     "url": "https://github.com/bjoern621"
@@ -24,16 +24,6 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/writing-style-reminder.sh PreToolUse source",
-            "timeout": 5
-          }
-        ]
-      },
-      {
-        "matcher": "mcp__docmost__(create_page|update_page|create_comment|update_comment)",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/writing-style-reminder.sh PreToolUse rendered",
             "timeout": 5
           }
         ]
