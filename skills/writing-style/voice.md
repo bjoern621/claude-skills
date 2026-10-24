@@ -140,6 +140,19 @@ An open problem names its workaround and the issue that tracks it: "An own domai
 Assumed values get declared once for the whole section: "Values are educated guesses unless stated otherwise."
 A cited bound sits next to the place where the implementation misses it, with the reason and a pointer to a better one.
 
+## Decisions, reports and requirements
+
+A decision in an ADR or a report names the options weighed, the one picked and the consequence that it brings.
+- "Several approaches came up, among them an external DNS provider, IPv6 multicast and a local DNS server inside the ICC. The choice fell on the last. As a consequence, the network answers only inside the ICC."
+
+A report opens on its focus, names where the work left the plan and why, and closes with the next goals.
+- "Unlike planned, implementation has not started, since another interim presentation took place."
+
+A quality goal reads as a test: the stimulus and a measurable response.
+- "An SPV node sends 100 requests to the network. No single full node handles more than 50% of them."
+
+Two variants of one thing get a table, one row per property and one column per variant.
+
 ## What it does and why
 
 A setting, a resource or a token created in config carries a description of what it does and why it exists.
