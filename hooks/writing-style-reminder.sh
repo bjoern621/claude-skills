@@ -14,7 +14,7 @@ prompt)
     message="Load writing-style before repository prose that a human reads and interface-text before a string on screen, however small the edit. $core"
     ;;
 *)
-    message="writing-style governs repository prose that a human reads. Load it before this edit unless it is already loaded. $core One sentence per source line, a paragraph per line in a PR, issue or wiki body. interface-text governs a string on screen."
+    message="writing-style governs repository prose that a human reads. Load it before this edit unless it is already loaded. $core One sentence per line in Markdown and commit bodies, a paragraph per line in a PR, issue or wiki body. interface-text governs a string on screen."
     ;;
 esac
 

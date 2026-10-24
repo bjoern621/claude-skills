@@ -20,7 +20,7 @@ Open [reference.md](reference.md) for a changelog entry, a docs page, a README, 
 `is a`, `is an`, `is the`, `are the` and `serves as` re-label the subject.
 Give it a verb.
 "The binding layer is a bridge." becomes "The binding layer redraws the view when the model changes."
-A measuring predicate stays: "The timeout is 30 s".
+A predicate naming a state stays: "The buffer is full".
 A glossary row keeps the copula.
 
 **One independent clause per sentence.**
@@ -56,9 +56,6 @@ Cut inflated words, hedges on facts, scaffolding ("Note that", "At its core"), A
 "well" appears as "as well", a water well or good health.
 Every other sense takes another word: "valid" for "well-formed".
 
-**Name the number.**
-A quantity that the source sets appears as that number: "a few retries" becomes "three retries" where the code sets three.
-
 **Describe what stands.**
 "now", "new", "no longer", "not yet", "currently", "recently", "soon", dates and counts that other work changes belong in commits and changelogs.
 State the invariant that produces the fact.
@@ -67,9 +64,11 @@ State the invariant that produces the fact.
 "Leaving the rule on would report each dependency twice."
 A path that the page offers keeps the indicative.
 
-**A list of members states a contract.**
-A closed set that the reader has to hit stays: the values that a field accepts.
-A sample of contents goes false with the next member.
+**Leave numbers and lists open.**
+A number or a list that the code sets goes stale with the next edit to the code.
+"Retries three times" becomes "retries a few times".
+A list names a few members and says that more exist: "providers such as Gmail and Outlook".
+A closed set that the reader has to hit stays complete: the values that a field accepts.
 
 **Punctuation.**
 A period, comma, colon or parenthesis takes the place of an em-dash, a `─` or a spaced hyphen standing in for one.
@@ -83,17 +82,18 @@ Straight quotes, one layer of parentheses, a hyphenated pair in front of its nou
 A sentence agrees with the code or the page that it describes.
 Every path, name, namespace and version that it names exists as named.
 Two places stating one fact agree.
-Where they differ, the source that owns the subject settles it: the code for behaviour, the ADR for product and architecture.
-A decision named in the text links its ADR, a topic its page and a sibling document its sibling.
-Every link resolves.
+Where they differ, the source that owns the subject settles it.
 
 ## Line breaks
 
-One sentence per source line in Markdown, code comments and commit bodies.
-A clipped fragment shares the line with the text after it: `# 30 s. The gateway drops idle streams at 60 s.`
-A code comment too wide for the file breaks after `,` `:` `;` or before a conjunction.
-Width alone breaks no rule where the file holds longer lines of the same kind.
+Markdown and commit bodies take one sentence per source line.
 Prose runs a sentence to its end on one line, whatever the width.
+A code comment breaks where its layout reads best.
+Short sentences and clipped fragments can share a line: `# 365 days. Google caps web sessions at 14 days by default.`
+A comment too wide for the file breaks at the one `,` `:` `;` or conjunction that splits it into readable halves.
+Every other punctuation mark keeps its line.
+A long line that reads in one pass stays whole.
+A review judges the comment block against the layout of the file around it.
 A wiki page, an issue, a PR or MR description and a review note show every line break: a paragraph goes in as one line.
 
 ## Comments
@@ -130,7 +130,7 @@ A fix follows these rules itself.
 - Every `, and` and `;` has been read against what follows.
   None leads into a second subject.
 - Every comment has been read against the line beneath it and cut on a second pass.
-- Every fact, name, path and link has been checked against its source.
+- Every fact, name and path has been checked against its source.
 - A docs page, a README and a commit body over five lines have been read once more by a subagent handed this skill and the draft alone.
   Each finding got accepted or refused with a reason.
 
