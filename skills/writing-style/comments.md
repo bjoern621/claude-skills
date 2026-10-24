@@ -36,7 +36,7 @@ The lines after it say what a caller has to know before calling:
 The sibling `SendReliablePacketTo` reuses "Reliable:" and adds "To: Send the packet to a specific address and port."
 The parts read the same in every name of the family.
 
-## A wire format gets drawn
+## A data structure documents its layout
 
 The struct carries an ASCII diagram of the header with every field's width and the total size.
 Each field repeats its width in a trailing comment: `TTL byte // Time to live (8 bits)`.
@@ -103,6 +103,7 @@ if destAddr != socket.MustGetLocalAddress().Addr() {
 
 The condition compares addresses.
 The comment names what the comparison means.
+A case label stays sparse: it goes where the condition fails to read as its case, and an `if` that says its case itself goes without one.
 
 ## A line that looks redundant says why it stays
 
