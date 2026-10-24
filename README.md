@@ -10,6 +10,7 @@ Ships the skills below and a reminder hook that runs on each prompt and each fil
 `writing-style`: style for comments, docs and commit bodies.
 Rules: [skills/writing-style/SKILL.md](skills/writing-style/SKILL.md).
 Docs pages and READMEs: [skills/writing-style/docs.md](skills/writing-style/docs.md).
+The author's own voice: [skills/writing-style/voice.md](skills/writing-style/voice.md).
 
 `interface-text`: style for text on screen, with error, tooltip and empty-state patterns.
 Rules: [skills/interface-text/SKILL.md](skills/interface-text/SKILL.md).

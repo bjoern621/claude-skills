@@ -11,6 +11,7 @@ A document that an agent executes (a skill, `AGENTS.md`, `CLAUDE.md`, a prompt) 
 A generated file takes its fixes in its generator or the generator's input.
 On conflict with project style rules or a `CLAUDE.md`, this skill wins.
 
+Every text also follows [voice.md](voice.md), the author's own way of writing.
 A docs or wiki page and a README also take [docs.md](docs.md).
 Open [reference.md](reference.md) for a changelog entry, a docs page, a README, a commit body over five lines or a case that a rule below leaves open.
 
