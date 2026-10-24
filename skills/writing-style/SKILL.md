@@ -100,6 +100,7 @@ A wiki page, an issue, a PR or MR description and a review note show every line 
 ## Comments
 
 1. A comment states what the code cannot show: unit, range, invariant, reason for an odd choice, caller obligation.
+   A doc comment on a function that others call carries its contract after the first line: concurrency, call obligations, behaviour on missing input, side effects, copies, errors and what it leaves to the caller.
    A paraphrase of the line, a value gloss (`# 0: no blink.`), what the tool's documentation already says and routine code stay uncommented.
 2. The first comment in a block, method or file holding none stays out unless it carries a constraint from item 1.
 3. It describes the code as it stands, for the code's next reader.
@@ -117,6 +118,8 @@ A wiki page, an issue, a PR or MR description and a review note show every line 
    Untouched ones stay.
 8. A test name states what the test proves.
    A log line reports the reading: `"%s declares no retry budget"`.
+
+[comments.md](comments.md) shows each kind in the author's own code.
 
 ## Reviewing
 
