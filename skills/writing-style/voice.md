@@ -5,7 +5,8 @@ Every text under this skill follows it next to [SKILL.md](SKILL.md).
 On conflict, SKILL.md wins.
 
 The examples restate the author's text with the spelling fixed, German originals translated.
-Chat habits stay out of repository prose: lower case, typos, dropped apostrophes, caps and "!!!" for emphasis, "or so" and "etc." as tails, a slash for "or", tag questions ("right?") and German and English mixed in one text.
+Chat habits stay out of repository prose: lower case, typos, dropped apostrophes, caps and "!!!" for emphasis, "or so" and "etc." as tails, tag questions ("right?") and sentences switching between German and English.
+A slash for "or" stays: "testing / reviewing".
 
 ## Claim first, reason after
 

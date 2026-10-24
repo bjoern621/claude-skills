@@ -13,6 +13,11 @@ On conflict with project style rules or a `CLAUDE.md`, this skill wins.
 
 Every text also follows [voice.md](voice.md), the author's own way of writing.
 A docs or wiki page and a README also take [docs.md](docs.md).
+
+English and German text follow their own grammar.
+The rules that rest on English grammar hold for English alone: `that` in a relative clause, the comma before `and`, "would", "well" and American spelling.
+German text sets a comma before every subordinate clause, takes the quotation marks that the project uses and keeps the English terms of its field (Branch, Merge Request, Deployment).
+Every other rule holds in both languages.
 Open [reference.md](reference.md) for a changelog entry, a docs page, a README, a commit body over five lines or a case that a rule below leaves open.
 
 ## Sentences
