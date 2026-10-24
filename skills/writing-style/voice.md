@@ -1,10 +1,10 @@
 # Voice
 
-The author's own way of writing, drawn from the author's messages.
+The author's own way of writing, drawn from the author's messages and the docs and specs that the author wrote.
 Every text under this skill follows it next to [SKILL.md](SKILL.md).
 On conflict, SKILL.md wins.
 
-The examples restate the author's messages with the spelling fixed.
+The examples restate the author's text with the spelling fixed, German originals translated.
 Chat habits stay out of repository prose: lower case, typos, dropped apostrophes, caps and "!!!" for emphasis, "or so" and "etc." as tails, a slash for "or", tag questions ("right?") and German and English mixed in one text.
 
 ## Claim first, reason after
@@ -61,6 +61,40 @@ A thing gets described by what it serves and where it stops.
 - "The WireGuard VPN gives internet and LAN access from a region with restricted internet. It reaches none of the services."
 - "An offline-access token lets a background app sign in while the user sits away from the PC."
 
+## A page opens on its job
+
+The first line names what the page does.
+The content starts on the next line.
+- "This document describes how to set up a local development environment."
+- "This guide describes how you contribute."
+
+## Terms get defined where they first appear
+
+A term gets its meaning after "means that" at first use.
+- "Blocking means that one block of a message or file goes out until the receiver confirms it."
+
+An acronym gets spelled out once.
+A synonym follows "also" in parentheses: "all peers (also nodes)".
+"more precisely" narrows a broad term to the one meant: "distribution transparency (more precisely access transparency)".
+
+## Operations read verb first
+
+An operation or a component gets described from its verb, with no subject.
+The description ends on what happens with missing or duplicate input.
+- "Adds a vertex to the graph. Nothing happens if the vertex exists."
+- "Returns the incident edges of a vertex. Nil if the vertex is not part of the graph."
+
+A sibling gets described by how it differs: "Like getEdges(). In place of a list, it concatenates a formatted string."
+
+## Guarantees name their scope
+
+A guarantee names what it covers, then what it leaves untouched.
+- "Blocking guarantees that the receiver keeps the current block apart from other blocks of the same message type. Messages of another type stay unaffected."
+
+A condition gets both branches: "With the blockchain subsystem, the node serves these functions as well. Without it, the node ignores the requests."
+A weakness names the failure, the quality that it costs and who stays unaffected: "Without the registry, new peers cannot join. Peers already connected stay unaffected."
+A process names its start state, the step that it repeats and when it stops: "This repeats until every vertex is part of the edge sequence."
+
 ## A real case anchors a rule
 
 An abstract rule gets one concrete case after "for example", or a restatement after "meaning".
@@ -69,6 +103,7 @@ An abstract rule gets one concrete case after "for example", or a restatement af
 The case comes from reality: real providers, real mails, real edge cases.
 A design gets tested against the case that breaks it, such as a text written for one pending file meeting two.
 A reason can point at a product that the reader knows: "A Discord chat never gets summarised either."
+An example uses named actors and the sizes that the format fixes: "Chunk 1 can end on the first two bytes of a four-byte code point. Chunk 2 starts with the other two."
 
 ## Behaviour from the user's side
 
@@ -82,6 +117,27 @@ An issue reports what works, what fails and what should happen.
 A status names its cause.
 "Degraded" alone tells the reader nothing.
 A likely cause may appear, marked as likely.
+
+## Steps and figures
+
+A setup step opens with the condition that calls for it, then the command, then the result that the reader sees.
+- "Clone the repository, if not done yet:"
+
+A default names where to change it.
+An alternative names what it costs: "Services started without the debugger skip every breakpoint."
+A figure gets one line on what it shows and one on how to read its notation: "'For all …' in the diagram stands for a loop."
+
+## Register follows the page
+
+A setup page and a contributing page address the reader as "you", in the imperative.
+A design doc says "we" for a choice that the team made.
+Every other page stays in the third person.
+
+## Open problems and assumptions
+
+An open problem names its workaround and the issue that tracks it: "An own domain avoids this problem (tracked in Task-91)."
+Assumed values get declared once for the whole section: "Values are educated guesses unless stated otherwise."
+A cited bound sits next to the place where the implementation misses it, with the reason and a pointer to a better one.
 
 ## What it does and why
 

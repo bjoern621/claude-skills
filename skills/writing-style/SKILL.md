@@ -76,7 +76,9 @@ A period, comma, colon or parenthesis takes the place of an em-dash, a `─` or 
 ASCII diagrams keep their box-drawing lines.
 Straight quotes, one layer of parentheses, a hyphenated pair in front of its noun alone ("a high-quality report").
 
-**Third person** in docs, a README aside.
+**Third person** in docs.
+A README, a setup page and a contributing page address the reader as "you".
+A design doc says "we" for the team's choice.
 
 ## Facts
 
