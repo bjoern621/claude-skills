@@ -1,12 +1,12 @@
 ---
 name: writing-style
-description: Style for repository prose that a human reads. Covers code and config comments, docstrings, identifiers, test names, log lines, Markdown docs, wiki pages, READMEs, changelogs, commit and PR bodies. Load before writing, editing or reviewing any of them, however small the edit. Also load it when the user asks to make text read less like AI.
+description: Style for repository prose and on-screen text that a human reads. Covers code and config comments, docstrings, identifiers, test names, log lines, Markdown docs, wiki pages, READMEs, changelogs, commit and PR bodies, and every string on screen (labels, buttons, tooltips, dialogs, errors, empty states, CLI output). Load before writing, editing or reviewing any of them, however small the edit. Also load it when the user asks to make text read less like AI or says "UI copy".
 ---
 
 # Writing style
 
 A chat reply follows the `caveman` plugin.
-A string on screen follows `interface-text`.
+A string on screen also takes [interface.md](interface.md).
 A document that an agent executes (a skill, `AGENTS.md`, `CLAUDE.md`, a prompt) follows `writing-for-agents` from `mattpocock-skills`.
 A generated file takes its fixes in its generator or the generator's input.
 On conflict with project style rules or a `CLAUDE.md`, this skill wins.

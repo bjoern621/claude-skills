@@ -1,6 +1,6 @@
 {
   "name": "bjoern",
-  "description": "Personal conventions: style for comments, docs, commit bodies, pull requests and interface text, plus merge request review rounds.",
+  "description": "Personal conventions: style for comments, docs, commit bodies, interface text and pull requests, plus merge request review rounds.",
   "author": {
     "name": "Björn",
     "url": "https://github.com/bjoern621"
