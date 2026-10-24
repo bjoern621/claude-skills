@@ -50,7 +50,7 @@ A sentence that the reader stops to admire or decode gets rewritten.
 
 - The project's language.
   English copy takes American spelling.
-- One term per concept, taken from the project's design or style document before coining a new one.
+- Terms come from the project's design or style document before a new one gets coined.
 - Ordinary technical verbs: holds, targets, refuses, retries, serves.
 - Problem words name what happened: "could not", "unable", "not supported".
   "error", "failed", "invalid", "illegal" and "fatal" stay out: they aim at the reader.
@@ -58,7 +58,6 @@ A sentence that the reader stops to admire or decode gets rewritten.
 - "please" for a request to wait or redo work, "sorry" for serious loss.
 - Identifiers ride in parentheses: "Compressed with the slower method (zstd-19)."
 - What is so and what to do.
-  An absence gets named where the reader would try to restore it.
 
 ## Completion criteria
 

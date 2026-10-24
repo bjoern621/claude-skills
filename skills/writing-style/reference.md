@@ -33,27 +33,11 @@ A verb with its object ("returns the matching messages") and a participle after 
 
 ## Describe what stands
 
-A state named in the past tense reads the running system and stays: "Disconnected", "expired", "Retried".
+A state that the running system passes through stays, in the past tense or with "no longer" and "not yet": "Disconnected", "expired", "hosts that are no longer reachable".
 A version that a contract fixes stays: "requires Postgres 14 or newer".
-An identifier names what the thing does.
-`parserV2`, `legacyPath` and `newParser` name a moment and go false after the next release.
-Naming an absence teaches a capability and then takes it away.
+An absence gets named where a reader would restore it: the missing thing looks required, was there before or matches its neighbours.
+Elsewhere, naming an absence teaches a capability and then takes it away.
 "There is no way to apply this without a restart." becomes "Applying restarts the service."
-
-## Comments
-
-A setting chosen for a reason outside the file earns its line:
-- `# Worker boots at ~930 MB, so a cap near that recycles it every few minutes.` above `per_worker_max_memory_mb = 1500`
-- `# Workaround for dotnet/runtime#98765, drop once it ships.`
-
-A number chosen by taste takes no comment.
-Defending one invents a constraint that the next reader works around.
-An absence earns a line where a reader would restore it: the missing thing looks required, was there before or matches what the neighbouring code does.
-
-## Changelog
-
-An entry names what somebody taking the release notices: behaviour, a message, a supported version, a shipped file.
-A test script, a CI step and a refactor leave the published artifact as it was and get no entry.
 
 ## Tells that no rule names
 

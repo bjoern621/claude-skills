@@ -9,9 +9,8 @@ Ships the skills below and a reminder hook that runs on each prompt and each fil
 
 `writing-style`: style for comments, docs, commit bodies and text on screen.
 Rules: [skills/writing-style/SKILL.md](skills/writing-style/SKILL.md).
-Docs pages and READMEs: [skills/writing-style/docs.md](skills/writing-style/docs.md).
-The author's own voice: [skills/writing-style/voice.md](skills/writing-style/voice.md).
-Comments by example: [skills/writing-style/comments.md](skills/writing-style/comments.md).
+Docs pages, READMEs, ADRs, reports and changelogs: [skills/writing-style/docs.md](skills/writing-style/docs.md).
+Comments, tests and messages: [skills/writing-style/comments.md](skills/writing-style/comments.md).
 Text on screen: [skills/writing-style/interface.md](skills/writing-style/interface.md).
 
 `pull-request`: shape of a pull request, merge request or issue.
