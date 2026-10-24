@@ -8,6 +8,7 @@ description: Style for repository prose that a human reads. Covers code and conf
 A chat reply follows the `caveman` plugin.
 A string on screen follows `interface-text`.
 A document that an agent executes (a skill, `AGENTS.md`, `CLAUDE.md`, a prompt) follows `writing-for-agents` from `mattpocock-skills`.
+A generated file takes its fixes in its generator or the generator's input.
 On conflict with project style rules or a `CLAUDE.md`, this skill wins.
 
 A docs or wiki page and a README also take [docs.md](docs.md).
@@ -55,6 +56,9 @@ Cut inflated words, hedges on facts, scaffolding ("Note that", "At its core"), A
 "well" appears as "as well", a water well or good health.
 Every other sense takes another word: "valid" for "well-formed".
 
+**Name the number.**
+A quantity that the source sets appears as that number: "a few retries" becomes "three retries" where the code sets three.
+
 **Describe what stands.**
 "now", "new", "no longer", "not yet", "currently", "recently", "soon", dates and counts that other work changes belong in commits and changelogs.
 State the invariant that produces the fact.
@@ -74,10 +78,21 @@ Straight quotes, one layer of parentheses, a hyphenated pair in front of its nou
 
 **Third person** in docs, a README aside.
 
+## Facts
+
+A sentence agrees with the code or the page that it describes.
+Every path, name, namespace and version that it names exists as named.
+Two places stating one fact agree.
+Where they differ, the source that owns the subject settles it: the code for behaviour, the ADR for product and architecture.
+A decision named in the text links its ADR, a topic its page and a sibling document its sibling.
+Every link resolves.
+
 ## Line breaks
 
 One sentence per source line in Markdown, code comments and commit bodies.
+A clipped fragment shares the line with the text after it: `# 30 s. The gateway drops idle streams at 60 s.`
 A code comment too wide for the file breaks after `,` `:` `;` or before a conjunction.
+Width alone breaks no rule where the file holds longer lines of the same kind.
 Prose runs a sentence to its end on one line, whatever the width.
 A wiki page, an issue, a PR or MR description and a review note show every line break: a paragraph goes in as one line.
 
@@ -102,12 +117,20 @@ A wiki page, an issue, a PR or MR description and a review note show every line 
 8. A test name states what the test proves.
    A log line reports the reading: `"%s declares no retry budget"`.
 
+## Reviewing
+
+A finding names the rule in this skill that the text breaks.
+Text breaking no rule here stays as written.
+A tell from [reference.md](reference.md) counts once it forms a pattern across the page.
+A fix follows these rules itself.
+
 ## Completion criteria
 
 - Every sentence written or touched has been read against each rule under "Sentences", one rule at a time.
 - Every `, and` and `;` has been read against what follows.
   None leads into a second subject.
 - Every comment has been read against the line beneath it and cut on a second pass.
+- Every fact, name, path and link has been checked against its source.
 - A docs page, a README and a commit body over five lines have been read once more by a subagent handed this skill and the draft alone.
   Each finding got accepted or refused with a reason.
 

@@ -11,6 +11,9 @@ Shape of a docs page, a wiki page and a README, above the sentence rules in [SKI
 - One addressee, named in a line before writing.
   The page explains what the project owns.
   A tool that the project plugs into gets named and left to its own docs.
+- A person reads the page.
+  An instruction to an agent and a split of work between agents and people go to the files that an agent executes.
+  A sentence on what a tool does stays.
 - Contract vocabulary.
   Routes, config keys, wire message names, config files that the reader edits and the parts named in plain words.
   Source files, functions, types and package paths stay out: the code answers those.
