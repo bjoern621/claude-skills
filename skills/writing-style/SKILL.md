@@ -137,6 +137,9 @@ A name that marks a moment (`parserV2`, `legacyPath`, `newParser`) goes false af
 
 A sentence agrees with the code or the page that it describes.
 Every path, name, namespace and version that it names exists as named.
+A state, an error or a term from an outside tool takes the tool's own words, read in its output or its docs.
+For example, Argo CD marks a tracked resource gone from Git as "requires pruning".
+Its "orphaned" names a resource that no application tracks.
 Two places stating one fact agree.
 Where they differ, the source that owns the subject settles it.
 
@@ -181,7 +184,8 @@ A fix follows these rules itself.
 - Every sentence written or touched has been read against each rule under "Sentences", one rule at a time.
 - Every `, and` and `;` has been read against what follows.
   None leads into a second subject.
-- Every fact, name and path has been checked against its source.
+- Every fact, name, path and term has been checked against its source before the text leaves the editor.
+  A pushed commit or a posted comment stays as written.
 - A commit body over five lines has been read once more by a subagent handed this skill and the draft alone.
   Each finding got accepted or refused with a reason.
 
