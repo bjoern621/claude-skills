@@ -6,6 +6,7 @@ Serves personal Claude Code skills as a plugin marketplace.
 
 `bjoern`: writing conventions, pull request shape and merge request review rounds.
 Ships the skills below and a reminder hook that runs on each prompt and each file edit.
+A second hook holds each distinct `git commit` once per session, until the message has been checked against its sources.
 
 `writing-style`: style for comments, docs, commit bodies and text on screen.
 Rules: [skills/writing-style/SKILL.md](skills/writing-style/SKILL.md).
