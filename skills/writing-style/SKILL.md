@@ -23,6 +23,7 @@ On conflict with project style rules or a `CLAUDE.md`, this skill wins.
 English and German text follow their own grammar.
 The rules that rest on English grammar hold for English alone: `that` in a relative clause, the comma before `and`, "would", "well" and American spelling.
 German text sets a comma before every subordinate clause, takes the quotation marks that the project uses and keeps the English terms of its field (Branch, Merge Request, Deployment).
+Such a term takes the article that the field uses: der Token, das Dependency.
 Every other rule holds in both languages.
 
 ## Sentences
