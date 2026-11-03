@@ -45,7 +45,7 @@ A voice tell (rule of three, transition openers, uniform rhythm) fires on a patt
 One instance of it passes.
 - Rule of three: a list landing on three items for rhythm.
 - Prompt echo: a heading whose first sentence restates it.
-- A question answering itself: "Why does it restart? Because nothing reconfigures it."
+- A question answering itself: "Why does it restart? Because the settings file changed."
 - Elegant variation: one entity renamed across a page to avoid repeating a word.
 - Bold label plus colon on each bullet.
 - Title Case headings.
