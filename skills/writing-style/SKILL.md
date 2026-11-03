@@ -72,6 +72,15 @@ A fact carries no "probably", "presumably" or "(not checked)".
 A guess stays apart from the facts, marked as a guess: "(is the peer disconnected?)".
 An open problem gets named as open, with its workaround and the issue that tracks it: "An own domain avoids this problem (tracked in Task-91)."
 
+**An obligation on the reader says so.**
+A contract that the reader fulfils (an input format, a key that a config needs, a resource that has to exist) takes "must", "must not", "may" and "should".
+"Each key ends in `.yaml`." becomes "Each key must end in `.yaml`."
+"The key name plays no other role." becomes "The key may take any name."
+A "should" names the cost of ignoring it.
+A rule that the system holds and the result of a broken contract stay indicative: "Without the ConfigMap, the pod hangs in `ContainerCreating`."
+German takes "muss", "darf nicht", "darf" and "sollte".
+"muss nicht" means "need not".
+
 **Cut a restriction that narrows nothing.**
 Delete `only`, `just`, `simply` or `merely` and reread.
 Same meaning: the word goes.

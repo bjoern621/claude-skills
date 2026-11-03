@@ -16,6 +16,15 @@ It goes in a parenthesis, worded differently at each use on a page: "The resolve
 A plain negative about one subject stays: `// nil when the profile sets no timeout.`
 An option that nobody proposed gets cut, rebuttal included: "A tempting approach would be", "You might think X, but", "To be clear".
 
+## An obligation on the reader says so
+
+A description in the present tense hides which parts of a contract the reader has to meet.
+For example, a Helm chart reads a ConfigMap of Kestra flows per entry:
+- Bad: "Die ConfigMap eines abgeschalteten Eintrags lesen die Jobs nicht. Jeder Key endet auf `.yaml` und hält genau einen Flow als reines Kestra-YAML. Der Flow trägt `id:` und `namespace:` auf oberster Ebene. Der Name des Keys spielt sonst keine Rolle."
+- Good: "Für einen abgeschalteten Eintrag darf die ConfigMap fehlen. Jeder Key muss auf `.yaml` enden und genau einen Flow als reines Kestra-YAML enthalten. Der Flow muss `id:` und `namespace:` auf oberster Ebene tragen. Der Key darf sonst beliebig heißen."
+
+The consequence keeps the indicative: "Fehlt sie, hängt der Pod in `ContainerCreating`, bis `activeDeadlineSeconds` den PostSync-Job scheitern lässt."
+
 ## Cut a restriction that narrows nothing
 
 - Bad: "Only after the lockfile is written does the install proceed." Good: "The install proceeds after the lockfile is written."
