@@ -54,6 +54,8 @@ One instance of it passes.
 - Chat leftovers: "Certainly! Here is", "I hope this helps", `oaicite`.
 - A rule written as decree: "Red belongs to destruction and no other fill exists." becomes "Red marks a destructive action."
 - A tool given a will: "The reconciler fixes itself" becomes "The reconciler rereads the settings on every pass."
+- A negated actor: "no job deletes it" or "kein Job löscht" puts the stress on an actor that the reader never expected.
+  The negation belongs on the verb of the thing concerned: "Einen Flow, den jemand von Hand aus dem KV-Key entfernt, löscht kein Job mehr." becomes "Ein Flow, den jemand von Hand aus dem KV-Key entfernt, wird nicht gelöscht."
 - Uniform rhythm: every sentence in a passage the same length and shape.
 
 A sentence that a cut left empty gets rewritten around a fact.
