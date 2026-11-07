@@ -1,6 +1,6 @@
 ---
 name: follow-up
-description: Works the open items that a finished task left behind, handing each one unrelated to that task to a background subagent with a short brief. Load when the user asks for one or more things that an earlier reply in this session left open ("fix the red test", "do 2 and 3", "do all of them").
+description: Load before working anything an earlier reply in this session left open, once the user picks it or says yes to an offer to do it ("fix the red test", "do 2 and 3", "yes delete it", "go ahead"), even when the items look small or tied to the finished task. Works related items inline and hands each unrelated one to a background subagent with a short brief.
 ---
 
 # Follow-up
