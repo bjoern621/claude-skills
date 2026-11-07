@@ -4,7 +4,7 @@ Serves personal Claude Code skills as a plugin marketplace.
 
 ## Plugins
 
-`bjoern`: writing conventions and their upkeep from feedback, pull request shape and merge request review rounds.
+`bjoern`: writing conventions and their upkeep from feedback, pull request shape, merge request review rounds and follow-up work.
 Ships the skills below and a reminder hook that runs on each prompt and each file edit.
 A second hook holds each distinct `git commit` once per session, until the message has been checked against its sources.
 
@@ -28,6 +28,11 @@ Triages every open thread, note and suggestion, pushes the fixes that hold up an
 Declined threads stay open for the author.
 Needs `glab` logged in to the merge request's host.
 Steps: [skills/address-mr/SKILL.md](skills/address-mr/SKILL.md).
+
+`follow-up`: works the items that a finished task left open, once the user picks some or all of them.
+Keeps the items that need the task's context in the main thread.
+Hands each other item to a background subagent with a short brief and relays its questions to the user.
+Steps: [skills/follow-up/SKILL.md](skills/follow-up/SKILL.md).
 
 ## Use in a repository
 
