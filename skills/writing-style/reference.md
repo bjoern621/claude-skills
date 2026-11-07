@@ -16,7 +16,11 @@ In a description, its parenthesis gets worded differently at each use on a page:
 A plain negative about one subject stays: `// nil when the profile sets no timeout.`
 An option that nobody proposed gets cut, rebuttal included: "A tempting approach would be", "You might think X, but", "To be clear".
 
-## An obligation on the reader says so
+## An instruction or an obligation on the reader says so
+
+A step toward an optional goal counts as an instruction as well: the goal in front leaves the choice to the reader.
+A sentence on what the system does without the reader keeps the system as subject: "The job scans the window and retries once."
+A choice that the reader makes names the reader, in a description as well: "The theme setting lets you pick a light or a dark sidebar."
 
 A description in the present tense hides which parts of a contract the reader has to meet.
 For example, a Helm chart reads a ConfigMap of Kestra flows per entry:

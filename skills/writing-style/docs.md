@@ -20,6 +20,7 @@ Shape of a docs page, a wiki page, a README, an ADR, a report and a setup or con
   A README, a setup page and a contributing page address the reader as "you", in the imperative.
   A design doc says "we" for a choice that the team made.
   Every other page stays in the third person.
+  A step that the reader takes stands in the imperative on every page.
 - Contract vocabulary.
   Routes, config keys, wire message names, config files that the reader edits and the parts named in plain words.
   Source files, functions, types and package paths stay out: the code answers those.
