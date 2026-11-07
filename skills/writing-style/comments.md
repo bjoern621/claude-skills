@@ -117,6 +117,8 @@ Clipping happens inside the language's own convention.
 A Go doc comment opens on the identifier.
 JSDoc tags carry the facts.
 Clipped fragments: `// Resolved timeout. nil if profile sets none.`
+A fragment ends with its fact.
+Run on into a clause, it holds the claim back: `# Pinned revision, so which package set a checkout builds against ...` becomes `# Pinned revision. A checkout builds against the package set that this file names.`
 Formats by example: `// ms, 1..60000.`
 A cut keeps every fact.
 Paths, line numbers and counts that shift with edits stay out.

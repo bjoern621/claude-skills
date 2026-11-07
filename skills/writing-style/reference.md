@@ -11,8 +11,8 @@ Cutting the contrast and keeping the copula leaves "A finding is a claim.", whic
 
 ## State the fact and stop
 
-The alternative stays where something pointed the reader at it: a default that the tool ships with, a habit taught by the predecessor or the option recommended a sentence earlier.
-It goes in a parenthesis, worded differently at each use on a page: "The resolver reads the lockfile (the manifest, up to 3.2)."
+A reader arrives holding an alternative when something pointed them at it: a default that the tool ships with, a habit taught by the predecessor or the option recommended a sentence earlier.
+In a description, its parenthesis gets worded differently at each use on a page: "The resolver reads the lockfile (the manifest, up to 3.2)."
 A plain negative about one subject stays: `// nil when the profile sets no timeout.`
 An option that nobody proposed gets cut, rebuttal included: "A tempting approach would be", "You might think X, but", "To be clear".
 

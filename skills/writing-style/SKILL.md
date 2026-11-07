@@ -37,7 +37,7 @@ A choice names its purpose after "to avoid" or "to prevent".
 The cost that it accepts follows as its own sentence: "Sending skips the ACK wait to avoid blocking. The receiver might get a faulty message."
 
 **Say what the thing does.**
-`is a`, `is an`, `is the`, `are the` and `serves as` re-label the subject.
+A form of "to be" joining the subject to a noun re-labels it: `is a`, `is the`, `are the`, `serves as`, a possessive ("is this file's property") and a cleft ("those two are what the verdicts measure").
 Give it a verb.
 "The binding layer is a bridge." becomes "The binding layer redraws the view when the model changes."
 A predicate naming a state stays: "The buffer is full".
@@ -51,8 +51,11 @@ One subject with two verbs stays one sentence: "The job scans the window and ret
 **State the fact and stop.**
 "X, not Y", "X, never Y", "not Y but X", "rather than", "instead of" and "X over Y" mirror the fact or hang a rejected option off it.
 Cut the mirror: "Runs on a subscription rather than per token." becomes "Runs on a subscription."
-An alternative that the reader arrives holding goes into a parenthesis.
-A correction of fact ("Use pnpm, not npm") and a choice between two live options ("deleted rather than shortened") stay inline.
+An alternative that the reader arrives holding, such as a tool's default or a habit, stays:
+- inline in an instruction, since the reader would act on it: "Use pnpm, not npm."
+- in a parenthesis in a description: "Sessions expire after 14 days (the library's default: 30)."
+
+A choice between two live options stays inline: "deleted rather than shortened".
 
 **Short.**
 A description fits one line.
