@@ -11,7 +11,7 @@ core="Say what a thing does, with no 'X is a Y'. One independent clause per sent
 
 case $surface in
 prompt)
-    message="Load writing-style before repository prose or a string on screen that a human reads, however small the edit. $core"
+    message="Load writing-style before repository prose or a string on screen that a human reads, however small the edit. $core A text that the user judges, doubts or offers as a sample takes writing-feedback."
     ;;
 *)
     message="writing-style governs repository prose and strings on screen that a human reads. Load it before this edit unless it is already loaded. $core One sentence per line in Markdown and commit bodies, a paragraph per line in a PR, issue or wiki body. A string on screen also takes its interface.md."

@@ -4,7 +4,7 @@ Serves personal Claude Code skills as a plugin marketplace.
 
 ## Plugins
 
-`bjoern`: writing conventions, pull request shape and merge request review rounds.
+`bjoern`: writing conventions and their upkeep from feedback, pull request shape and merge request review rounds.
 Ships the skills below and a reminder hook that runs on each prompt and each file edit.
 A second hook holds each distinct `git commit` once per session, until the message has been checked against its sources.
 
@@ -13,6 +13,11 @@ Rules: [skills/writing-style/SKILL.md](skills/writing-style/SKILL.md).
 Docs pages, READMEs, ADRs, reports and changelogs: [skills/writing-style/docs.md](skills/writing-style/docs.md).
 Comments, tests and messages: [skills/writing-style/comments.md](skills/writing-style/comments.md).
 Text on screen: [skills/writing-style/interface.md](skills/writing-style/interface.md).
+
+`writing-feedback`: turns the user's judgement of a text, bad or good, into an edit of `writing-style`.
+Fixes the text where it lives in the current work, records the case and releases the plugin.
+Steps: [skills/writing-feedback/SKILL.md](skills/writing-feedback/SKILL.md).
+Cases: [skills/writing-feedback/cases/](skills/writing-feedback/cases/).
 
 `pull-request`: shape of a pull request, merge request or issue.
 One change per title, the issue link first, the shortest description that carries the change and a picture for every visible change.
