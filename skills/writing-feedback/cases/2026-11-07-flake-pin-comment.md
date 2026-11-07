@@ -23,14 +23,14 @@ source: screen-sharing flake.nix:4
 
 ## Patterns
 - Fragment running on into a clause, holding the claim back: "A revision on both inputs and never a branch, so". Rule: comments.md "Form", clipped fragments. Cause: Ambiguous (fragments allowed, their end unstated).
-- Rejected option hung off the fact: "never a branch", "rather than the day someone last ran". Rule: "State the fact and stop". Cause: Hard to see.
-- Possessive copula: "is this file's property". Rule: "Say what the thing does". Cause: Narrow (listed forms stop at `is a`, `is the`).
+- Rejected option hung off the fact: "never a branch", "rather than the day someone last ran". Rule: "State the fact and stop". Cause: Held.
+- Possessive copula: "is this file's property". Rule: "Say what the thing does". Cause: Narrow (listed forms such as `is a` and `is the` missed it).
 - Cleft copula: "those two are what every codec verdict is measured against". Rule: "Say what the thing does". Cause: Narrow.
-- Second subject after `, and`: "with no commit saying so, and those two are". Rule: "One independent clause per sentence". Cause: Hard to see.
-- Relabel: "the plugin set is the thing under test". Rule: "Say what the thing does". Cause: Hard to see.
+- Second subject after `, and`: "with no commit saying so, and those two are". Rule: "One independent clause per sentence". Cause: Held.
+- Relabel: "the plugin set is the thing under test". Rule: "Say what the thing does". Cause: Held.
 - Paired negation: "an edit, not a command". Rule: "State the fact and stop". Cause: Ambiguous (the reader arrives holding `nix flake update`, and the rule left open whether that alternative stays inline or goes in a parenthesis).
-- False claim: "with no commit saying so". `flake.lock` sits in the repository, so a lock bump records the move. Rule: "Facts and scope". Cause: Hard to see.
-- Two-way verb: "The revision tracks nixos-unstable", while a pinned revision tracks nothing. Rule: "Terms and names". Cause: Hard to see.
+- False claim: "with no commit saying so". `flake.lock` sits in the repository, so a lock bump records the move. Rule: "Facts and scope". Cause: Held.
+- Two-way verb: "The revision tracks nixos-unstable", while a pinned revision tracks nothing. Rule: "Terms and names". Cause: Held.
 
 ## Open
 docs/packaging.md ("Version pinning") states most of these facts too.

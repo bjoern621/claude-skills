@@ -79,9 +79,13 @@ Then pick the cause:
 | Buried | The rule sits far from where a writer of this kind of text looks | Move it up, or into the page for that kind |
 | Conflict | Another rule or example pulls the other way | Step 6 |
 | Hard to see | The rule reads clearly, but a long page hides the shape from a reader | A pattern in `skills/writing-style/scripts/check-style.sh`, created on first need |
+| Held | A fresh reader with the skill fixes the pattern unprompted | None: the rule stays as written, and the case stays as a regression check |
 
-A covered pattern counts as a miss, whoever wrote the text.
-Count the cases in `cases/` that name each rule.
+A covered pattern gets tested before it counts as a miss.
+A fresh subagent gets the `writing-style` files and the case text alone, and rewrites the text.
+A pattern that it fixes unprompted takes the cause Held, since the skill already carries it and the writer went without.
+A pattern that it leaves in place counts as a miss, whoever wrote the text, and takes a cause from the other rows.
+Count the misses in `cases/` per rule.
 A rule with several misses moves up in its section or gets shorter.
 A long section around it gets cut.
 A good sample confirms rules and gives them anchors.
@@ -98,6 +102,9 @@ Once settled, rewrite every section that held the losing direction, as a whole.
 A point edit beside an untouched paragraph leaves the clash for the next reader.
 
 ## 7. Edit writing-style
+
+A report edits `writing-style` only for a pattern that missed, or for a good sample that anchors a rule lacking one.
+A report whose patterns all held goes to step 8 with its case alone.
 
 Each edit rewrites the section that it touches as a whole.
 The new point merges into existing sentences before it adds a line.
@@ -121,6 +128,7 @@ In `~/git/claude-skills`:
 1. Stage by name and commit the case and the edits as one commit.
    The body names the case and the cause, the way earlier commits in `git log` do.
 2. `git push origin HEAD:main`.
+   A commit holding a case alone stops here: the plugin behaves the same, so no release or update follows.
 3. Release the next tag after `git describe --tags --abbrev=0 --match 'v*'`: minor for a new rule, page or skill, patch otherwise.
    `gh release create <tag> --target main --title <tag> --notes-file <file>`, with `gh` from `nix shell nixpkgs#gh` and `GH_TOKEN` from `git credential fill`.
    The notes follow the previous release (`gh release view`): `## Added`, `## Changed` and `## Removed`, one bullet per rule change since the previous tag.
@@ -132,4 +140,4 @@ In `~/git/claude-skills`:
    Each project scope of `bjoern@bjoern-skills` in `~/.claude/plugins/installed_plugins.json` takes the same update with `-s project`, run from its `projectPath`.
    A running session loads the new version after a restart.
 
-The report names the patterns and their causes, the rules changed, the source fix (path and commit) or why the text stayed, the release tag and URL, and the commit that the local install now holds.
+The report names the patterns and their causes, the rules changed or that every pattern held, the source fix (path and commit) or why the text stayed, the release tag and URL, and the commit that the local install now holds.
