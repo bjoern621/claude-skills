@@ -1,95 +1,61 @@
 version: "3"
 
-# The including Taskfile's `vars:` settle TAG_PREFIX, FORGE and BRANCH, and those beat the command line.
-# PART and NOTES come from the command line.
+# The including Taskfile's `vars:` settle the project's settings, and those beat the command line.
+# PART, VERSION and NOTES come from the command line.
+# release.sh beside this file does the work (README.md).
 vars:
   # The prefix in front of every version tag: "v" for v1.2.3, unset or "" for 1.2.3.
   # It takes no default, since `default` would replace an empty prefix as well.
   TAG_PREFIX: "{{.TAG_PREFIX}}"
   # github creates a GitHub release on the tag. tag pushes the tag alone, for a forge whose CI publishes from it.
   FORGE: '{{.FORGE | default "github"}}'
+  # push tags and pushes from here. merge-request opens a merge request with the release commit, and CI publishes it.
+  VIA: '{{.VIA | default "push"}}'
   BRANCH: '{{.BRANCH | default "main"}}'
-  # major, minor or patch.
-  PART: '{{.PART | default "minor"}}'
-  # The version tags on origin, one "<commit> <tag>" per line.
-  # A local tag counts for nothing: a clone missing a tag would offer that tag again.
-  REMOTE_TAGS:
-    sh: |
-      git ls-remote --tags origin \
-        | sed -E 's#\^\{\}$##; s#refs/tags/##' \
-        | awk -v re='^{{.TAG_PREFIX}}[0-9]+[.][0-9]+[.][0-9]+$' '$2 ~ re { print $1, $2 }'
-  CURRENT:
-    sh: echo "{{.REMOTE_TAGS}}" | awk '{ print $2 }' | sort -uV | tail -1
-  # The version tag on origin pointing at HEAD, left by a release that this commit already got.
-  HEAD_TAG:
-    sh: echo "{{.REMOTE_TAGS}}" | awk -v head="$(git rev-parse HEAD)" '$1 == head { print $2 }' | sort -uV | tail -1
-  NEXT:
-    sh: |
-      version="{{.CURRENT}}"
-      version=${version#"{{.TAG_PREFIX}}"}
-      version=${version:-0.0.0}
-      major=${version%%.*}
-      rest=${version#*.}
-      minor=${rest%%.*}
-      patch=${rest#*.}
-      case "{{.PART}}" in
-        major) echo "{{.TAG_PREFIX}}$((major + 1)).0.0" ;;
-        minor) echo "{{.TAG_PREFIX}}$major.$((minor + 1)).0" ;;
-        patch) echo "{{.TAG_PREFIX}}$major.$minor.$((patch + 1))" ;;
-        *) echo "PART takes major, minor or patch." >&2 ; exit 1 ;;
-      esac
-  # A rerun on a released commit finishes that release in place of starting the next one.
-  TAG: '{{.HEAD_TAG | default .NEXT}}'
-  SUBJECT:
-    sh: git log -1 --format=%s
-  # gh from the PATH where a dev shell puts it, from nixpkgs otherwise.
-  GH:
-    sh: command -v gh >/dev/null && echo gh || echo "nix shell nixpkgs#gh --command gh"
+  # A changelog whose pending entries pick the bump and fill the release text.
+  CHANGELOG: "{{.CHANGELOG}}"
+  # A directory of changelog fragments, one Markdown file per merge request, that a release gathers into CHANGELOG.
+  FRAGMENTS: "{{.FRAGMENTS}}"
+  # A shell command run after the changelog cut, with TAG and VERSION set. The release commit takes what it changes.
+  PREPARE: "{{.PREPARE}}"
+  # true waits for CI on the release branch before releasing and follows CI on the tag after a push.
+  CI: '{{.CI | default "false"}}'
+  # major, minor or patch in place of the bump that the changelog picks. minor without a changelog.
+  PART: "{{.PART}}"
+  VERSION: "{{.VERSION}}"
+  NOTES: "{{.NOTES}}"
 
 tasks:
   version:
-    desc: Print the published version and the one that a release would create. PART=major, minor or patch
+    desc: Print the published version and the one that a release would create
+    env: &settings
+      TAG_PREFIX: "{{.TAG_PREFIX}}"
+      FORGE: "{{.FORGE}}"
+      VIA: "{{.VIA}}"
+      BRANCH: "{{.BRANCH}}"
+      CHANGELOG: "{{.CHANGELOG}}"
+      FRAGMENTS: "{{.FRAGMENTS}}"
+      PREPARE: "{{.PREPARE}}"
+      CI: "{{.CI}}"
+      PART: "{{.PART}}"
+      VERSION: "{{.VERSION}}"
+      NOTES: "{{.NOTES}}"
+      YES: "{{.CLI_ASSUME_YES}}"
     cmds:
-      - 'echo "published {{.CURRENT | default "nothing"}}, next {{.TAG}}"'
+      - bash "{{.TASKFILE_DIR}}/release.sh" version
+    silent: true
 
   notes:
     desc: Print the notes of the newest GitHub release
-    preconditions:
-      - sh: test "{{.FORGE}}" = github
-        msg: "FORGE={{.FORGE}} keeps no release notes on the forge."
-      - sh: test -n "{{.CURRENT}}"
-        msg: No release exists yet.
-    env:
-      GH_TOKEN: &token
-        sh: |
-          [ "{{.FORGE}}" = github ] || exit 0
-          [ -n "$GH_TOKEN" ] && { echo "$GH_TOKEN"; exit 0; }
-          printf 'protocol=https\nhost=github.com\n\n' | git credential fill | sed -n 's/^password=//p'
+    env: *settings
     cmds:
-      - "{{.GH}} release view {{.CURRENT}} --json body --jq .body"
+      - bash "{{.TASKFILE_DIR}}/release.sh" notes
+    silent: true
 
   release:
-    desc: Tag the next version on the release branch, push the tag and publish the release. PART=major, minor or patch, NOTES=<notes file> for FORGE=github
-    prompt: Release {{.TAG}} from "{{.SUBJECT}}"?
-    preconditions:
-      - sh: test "{{.FORGE}}" = tag || test "{{.FORGE}}" = github
-        msg: "FORGE takes github or tag, not {{.FORGE}}."
-      - sh: test "$(git branch --show-current)" = "{{.BRANCH}}"
-        msg: A release runs from {{.BRANCH}}. Switch to {{.BRANCH}}, then release.
-      - sh: test -z "$(git status --porcelain)"
-        msg: The working tree carries changes. Commit them, then release.
-      - sh: git fetch --quiet origin "{{.BRANCH}}" && test "$(git rev-parse HEAD)" = "$(git rev-parse "origin/{{.BRANCH}}")"
-        msg: "{{.BRANCH}} differs from origin. Pull or push, then release."
-      - sh: test "{{.FORGE}}" = tag || test -s "{{.NOTES}}"
-        msg: "FORGE=github needs NOTES=<file> naming a notes file with content."
-    env:
-      GH_TOKEN: *token
+    desc: Release the next version from the release branch. VERSION=<tag> names it, PART=major, minor or patch picks the bump, NOTES=<file>, --yes skips the question
+    interactive: true
+    env: *settings
     cmds:
-      - cmd: git tag -a {{.TAG}} -m {{.TAG}}
-        if: "! git rev-parse --quiet --verify refs/tags/{{.TAG}} >/dev/null"
-      - cmd: echo "{{.TAG}} tags $(git rev-parse --short '{{.TAG}}^{commit}'), not HEAD. Delete the local tag, then release." >&2; exit 1
-        if: test "$(git rev-parse '{{.TAG}}^{commit}')" != "$(git rev-parse HEAD)"
-      - git push --quiet origin refs/tags/{{.TAG}}
-      - cmd: '{{.GH}} release create {{.TAG}} --verify-tag --title {{.TAG}} --notes-file "{{.NOTES}}"'
-        if: test "{{.FORGE}}" = github && ! {{.GH}} release view {{.TAG}} >/dev/null 2>&1
-      - echo "Published {{.TAG}}."
+      - bash "{{.TASKFILE_DIR}}/release.sh" release
+    silent: true
