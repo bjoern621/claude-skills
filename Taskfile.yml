@@ -1,0 +1,58 @@
+version: "3"
+
+vars:
+  # Fetches the tags first: a clone missing a tag would offer that tag again.
+  CURRENT:
+    sh: git fetch --quiet --tags origin && git tag --list 'v*' --sort=-v:refname | head -1
+  # major, minor or patch. A new rule, page or skill takes minor, every other change patch.
+  PART: minor
+  NEXT:
+    sh: |
+      version={{.CURRENT}}
+      version=${version#v}
+      major=${version%%.*}
+      rest=${version#*.}
+      minor=${rest%%.*}
+      patch=${rest#*.}
+      case "{{.PART}}" in
+        major) echo "v$((major + 1)).0.0" ;;
+        minor) echo "v$major.$((minor + 1)).0" ;;
+        patch) echo "v$major.$minor.$((patch + 1))" ;;
+        *) echo "PART takes major, minor or patch." >&2 ; exit 1 ;;
+      esac
+  SUBJECT:
+    sh: git log -1 --format=%s
+  GH: >-
+    GH_TOKEN=$(printf 'protocol=https\nhost=github.com\n\n' | git credential fill | sed -n 's/^password=//p')
+    nix shell nixpkgs#gh --command gh
+
+tasks:
+  version:
+    desc: Print the published version and the one that a release would create
+    cmds:
+      - 'echo "published {{.CURRENT}}, next {{.NEXT}}"'
+
+  notes:
+    desc: Print the notes of the newest release
+    cmds:
+      - "{{.GH}} release view {{.CURRENT}} --json body --jq .body"
+
+  release:
+    desc: Release the next version from main on GitHub. PART=major, minor or patch, NOTES=<notes file>
+    requires:
+      vars: [NOTES]
+    prompt: Release {{.NEXT}} from "{{.SUBJECT}}"?
+    preconditions:
+      - sh: test "$(git branch --show-current)" = main
+        msg: A release runs from main. Switch to main, then release.
+      - sh: test -z "$(git status --porcelain)"
+        msg: The working tree carries changes. Commit them, then release.
+      - sh: git fetch --quiet origin main && test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+        msg: main differs from origin. Pull or push, then release.
+      - sh: test -z "$(git tag --points-at HEAD)"
+        msg: This commit already carries a tag. Commit the change to publish, then release.
+      - sh: test -s "{{.NOTES}}"
+        msg: "The notes file {{.NOTES}} is missing or empty."
+    cmds:
+      - '{{.GH}} release create {{.NEXT}} --target main --title {{.NEXT}} --notes-file "{{.NOTES}}"'
+      - git fetch --quiet --tags origin

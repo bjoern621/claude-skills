@@ -129,9 +129,9 @@ In `~/git/claude-skills`:
    The body names the case and the cause, the way earlier commits in `git log` do.
 2. `git push origin HEAD:main`.
    A commit holding a case alone stops here: the plugin behaves the same, so no release or update follows.
-3. Release the next tag after `git describe --tags --abbrev=0 --match 'v*'`: minor for a new rule, page or skill, patch otherwise.
-   `gh release create <tag> --target main --title <tag> --notes-file <file>`, with `gh` from `nix shell nixpkgs#gh` and `GH_TOKEN` from `git credential fill`.
-   The notes follow the previous release (`gh release view`): `## Added`, `## Changed` and `## Removed`, one bullet per rule change since the previous tag.
+3. Release with `task release PART=<part> NOTES=<file> --yes`: `minor` for a new rule, page or skill, `patch` otherwise.
+   The task picks the next tag from the tags on `origin` and creates the GitHub release on `main`.
+   The notes follow the previous release (`task notes`): `## Added`, `## Changed` and `## Removed`, one bullet per rule change since the previous tag.
 4. Update the local install:
    ```
    claude plugin marketplace update bjoern-skills
