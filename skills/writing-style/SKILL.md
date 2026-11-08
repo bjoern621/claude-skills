@@ -137,6 +137,7 @@ A short gloss sits in quotes and parentheses behind the term: `the sequence numb
 A synonym follows "also" in parentheses: "all peers (also nodes)".
 "more precisely" narrows a broad term to the one meant: "distribution transparency (more precisely access transparency)".
 A term that reads several ways gets pinned down: "per instance" names an environment, a server or a chart version.
+A verb promising ongoing behaviour from something fixed takes the verb that fits: "The snapshot mirrors production" becomes "The snapshot comes from production".
 
 One concept keeps one name in every file, page and interface.
 Two concepts that a reader could merge stay apart in every sentence: "Signing in to Pidgemail and linking a mail account stay independent."
@@ -168,6 +169,11 @@ A value taken from an outside source links that source beside the value.
 An operation or a component gets described from its verb, after the identifier where the doc convention leads with one.
 The description ends on what happens with missing or duplicate input: "Adds a vertex to the graph. Nothing happens if the vertex exists."
 A sibling gets described by how it differs: "Like getEdges(). In place of a list, it concatenates a formatted string."
+
+Items that a reader compares side by side (option cards, table rows, parallel bullets) fill the same slots in the same order, each slot with one kind of content.
+"2 vCPU, 4 GB RAM" beside "Enough for small sites" becomes "2 vCPU, 4 GB RAM" beside "1 vCPU, 2 GB RAM".
+Amounts that a reader compares take one base and one written form, each with its unit.
+"$12 per month" beside "$130 per year" becomes "$12 per month" beside "$10.83 per month".
 
 ## Behaviour
 

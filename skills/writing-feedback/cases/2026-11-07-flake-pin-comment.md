@@ -30,7 +30,7 @@ source: screen-sharing flake.nix:4
 - Relabel: "the plugin set is the thing under test". Rule: "Say what the thing does". Cause: Held.
 - Paired negation: "an edit, not a command". Rule: "State the fact and stop". Cause: Ambiguous (the reader arrives holding `nix flake update`, and the rule left open whether that alternative stays inline or goes in a parenthesis).
 - False claim: "with no commit saying so". `flake.lock` sits in the repository, so a lock bump records the move. Rule: "Facts and scope". Cause: Held.
-- Two-way verb: "The revision tracks nixos-unstable", while a pinned revision tracks nothing. Rule: "Terms and names". Cause: Held.
+- Two-way verb: "The revision tracks nixos-unstable", while a pinned revision tracks nothing. Rule: "Terms and names". Cause: Narrow (two fresh readers kept "tracks" on the 2026-11-08 check, since the rule named terms alone).
 
 ## Open
 docs/packaging.md ("Version pinning") states most of these facts too.
