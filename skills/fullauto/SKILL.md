@@ -95,6 +95,12 @@ Each coherent change gets a small merge request of its own.
 A merge follows a green pipeline and every review thread resolved, by fix or by a reply naming the reason.
 Bot review rounds repeat until the review reports no findings.
 
+A pipeline gets one waiter: the agent that owns its merge request.
+The waiter polls the pipeline status at most once a minute, one request per round.
+It reads the jobs and review threads once, after the pipeline ends, and stops with its stream.
+The forge serves the user and every CI job as well.
+For example, seventeen loops polling merge requests every 20 seconds slowed a small GitLab's pages from milliseconds to seconds.
+
 Never:
 - merge a red pipeline
 - skip a hook or a required job
