@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "bjoern",
-      "description": "Writing conventions, pull request shape, merge request review rounds and follow-up work.",
+      "description": "Writing conventions, pull request shape, merge request review rounds, follow-up work and autonomous runs.",
       "source": "./",
       "category": "productivity"
     }

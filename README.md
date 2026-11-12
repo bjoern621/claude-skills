@@ -4,7 +4,7 @@ Serves personal Claude Code skills as a plugin marketplace.
 
 ## Plugins
 
-`bjoern`: writing conventions and their upkeep from feedback, pull request shape, merge request review rounds and follow-up work.
+`bjoern`: writing conventions and their upkeep from feedback, pull request shape, merge request review rounds, follow-up work and autonomous runs.
 Ships the skills below and a reminder hook that runs on each prompt and each file edit.
 A second hook holds each distinct `git commit` once per session, until the message has been checked against its sources.
 
@@ -33,6 +33,10 @@ Steps: [skills/address-mr/SKILL.md](skills/address-mr/SKILL.md).
 Keeps the items that need the task's context in the main thread.
 Hands each other item to a background subagent with a short brief and relays its questions to the user.
 Steps: [skills/follow-up/SKILL.md](skills/follow-up/SKILL.md).
+
+`fullauto`: a long autonomous run over a backlog, started by saying "fullauto".
+The main thread coordinates, stays reachable and reports, while background subagents fix blockers and work tickets to merged merge requests inside the user's grant.
+Steps: [skills/fullauto/SKILL.md](skills/fullauto/SKILL.md).
 
 ## Use in a repository
 
