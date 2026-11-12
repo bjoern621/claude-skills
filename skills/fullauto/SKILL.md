@@ -61,6 +61,12 @@ The brief follows step 3 of the `follow-up` skill (goal, done when, picture, rul
 - the grant from step 1, word for word, with the ceiling
 - the shared resources that this agent owns
 - the merge request process of the repository, pointed at in `CLAUDE.md`
+- the `writing-style` skill, loaded before the agent writes any text: commits, comments, merge request and issue bodies, changelog fragments, strings on screen
+- the project docs that set its design goals, by path: guidelines, review rules, issue templates, the README and the docs and ADRs of the area that it touches
+
+Before merging, the agent checks its diff and its texts against those docs and names them in its report.
+A rule arriving mid-run goes to every running agent through `SendMessage`.
+Each agent re-checks its unmerged work against it.
 
 A shared resource takes one owner at a time.
 A phone or emulator over ADB, a dev server port, a worktree, a branch, a component release and a migration number each count as one.
@@ -153,3 +159,4 @@ The closing report lists merged merge requests, issues filed and closed, open qu
 | Too few questions                  | The list in step 8, asked together and early                |
 | A spawned agent gets forgotten     | Ledger line per agent, updated on every notification        |
 | A guessed result gets reported     | Results enter a report after the notification alone         |
+| Text or design drifts from project | Briefs name `writing-style` and the design docs by path     |
