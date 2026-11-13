@@ -63,6 +63,7 @@ The brief follows step 3 of the `follow-up` skill (goal, done when, picture, rul
 - the merge request process of the repository, pointed at in `CLAUDE.md`
 - the `writing-style` skill, loaded before the agent writes any text: commits, comments, merge request and issue bodies, changelog fragments, strings on screen
 - the project docs that set its design goals, by path: guidelines, review rules, issue templates, the README and the docs and ADRs of the area that it touches
+- the waiting rule from step 5: every wait ends in a report or in the next step, never in silence
 
 Before merging, the agent checks its diff and its texts against those docs and names them in its report.
 A rule arriving mid-run goes to every running agent through `SendMessage`.
@@ -88,6 +89,19 @@ The main thread answers the user within one turn, whatever runs.
 - Never sleep or poll for an agent: its notification re-invokes the main thread.
 - The main thread does no stream work of its own beyond a few lookups.
   Work of more than a handful of tool calls goes to an agent.
+
+An agent that ends its turn to wait gets woken by its own background command alone.
+A wait for a state outside the session, such as a deploy rolling out, runs as a background command that checks the state and exits once it holds or a timeout passes.
+A turn ended on "waiting for the rollout" with no such command behind it never resumes.
+For example, two agents ended their turns at midnight waiting for a dev rollout. The rollout finished minutes later, and both sat silent until morning.
+
+The main thread checks every running agent on each user message and on each notification:
+1. Read the time of the agent's last transcript line and its last action.
+2. An agent that ended its turn with no live background command of its own, and has not reported, gets resumed through `SendMessage`. The message names the step where it stopped and why the wait is over.
+3. An agent whose last line is a model request older than about 15 minutes has stalled. Stop it with `TaskStop` and resume it through `SendMessage` with the step it was on.
+4. A background command polling the forge counts as live while its output file grows.
+
+Done when every agent in the ledger is working, holds a live background command, or has reported.
 
 ## 6. Drive each merge request to merged
 
@@ -164,5 +178,6 @@ The closing report lists merged merge requests, issues filed and closed, open qu
 | Too many questions                 | Decide what no rule leaves to the user, write the reason    |
 | Too few questions                  | The list in step 8, asked together and early                |
 | A spawned agent gets forgotten     | Ledger line per agent, updated on every notification        |
+| An agent waits with nothing behind | Waits run as background commands. The sweep in step 5       |
 | A guessed result gets reported     | Results enter a report after the notification alone         |
 | Text or design drifts from project | Briefs name `writing-style` and the design docs by path     |
