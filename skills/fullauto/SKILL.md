@@ -74,6 +74,7 @@ A phone or emulator over ADB, a dev server port, a worktree, a branch, a compone
 A second stream needing the same resource waits, or joins the owner's brief through `SendMessage`.
 Two agents never edit the same files.
 Each agent editing a repository works in a worktree of its own.
+A background agent opens it with `git worktree add --detach`, since an `EnterWorktree` call from one once hung for half an hour.
 
 Keep a ledger in the scratchpad: agent name, stream, owned resources, state, merge request links.
 Update it on every launch, notification and relay.
