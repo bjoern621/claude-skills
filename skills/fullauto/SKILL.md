@@ -99,7 +99,9 @@ The main thread checks every running agent on each user message and on each noti
 1. Read the time of the agent's last transcript line and its last action.
 2. An agent that ended its turn with no live background command of its own, and has not reported, gets resumed through `SendMessage`. The message names the step where it stopped and why the wait is over.
 3. An agent whose last line is a model request older than about 15 minutes has stalled. Stop it with `TaskStop` and resume it through `SendMessage` with the step it was on.
-4. A background command polling the forge counts as live while its output file grows.
+4. A background command polling the forge prints one line per round, and counts as live while its output file grows.
+   A waiter that prints nothing until it exits looks the same alive and dead.
+   Where the state that it waits for already holds, such as a pipeline already ended, the agent gets resumed with that state.
 
 Done when every agent in the ledger is working, holds a live background command, or has reported.
 
