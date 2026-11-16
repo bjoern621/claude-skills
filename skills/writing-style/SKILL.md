@@ -192,6 +192,19 @@ Prose runs a sentence to its end on one line, whatever the width.
 A wiki page, an issue, a PR or MR description and a review note show every line break: a paragraph goes in as one line.
 A code comment breaks by its layout, as [comments.md](comments.md) sets out.
 
+## Pattern check
+
+To catch what a pattern can find, such as `, and`, `;`, a dash or a copula, run `bash <skill-dir>/scripts/style-check.sh <file>` on the draft right after its first write.
+A commit message or a description goes in on stdin: `printf '%s\n' "$message" | bash <skill-dir>/scripts/style-check.sh`.
+`--as pr` reads a PR, MR, issue or wiki body.
+`--as ui` reads one string on screen per line.
+A source file gets its comments checked alone.
+Each hit names its rule.
+A `fix` hit breaks the rule wherever it stands: fix it.
+A `read` hit marks a candidate: fix it or keep it where its rule allows the case.
+`--list` prints every check.
+A run without hits leaves the reading to do, since a fluent, empty sentence matches no pattern.
+
 ## Reviewing
 
 A finding names the rule in this skill that the text breaks.
@@ -204,6 +217,8 @@ A fix follows these rules itself.
 - The page for the kind of text has been read where one exists.
   Its own criteria hold.
 - Every sentence written or touched has been read against each rule under "Sentences", one rule at a time.
+- `style-check.sh` has run on the text as it leaves the editor.
+  Each hit got fixed or kept where its rule allows the case.
 - Every `, and` and `;` has been read against what follows.
   None leads into a second subject.
 - Every fact, name, path and term has been checked against its source before the text leaves the editor.

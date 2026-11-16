@@ -13,6 +13,7 @@ Rules: [skills/writing-style/SKILL.md](skills/writing-style/SKILL.md).
 Docs pages, READMEs, ADRs, reports and changelogs: [skills/writing-style/docs.md](skills/writing-style/docs.md).
 Comments, tests and messages: [skills/writing-style/comments.md](skills/writing-style/comments.md).
 Text on screen: [skills/writing-style/interface.md](skills/writing-style/interface.md).
+Pattern check for the rules that a match can find: [skills/writing-style/scripts/style-check.sh](skills/writing-style/scripts/style-check.sh).
 
 `writing-feedback`: turns the user's judgement of a text, bad or good, into an edit of `writing-style`.
 Fixes the text where it lives in the current work, records the case and releases the plugin.
