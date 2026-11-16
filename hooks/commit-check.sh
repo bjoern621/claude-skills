@@ -26,6 +26,8 @@ hash=$(printf '%s' "$command" | sha256sum | cut -d' ' -f1)
 grep -qxF "$hash" "$seen" 2>/dev/null && exit 0
 printf '%s\n' "$hash" >>"$seen"
 
-reason="Commit held once for a check, since a pushed message stays as written. Reread the subject and body against the staged diff. Check every claim about a tool, a state, an error or a term against its source: the tool's output, its docs or the code. Write a tool's state in the tool's own words. Fix the message where a claim fails, then run the commit again."
+check=$(cd "$(dirname "$0")/.." && pwd)/skills/writing-style/scripts/style-check.sh
+
+reason="Commit held once for a check, since a pushed message stays as written. Reread the subject and body against the staged diff. Check every claim about a tool, a state, an error or a term against its source: the tool's output, its docs or the code. Write a tool's state in the tool's own words. Pipe the message through bash $check, then fix each hit or keep it where its rule allows the case. Fix the message where a claim fails, then run the commit again."
 
 printf '{"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"%s"}}\n' "$reason"
