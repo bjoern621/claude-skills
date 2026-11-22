@@ -106,7 +106,7 @@ State the invariant that produces the fact.
 A number or a list that the code sets goes stale with the next edit to the code.
 "Retries three times" becomes "retries a few times".
 A list names a few members and says that more exist: "providers such as Gmail and Outlook".
-A closed set that the reader has to hit stays complete: the values that a field accepts.
+A closed set that the reader has to hit stays complete where the reader looks it up: the values that a field accepts, in the reference for that field.
 The exact number lives beside the code that sets it.
 
 **A real case anchors a rule.**

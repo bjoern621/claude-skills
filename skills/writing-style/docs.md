@@ -69,6 +69,11 @@ Without a real default to argue against, the page takes the informing shape.
 Its section order sets the model.
 Its wording breaks these rules in places.
 
+"What it does" names what the reader sees or gets, ahead of any input that the software reads.
+A benefit reads as what happens: "zero-config" becomes "finds the bucket in the credentials that the cloud CLI already holds".
+The intro names the kinds of input in one line, such as the tools whose files it reads.
+The full list, with the fields and variants of each, goes under "where it works".
+
 Every capability line gets checked against the code before it ships.
 Limits get stated as what works.
 An unsupported case gets named where the reader would assume it works.
@@ -78,6 +83,7 @@ A section that the project has nothing for stays out.
 
 An entry names what somebody taking the release notices: behaviour, a message, a supported version, a shipped file.
 A test script, a CI step and a refactor leave the published artifact as it was and get no entry.
+Notes that announce the software to readers who never saw it, such as those of a 1.0 release, open with the README's lines on what it does.
 
 ## Completion criteria
 
@@ -86,6 +92,7 @@ A test script, a CI step and a refactor leave the published artifact as it was a
   A page whose title names the code is exempt.
 - Every decision on a docs page takes one line.
 - Every capability claim has been checked against the code.
+- A README intro names what the reader sees before any input that the software reads.
 - The page has been read once more by a subagent handed the skill and the draft alone.
   Each finding got accepted or refused with a reason.
 - `bash <skill-dir>/scripts/page-shape.sh <page>` has run.
