@@ -129,7 +129,8 @@ In `~/git/claude-skills`:
    The body names the case and the cause, the way earlier commits in `git log` do.
 2. `git push origin HEAD:main`.
    A commit holding a case alone stops here: the plugin behaves the same, so no release or update follows.
-3. Release with `task release PART=<part> NOTES=<file> --yes`: `minor` for a new rule, page or skill, `patch` otherwise.
+3. Release with `nix shell nixpkgs#go-task nixpkgs#gh --command task release PART=<part> NOTES=<file> --yes`: `minor` for a new rule, page or skill, `patch` otherwise.
+   Neither `task` nor `gh` sits on the agent's `PATH`.
    The task picks the next tag from the tags on `origin` and creates the GitHub release on `main`.
    The notes follow the previous release (`task notes`): `## Added`, `## Changed` and `## Removed`, one bullet per rule change since the previous tag.
 4. Update the local install:
