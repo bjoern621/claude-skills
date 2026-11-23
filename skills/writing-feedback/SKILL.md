@@ -39,6 +39,7 @@ Steps 4 to 8 run in a background subagent, so the conversation goes on.
 Its brief: the report verbatim, the patterns from step 1, where the text lives and the path of this file, whose steps 4 to 8 it follows.
 A question from step 6 comes back as the subagent's result.
 The main thread asks the user, then resumes the subagent with the answer through `SendMessage`.
+A result naming changed rules sends the main thread to read them in `~/git/claude-skills` before its next text, since the running session keeps the version that it loaded.
 
 ## 4. Record the case
 
@@ -85,6 +86,8 @@ A covered pattern gets tested before it counts as a miss.
 A fresh subagent gets the `writing-style` files and the case text alone, and rewrites the text.
 Its brief states the facts behind the text in the terms of their source, such as the names in the code, since a brief in plain words hands it the fix.
 A pattern that it fixes unprompted takes the cause Held, since the skill already carries it and the writer went without.
+A repeat of a recorded case first checks the plugin version under the writer's skill path in `~/.claude/plugins/cache`.
+An install older than the rule makes the repeat a stale session.
 A pattern that it leaves in place counts as a miss, whoever wrote the text, and takes a cause from the other rows.
 Count the misses in `cases/` per rule.
 A rule with several misses moves up in its section or gets shorter.
