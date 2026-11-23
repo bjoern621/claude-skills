@@ -83,6 +83,7 @@ Then pick the cause:
 
 A covered pattern gets tested before it counts as a miss.
 A fresh subagent gets the `writing-style` files and the case text alone, and rewrites the text.
+Its brief states the facts behind the text in the terms of their source, such as the names in the code, since a brief in plain words hands it the fix.
 A pattern that it fixes unprompted takes the cause Held, since the skill already carries it and the writer went without.
 A pattern that it leaves in place counts as a miss, whoever wrote the text, and takes a cause from the other rows.
 Count the misses in `cases/` per rule.
@@ -139,6 +140,7 @@ In `~/git/claude-skills`:
    claude plugin update bjoern@bjoern-skills -s user
    ```
    Each project scope of `bjoern@bjoern-skills` in `~/.claude/plugins/installed_plugins.json` takes the same update with `-s project`, run from its `projectPath`.
+   A scope whose `projectPath` no longer exists gets skipped and named in the report.
    A running session loads the new version after a restart.
 
 The report names the patterns and their causes, the rules changed or that every pattern held, the source fix (path and commit) or why the text stayed, the release tag and URL, and the commit that the local install now holds.
