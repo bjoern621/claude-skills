@@ -39,6 +39,22 @@ for f in "$@"; do
     wpl=$(awk -v w="$prose_words" -v l="$prose_lines" 'BEGIN{ if(l) printf "%.1f", w/l; else print "0" }')
     wpd=$(awk -v w="$words" -v d="$diagrams" 'BEGIN{ if(d) printf "%d", w/d; else print "-" }')
 
+    # A README gets a budget of its own, since its reader skims and its pictures carry what shows on screen.
+    is_readme=0
+    case "$(basename "$f")" in *README*|*readme*) is_readme=1 ;; esac
+    pictures=$(rg -c '!\[[^]]*\]\(|<img ' "$f" 2>/dev/null || echo 0)
+    # Prose lines above the first picture, or -1 for a page without one.
+    before_picture=$(awk '
+        /!\[[^]]*\]\(|<img / { found = 1; exit }
+        /^[[:space:]]*```/ { fence = !fence; next }
+        fence { next }
+        /^[[:space:]]*$/ { next }
+        /^[[:space:]]*#/ { next }
+        { n++ }
+        END { print (found ? n + 0 : -1) }
+    ' "$f")
+    wpp=$(awk -v w="$words" -v p="$pictures" 'BEGIN{ if(p) printf "%d", w/p; else print "-" }')
+
     printf '%s\n' "$f"
     printf '  words                 %s   (reference shape under 800, read the page over 1500)\n' "$words"
     printf '  prose lines           %s\n' "$prose_lines"
@@ -46,8 +62,14 @@ for f in "$@"; do
     printf '  words per diagram     %s   (reference shape under 400, read the page over 1500, %s diagrams)\n' "$wpd" "$diagrams"
     printf '  code spans            %s, of which implementation %s   (reference shape 0)\n' "$spans" "$impl"
     printf '  longest section       %s lines   (reference shape under 30, read the page over 40)\n' "$longest"
+    if [ "$is_readme" -eq 1 ]; then
+        printf '  README words          %s   (README shape under 800)\n' "$words"
+        printf '  lines before picture  %s   (README shape 1 or 2, -1 without a picture)\n' "$before_picture"
+        printf '  words per picture     %s   (README shape under 200, %s pictures)\n' "$wpp" "$pictures"
+    fi
 
-    over=$(awk -v wpl="$wpl" -v longest="$longest" -v d="$diagrams" -v w="$words" -v p="$impl" '
+    over=$(awk -v wpl="$wpl" -v longest="$longest" -v d="$diagrams" -v w="$words" -v p="$impl" \
+        -v r="$is_readme" -v bp="$before_picture" -v pics="$pictures" '
         BEGIN {
             n = 0
             if (w > 1500) n++
@@ -57,6 +79,9 @@ for f in "$@"; do
             if (d > 0 && w / d > 1500) n++
             # A page whose subject is the code names it on purpose, so this one is judged by eye.
             if (p > 0) n++
+            if (r == 1 && w > 800) n++
+            if (r == 1 && (bp < 0 || bp > 2)) n++
+            if (r == 1 && pics > 0 && w / pics > 200) n++
             print n
         }')
     if [ "$over" -gt 0 ]; then
