@@ -137,6 +137,8 @@ In `~/git/claude-skills`:
    Neither `task` nor `gh` sits on the agent's `PATH`.
    The task picks the next tag from the tags on `origin` and creates the GitHub release on `main`.
    The notes follow the previous release (`task notes`): `## Added`, `## Changed` and `## Removed`, one bullet per rule change since the previous tag.
+   The task refuses a tree with changes, untracked files included.
+   An untracked file of a parallel agent, such as its case, waits for that agent's commit, untouched by a stash or a staging of yours.
 4. Update the local install:
    ```
    claude plugin marketplace update bjoern-skills
