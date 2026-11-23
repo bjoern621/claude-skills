@@ -152,7 +152,7 @@ A name that marks a moment (`parserV2`, `legacyPath`, `newParser`) goes false af
 
 ## Facts and scope
 
-A sentence agrees with the code or the page that it describes.
+A sentence agrees with the code or the page that it describes: a summary that holds in every case agrees as well as the conditions behind it.
 Every path, name, namespace and version that it names exists as named.
 A state, an error or a term from an outside tool takes the tool's own words, read in its output or its docs.
 For example, Argo CD marks a tracked resource gone from Git as "requires pruning".

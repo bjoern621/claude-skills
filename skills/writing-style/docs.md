@@ -71,6 +71,7 @@ Its wording breaks these rules in places.
 
 "What it does" names what the reader sees or gets, ahead of any input that the software reads.
 A benefit reads as what happens: "zero-config" becomes "finds the bucket in the credentials that the cloud CLI already holds".
+A check reads as the fact that its result tells the reader, in the words of its message on screen.
 The intro names the kinds of input in one line, such as the tools whose files it reads.
 The full list, with the fields and variants of each, goes under "where it works".
 

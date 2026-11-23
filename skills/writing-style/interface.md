@@ -34,6 +34,9 @@ A sentence that the reader stops to admire or decode gets rewritten.
 - Error or refusal: problem, cause, fix, with exact names and the reader's own values.
   The fix appears where one exists.
   "The converter is not installed, so the importer cannot read this format. Install it or export as CSV."
+- Result of a check (a diagnostic, a lint warning, a validation hint): the one fact that the result tells the reader.
+  The conditions that the check tests stay in the code and its docs.
+  "`retry_limit` appears in no handler, no default config and no schema." becomes "The app does not read `retry_limit`."
 - A wait names no exact seconds: "Try again in a moment."
 - Disabled control: why and what enables it.
   "Locked while a backup runs. Stop the backup to change it."
