@@ -179,11 +179,11 @@ Amounts that a reader compares take one base and one written form, each with its
 
 Interface behaviour reads as the sequence that a user sees: trigger, state, result.
 "The first file needs accepting. Every file after it arrives without a prompt."
+A text on a change to that behaviour opens on what the person can do afterwards, then names one place or step per sentence: "You can drop a file onto any open chat. A drop on the chat list starts a new chat with that file."
+A change that nobody sees opens on the problem that it ends, then gives the fix: "Two tabs saving one draft overwrote each other. Each save carries the draft's version and fails on a stale one."
+A fix line names the behaviour that it ends and, in parentheses, what that behaviour broke: "Fix payload being modified (broke file transfer)".
 An issue reports what works, what fails and what should happen.
-A fix names the behaviour that it ends and, in parentheses, what that behaviour broke: "Fix payload being modified (broke file transfer)".
-A status names its cause.
-"Degraded" alone tells the reader nothing.
-A likely cause may appear, marked as likely.
+A status names its cause, a likely one marked as likely: "Degraded" alone tells the reader nothing.
 
 ## Line breaks
 
