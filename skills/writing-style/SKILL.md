@@ -46,7 +46,7 @@ A glossary row keeps the copula.
 **One independent clause per sentence.**
 `, and` or `;` leading into a second subject with its own verb becomes a period.
 "A tag sits on a message, and a thread carries its tags." becomes "A tag sits on a message. A thread carries its tags."
-One subject with two verbs stays one sentence: "The job scans the window and retries once."
+One subject with two verbs stays one sentence where both verbs make one point: "The job scans the window and retries once."
 
 **State the fact and stop.**
 "X, not Y", "X, never Y", "not Y but X", "rather than", "instead of" and "X over Y" mirror the fact or hang a rejected option off it.
@@ -59,7 +59,7 @@ A choice between two live options stays inline: "deleted rather than shortened".
 
 **Short.**
 A description fits one line.
-A bullet carries one point, as a short noun phrase where it can.
+A bullet carries one point, as a short noun phrase where it can: each result that the reader checks apart, such as "Clears the cache" and "Ends every session", takes its own bullet, whether the two share a sentence or follow one another.
 The longer wording stays when the shorter one would drop a fact.
 Each line earns its place by a fact that the human reader needs.
 
@@ -131,17 +131,17 @@ A slash for "or" stays: "testing / reviewing".
 
 ## Terms and names
 
+One concept keeps one name in every file, page and interface.
+One word keeps one sense through a text, inside a compound as well: "The backup job runs at night. Restore the backup from the list." becomes "The backup job runs at night. Restore a copy from the list."
+A term that reads several ways gets pinned down: "per instance" names an environment, a server or a chart version.
+A verb promising ongoing behaviour from something fixed takes the verb that fits: "The snapshot mirrors production" becomes "The snapshot comes from production".
+Two concepts that a reader could merge stay apart in every sentence, with their relation stated: "Signing in to Pidgemail and linking a mail account stay independent." "Unreachable hosts form a subset of the hosts without a route."
+
 A term gets its meaning at first use, after "means that": "Blocking means that one block of a message or file goes out until the receiver confirms it."
 An acronym gets spelled out once.
 A short gloss sits in quotes and parentheses behind the term: `the sequence number ("version") of the LSA`.
 A synonym follows "also" in parentheses: "all peers (also nodes)".
 "more precisely" narrows a broad term to the one meant: "distribution transparency (more precisely access transparency)".
-A term that reads several ways gets pinned down: "per instance" names an environment, a server or a chart version.
-A verb promising ongoing behaviour from something fixed takes the verb that fits: "The snapshot mirrors production" becomes "The snapshot comes from production".
-
-One concept keeps one name in every file, page and interface.
-Two concepts that a reader could merge stay apart in every sentence: "Signing in to Pidgemail and linking a mail account stay independent."
-Two close terms get their relation stated: "Unreachable hosts form a subset of the hosts without a route."
 An existing text that fits gets reused before a new one gets written.
 
 A name states the role in the project's own words.

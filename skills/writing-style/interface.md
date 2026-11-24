@@ -38,6 +38,8 @@ A sentence that the reader stops to admire or decode gets rewritten.
   The conditions that the check tests stay in the code and its docs.
   "`retry_limit` appears in no handler, no default config and no schema." becomes "The app does not read `retry_limit`."
 - A wait names no exact seconds: "Try again in a moment."
+- Confirmation of an action that cannot come back: what goes, what stays and whether it comes back, one fact per item.
+  "Removes the backups and stops the schedule." becomes "Removes the backups." beside "Stops the schedule."
 - Disabled control: why and what enables it.
   "Locked while a backup runs. Stop the backup to change it."
 - Option description: the observable effect and when to pick it.
